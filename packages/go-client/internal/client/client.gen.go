@@ -28,6 +28,47 @@ const (
 	RoleAuthScopes           = "RoleAuth.Scopes"
 )
 
+// Defines values for AlertGroupSeverity.
+const (
+	AlertGroupSeverityCritical AlertGroupSeverity = "Critical"
+	AlertGroupSeverityInfo     AlertGroupSeverity = "Info"
+	AlertGroupSeverityWarning  AlertGroupSeverity = "Warning"
+)
+
+// Defines values for AlertSubscriptionChannelType.
+const (
+	AlertSubscriptionChannelTypeDiscord   AlertSubscriptionChannelType = "discord"
+	AlertSubscriptionChannelTypePagerduty AlertSubscriptionChannelType = "pagerduty"
+	AlertSubscriptionChannelTypeSlack     AlertSubscriptionChannelType = "slack"
+	AlertSubscriptionChannelTypeWebhook   AlertSubscriptionChannelType = "webhook"
+)
+
+// Defines values for AlertSubscriptionSeverityFilter.
+const (
+	AlertSubscriptionSeverityFilterCritical AlertSubscriptionSeverityFilter = "Critical"
+	AlertSubscriptionSeverityFilterInfo     AlertSubscriptionSeverityFilter = "Info"
+	AlertSubscriptionSeverityFilterWarning  AlertSubscriptionSeverityFilter = "Warning"
+)
+
+// Defines values for BatchContractsRequestAction.
+const (
+	BatchContractsRequestActionTag     BatchContractsRequestAction = "tag"
+	BatchContractsRequestActionUntrack BatchContractsRequestAction = "untrack"
+)
+
+// Defines values for BatchContractsResultAction.
+const (
+	BatchContractsResultActionTag     BatchContractsResultAction = "tag"
+	BatchContractsResultActionUntrack BatchContractsResultAction = "untrack"
+)
+
+// Defines values for CompareResponseWindow.
+const (
+	CompareResponseWindowN24h CompareResponseWindow = "24h"
+	CompareResponseWindowN30d CompareResponseWindow = "30d"
+	CompareResponseWindowN7d  CompareResponseWindow = "7d"
+)
+
 // Defines values for ContractStatus.
 const (
 	ContractStatusActive      ContractStatus = "active"
@@ -42,6 +83,21 @@ const (
 	ContractAlertSeverityCritical ContractAlertSeverity = "Critical"
 	ContractAlertSeverityInfo     ContractAlertSeverity = "Info"
 	ContractAlertSeverityWarning  ContractAlertSeverity = "Warning"
+)
+
+// Defines values for CreateAlertSubscriptionChannelType.
+const (
+	CreateAlertSubscriptionChannelTypeDiscord   CreateAlertSubscriptionChannelType = "discord"
+	CreateAlertSubscriptionChannelTypePagerduty CreateAlertSubscriptionChannelType = "pagerduty"
+	CreateAlertSubscriptionChannelTypeSlack     CreateAlertSubscriptionChannelType = "slack"
+	CreateAlertSubscriptionChannelTypeWebhook   CreateAlertSubscriptionChannelType = "webhook"
+)
+
+// Defines values for CreateAlertSubscriptionSeverityFilter.
+const (
+	CreateAlertSubscriptionSeverityFilterCritical CreateAlertSubscriptionSeverityFilter = "Critical"
+	CreateAlertSubscriptionSeverityFilterInfo     CreateAlertSubscriptionSeverityFilter = "Info"
+	CreateAlertSubscriptionSeverityFilterWarning  CreateAlertSubscriptionSeverityFilter = "Warning"
 )
 
 // Defines values for ErrorError0Code.
@@ -60,12 +116,75 @@ const (
 	Invocations ForecastSeriesMetric = "invocations"
 )
 
+// Defines values for SlackMessageResponseType.
+const (
+	Ephemeral SlackMessageResponseType = "ephemeral"
+)
+
+// Defines values for UptimeResultWindow.
+const (
+	UptimeResultWindowN24h UptimeResultWindow = "24h"
+	UptimeResultWindowN30d UptimeResultWindow = "30d"
+	UptimeResultWindowN7d  UptimeResultWindow = "7d"
+)
+
+// Defines values for V2AlertSeverity.
+const (
+	V2AlertSeverityCritical V2AlertSeverity = "Critical"
+	V2AlertSeverityInfo     V2AlertSeverity = "Info"
+	V2AlertSeverityWarning  V2AlertSeverity = "Warning"
+)
+
+// Defines values for V2InvocationStatus.
+const (
+	V2InvocationStatusFAILED   V2InvocationStatus = "FAILED"
+	V2InvocationStatusNOTFOUND V2InvocationStatus = "NOT_FOUND"
+	V2InvocationStatusSUCCESS  V2InvocationStatus = "SUCCESS"
+)
+
+// Defines values for V2StorageEntryDurability.
+const (
+	V2StorageEntryDurabilityInstance   V2StorageEntryDurability = "instance"
+	V2StorageEntryDurabilityPersistent V2StorageEntryDurability = "persistent"
+	V2StorageEntryDurabilityTemporary  V2StorageEntryDurability = "temporary"
+)
+
+// Defines values for V2StorageEntryStatus.
+const (
+	V2StorageEntryStatusArchived V2StorageEntryStatus = "archived"
+	V2StorageEntryStatusDeleted  V2StorageEntryStatus = "deleted"
+	V2StorageEntryStatusLive     V2StorageEntryStatus = "live"
+)
+
 // Defines values for NetworkParam.
 const (
 	NetworkParamFuturenet  NetworkParam = "futurenet"
 	NetworkParamMainnet    NetworkParam = "mainnet"
 	NetworkParamStandalone NetworkParam = "standalone"
 	NetworkParamTestnet    NetworkParam = "testnet"
+)
+
+// Defines values for V2Network.
+const (
+	V2NetworkFuturenet  V2Network = "futurenet"
+	V2NetworkMainnet    V2Network = "mainnet"
+	V2NetworkStandalone V2Network = "standalone"
+	V2NetworkTestnet    V2Network = "testnet"
+)
+
+// Defines values for ListAlertsParamsSeverity.
+const (
+	ListAlertsParamsSeverityCritical ListAlertsParamsSeverity = "Critical"
+	ListAlertsParamsSeverityInfo     ListAlertsParamsSeverity = "Info"
+	ListAlertsParamsSeverityWarning  ListAlertsParamsSeverity = "Warning"
+)
+
+// Defines values for ListAlertsParamsNetwork.
+const (
+	ListAlertsParamsNetworkFuturenet  ListAlertsParamsNetwork = "futurenet"
+	ListAlertsParamsNetworkMainnet    ListAlertsParamsNetwork = "mainnet"
+	ListAlertsParamsNetworkStandalone ListAlertsParamsNetwork = "standalone"
+	ListAlertsParamsNetworkTestnet    ListAlertsParamsNetwork = "testnet"
 )
 
 // Defines values for CreateApiKeyJSONBodyScopes.
@@ -76,12 +195,34 @@ const (
 	WriteContracts CreateApiKeyJSONBodyScopes = "write:contracts"
 )
 
+// Defines values for CompareContractsParamsWindow.
+const (
+	CompareContractsParamsWindowN24h CompareContractsParamsWindow = "24h"
+	CompareContractsParamsWindowN30d CompareContractsParamsWindow = "30d"
+	CompareContractsParamsWindowN7d  CompareContractsParamsWindow = "7d"
+)
+
 // Defines values for ListContractsParamsNetwork.
 const (
 	ListContractsParamsNetworkFuturenet  ListContractsParamsNetwork = "futurenet"
 	ListContractsParamsNetworkMainnet    ListContractsParamsNetwork = "mainnet"
 	ListContractsParamsNetworkStandalone ListContractsParamsNetwork = "standalone"
 	ListContractsParamsNetworkTestnet    ListContractsParamsNetwork = "testnet"
+)
+
+// Defines values for ListContractsParamsSort.
+const (
+	AddedAt ListContractsParamsSort = "added_at"
+	Id      ListContractsParamsSort = "id"
+	Label   ListContractsParamsSort = "label"
+	Network ListContractsParamsSort = "network"
+	Status  ListContractsParamsSort = "status"
+)
+
+// Defines values for ListContractsParamsDir.
+const (
+	Asc  ListContractsParamsDir = "asc"
+	Desc ListContractsParamsDir = "desc"
 )
 
 // Defines values for RegisterContractJSONBodyNetwork.
@@ -98,6 +239,14 @@ const (
 	ListContractEventsParamsNetworkMainnet    ListContractEventsParamsNetwork = "mainnet"
 	ListContractEventsParamsNetworkStandalone ListContractEventsParamsNetwork = "standalone"
 	ListContractEventsParamsNetworkTestnet    ListContractEventsParamsNetwork = "testnet"
+)
+
+// Defines values for ExportContractEventsCSVParamsNetwork.
+const (
+	ExportContractEventsCSVParamsNetworkFuturenet  ExportContractEventsCSVParamsNetwork = "futurenet"
+	ExportContractEventsCSVParamsNetworkMainnet    ExportContractEventsCSVParamsNetwork = "mainnet"
+	ExportContractEventsCSVParamsNetworkStandalone ExportContractEventsCSVParamsNetwork = "standalone"
+	ExportContractEventsCSVParamsNetworkTestnet    ExportContractEventsCSVParamsNetwork = "testnet"
 )
 
 // Defines values for ListContractInvocationsParamsNetwork.
@@ -125,16 +274,59 @@ const (
 
 // Defines values for ListContractStorageParamsDurability.
 const (
-	Instance   ListContractStorageParamsDurability = "instance"
-	Persistent ListContractStorageParamsDurability = "persistent"
-	Temporary  ListContractStorageParamsDurability = "temporary"
+	ListContractStorageParamsDurabilityInstance   ListContractStorageParamsDurability = "instance"
+	ListContractStorageParamsDurabilityPersistent ListContractStorageParamsDurability = "persistent"
+	ListContractStorageParamsDurabilityTemporary  ListContractStorageParamsDurability = "temporary"
 )
 
 // Defines values for ListContractStorageParamsStatus.
 const (
-	Archived ListContractStorageParamsStatus = "archived"
-	Deleted  ListContractStorageParamsStatus = "deleted"
-	Live     ListContractStorageParamsStatus = "live"
+	ListContractStorageParamsStatusArchived ListContractStorageParamsStatus = "archived"
+	ListContractStorageParamsStatusDeleted  ListContractStorageParamsStatus = "deleted"
+	ListContractStorageParamsStatusLive     ListContractStorageParamsStatus = "live"
+)
+
+// Defines values for ListAllEventsParamsType.
+const (
+	ListAllEventsParamsTypeContract   ListAllEventsParamsType = "contract"
+	ListAllEventsParamsTypeDiagnostic ListAllEventsParamsType = "diagnostic"
+	ListAllEventsParamsTypeSystem     ListAllEventsParamsType = "system"
+)
+
+// Defines values for ListAllEventsParamsNetwork.
+const (
+	ListAllEventsParamsNetworkFuturenet  ListAllEventsParamsNetwork = "futurenet"
+	ListAllEventsParamsNetworkMainnet    ListAllEventsParamsNetwork = "mainnet"
+	ListAllEventsParamsNetworkStandalone ListAllEventsParamsNetwork = "standalone"
+	ListAllEventsParamsNetworkTestnet    ListAllEventsParamsNetwork = "testnet"
+)
+
+// Defines values for ListAllInvocationsParamsStatus.
+const (
+	ListAllInvocationsParamsStatusFAILED   ListAllInvocationsParamsStatus = "FAILED"
+	ListAllInvocationsParamsStatusNOTFOUND ListAllInvocationsParamsStatus = "NOT_FOUND"
+	ListAllInvocationsParamsStatusSUCCESS  ListAllInvocationsParamsStatus = "SUCCESS"
+)
+
+// Defines values for ListAllInvocationsParamsNetwork.
+const (
+	ListAllInvocationsParamsNetworkFuturenet  ListAllInvocationsParamsNetwork = "futurenet"
+	ListAllInvocationsParamsNetworkMainnet    ListAllInvocationsParamsNetwork = "mainnet"
+	ListAllInvocationsParamsNetworkStandalone ListAllInvocationsParamsNetwork = "standalone"
+	ListAllInvocationsParamsNetworkTestnet    ListAllInvocationsParamsNetwork = "testnet"
+)
+
+// Defines values for PostApiV1LabelsJSONBodyScope.
+const (
+	Public    PostApiV1LabelsJSONBodyScope = "public"
+	Workspace PostApiV1LabelsJSONBodyScope = "workspace"
+)
+
+// Defines values for GetContractReportParamsFormat.
+const (
+	Csv  GetContractReportParamsFormat = "csv"
+	Json GetContractReportParamsFormat = "json"
+	Pdf  GetContractReportParamsFormat = "pdf"
 )
 
 // Defines values for ListWatchdogAlertsParamsSeverity.
@@ -162,9 +354,9 @@ const (
 
 // Defines values for ListContractAlertsParamsSeverity.
 const (
-	Critical ListContractAlertsParamsSeverity = "Critical"
-	Info     ListContractAlertsParamsSeverity = "Info"
-	Warning  ListContractAlertsParamsSeverity = "Warning"
+	ListContractAlertsParamsSeverityCritical ListContractAlertsParamsSeverity = "Critical"
+	ListContractAlertsParamsSeverityInfo     ListContractAlertsParamsSeverity = "Info"
+	ListContractAlertsParamsSeverityWarning  ListContractAlertsParamsSeverity = "Warning"
 )
 
 // Defines values for ListContractAlertsParamsNetwork.
@@ -175,12 +367,116 @@ const (
 	ListContractAlertsParamsNetworkTestnet    ListContractAlertsParamsNetwork = "testnet"
 )
 
+// Defines values for GetContractUptimeParamsWindow.
+const (
+	GetContractUptimeParamsWindowN24h GetContractUptimeParamsWindow = "24h"
+	GetContractUptimeParamsWindowN30d GetContractUptimeParamsWindow = "30d"
+	GetContractUptimeParamsWindowN7d  GetContractUptimeParamsWindow = "7d"
+)
+
 // Defines values for GetWatchdogStatsParamsNetwork.
 const (
 	GetWatchdogStatsParamsNetworkFuturenet  GetWatchdogStatsParamsNetwork = "futurenet"
 	GetWatchdogStatsParamsNetworkMainnet    GetWatchdogStatsParamsNetwork = "mainnet"
 	GetWatchdogStatsParamsNetworkStandalone GetWatchdogStatsParamsNetwork = "standalone"
 	GetWatchdogStatsParamsNetworkTestnet    GetWatchdogStatsParamsNetwork = "testnet"
+)
+
+// Defines values for V2ListContractsParamsNetwork.
+const (
+	V2ListContractsParamsNetworkFuturenet  V2ListContractsParamsNetwork = "futurenet"
+	V2ListContractsParamsNetworkMainnet    V2ListContractsParamsNetwork = "mainnet"
+	V2ListContractsParamsNetworkStandalone V2ListContractsParamsNetwork = "standalone"
+	V2ListContractsParamsNetworkTestnet    V2ListContractsParamsNetwork = "testnet"
+)
+
+// Defines values for V2ListEventsParamsNetwork.
+const (
+	V2ListEventsParamsNetworkFuturenet  V2ListEventsParamsNetwork = "futurenet"
+	V2ListEventsParamsNetworkMainnet    V2ListEventsParamsNetwork = "mainnet"
+	V2ListEventsParamsNetworkStandalone V2ListEventsParamsNetwork = "standalone"
+	V2ListEventsParamsNetworkTestnet    V2ListEventsParamsNetwork = "testnet"
+)
+
+// Defines values for V2ListEventsParamsType.
+const (
+	V2ListEventsParamsTypeContract V2ListEventsParamsType = "contract"
+	V2ListEventsParamsTypeSystem   V2ListEventsParamsType = "system"
+)
+
+// Defines values for V2ListInvocationsParamsNetwork.
+const (
+	V2ListInvocationsParamsNetworkFuturenet  V2ListInvocationsParamsNetwork = "futurenet"
+	V2ListInvocationsParamsNetworkMainnet    V2ListInvocationsParamsNetwork = "mainnet"
+	V2ListInvocationsParamsNetworkStandalone V2ListInvocationsParamsNetwork = "standalone"
+	V2ListInvocationsParamsNetworkTestnet    V2ListInvocationsParamsNetwork = "testnet"
+)
+
+// Defines values for V2ListInvocationsParamsStatus.
+const (
+	FAILED   V2ListInvocationsParamsStatus = "FAILED"
+	NOTFOUND V2ListInvocationsParamsStatus = "NOT_FOUND"
+	SUCCESS  V2ListInvocationsParamsStatus = "SUCCESS"
+)
+
+// Defines values for V2ContractStatsParamsWindow.
+const (
+	N24h V2ContractStatsParamsWindow = "24h"
+	N30d V2ContractStatsParamsWindow = "30d"
+	N7d  V2ContractStatsParamsWindow = "7d"
+)
+
+// Defines values for V2ListStorageEntriesParamsNetwork.
+const (
+	V2ListStorageEntriesParamsNetworkFuturenet  V2ListStorageEntriesParamsNetwork = "futurenet"
+	V2ListStorageEntriesParamsNetworkMainnet    V2ListStorageEntriesParamsNetwork = "mainnet"
+	V2ListStorageEntriesParamsNetworkStandalone V2ListStorageEntriesParamsNetwork = "standalone"
+	V2ListStorageEntriesParamsNetworkTestnet    V2ListStorageEntriesParamsNetwork = "testnet"
+)
+
+// Defines values for V2ListStorageEntriesParamsDurability.
+const (
+	Instance   V2ListStorageEntriesParamsDurability = "instance"
+	Persistent V2ListStorageEntriesParamsDurability = "persistent"
+	Temporary  V2ListStorageEntriesParamsDurability = "temporary"
+)
+
+// Defines values for V2ListStorageEntriesParamsStatus.
+const (
+	Archived V2ListStorageEntriesParamsStatus = "archived"
+	Deleted  V2ListStorageEntriesParamsStatus = "deleted"
+	Live     V2ListStorageEntriesParamsStatus = "live"
+)
+
+// Defines values for V2ListWatchdogAlertsParamsNetwork.
+const (
+	V2ListWatchdogAlertsParamsNetworkFuturenet  V2ListWatchdogAlertsParamsNetwork = "futurenet"
+	V2ListWatchdogAlertsParamsNetworkMainnet    V2ListWatchdogAlertsParamsNetwork = "mainnet"
+	V2ListWatchdogAlertsParamsNetworkStandalone V2ListWatchdogAlertsParamsNetwork = "standalone"
+	V2ListWatchdogAlertsParamsNetworkTestnet    V2ListWatchdogAlertsParamsNetwork = "testnet"
+)
+
+// Defines values for V2ListWatchdogAlertsParamsSeverity.
+const (
+	Critical V2ListWatchdogAlertsParamsSeverity = "Critical"
+	Info     V2ListWatchdogAlertsParamsSeverity = "Info"
+	Warning  V2ListWatchdogAlertsParamsSeverity = "Warning"
+)
+
+// Defines values for V2ListMonitoredContractsParamsNetwork.
+const (
+	V2ListMonitoredContractsParamsNetworkFuturenet  V2ListMonitoredContractsParamsNetwork = "futurenet"
+	V2ListMonitoredContractsParamsNetworkMainnet    V2ListMonitoredContractsParamsNetwork = "mainnet"
+	V2ListMonitoredContractsParamsNetworkStandalone V2ListMonitoredContractsParamsNetwork = "standalone"
+	V2ListMonitoredContractsParamsNetworkTestnet    V2ListMonitoredContractsParamsNetwork = "testnet"
+)
+
+// Defines values for V2WatchdogStatsParamsNetwork.
+const (
+	V2WatchdogStatsParamsNetworkFuturenet  V2WatchdogStatsParamsNetwork = "futurenet"
+	V2WatchdogStatsParamsNetworkMainnet    V2WatchdogStatsParamsNetwork = "mainnet"
+	V2WatchdogStatsParamsNetworkStandalone V2WatchdogStatsParamsNetwork = "standalone"
+	V2WatchdogStatsParamsNetworkTestnet    V2WatchdogStatsParamsNetwork = "testnet"
 )
 
 // APIKey defines model for APIKey.
@@ -194,6 +490,117 @@ type APIKey struct {
 	Scopes     []string   `json:"scopes"`
 }
 
+// AlertGroup defines model for AlertGroup.
+type AlertGroup struct {
+	BackfillEligible bool               `json:"backfill_eligible"`
+	ContractId       string             `json:"contract_id"`
+	Count            int64              `json:"count"`
+	DedupeWindowSecs int64              `json:"dedupe_window_secs"`
+	FirstSeen        time.Time          `json:"first_seen"`
+	GroupKey         string             `json:"group_key"`
+	Id               int64              `json:"id"`
+	LastMessage      string             `json:"last_message"`
+	LastSeen         time.Time          `json:"last_seen"`
+	Rule             string             `json:"rule"`
+	Severity         AlertGroupSeverity `json:"severity"`
+}
+
+// AlertGroupSeverity defines model for AlertGroup.Severity.
+type AlertGroupSeverity string
+
+// AlertSubscription A notification channel subscribed to a contract's alerts. Secrets are
+// never returned: Slack and Discord webhook URLs are masked
+// (e.g. `https://hooks.slack.com/services/***`) and the PagerDuty
+// routing key is reported only via `has_routing_key`.
+type AlertSubscription struct {
+	ChannelType    AlertSubscriptionChannelType    `json:"channel_type"`
+	ContractId     string                          `json:"contract_id"`
+	CreatedAt      time.Time                       `json:"created_at"`
+	HasRoutingKey  bool                            `json:"has_routing_key"`
+	Id             string                          `json:"id"`
+	SeverityFilter AlertSubscriptionSeverityFilter `json:"severity_filter"`
+	UpdatedAt      time.Time                       `json:"updated_at"`
+	WebhookUrl     string                          `json:"webhook_url"`
+}
+
+// AlertSubscriptionChannelType defines model for AlertSubscription.ChannelType.
+type AlertSubscriptionChannelType string
+
+// AlertSubscriptionSeverityFilter defines model for AlertSubscription.SeverityFilter.
+type AlertSubscriptionSeverityFilter string
+
+// BatchContractsRequest defines model for BatchContractsRequest.
+type BatchContractsRequest struct {
+	// Action untrack permanently deletes the contracts and their indexed data; tag sets the label on each contract.
+	Action BatchContractsRequestAction `json:"action"`
+	Args   *struct {
+		// Label Required when action is `tag`; replaces the contract label.
+		Label *string `json:"label,omitempty"`
+	} `json:"args,omitempty"`
+
+	// Ids Contract IDs to act on (at most 100; duplicates are ignored).
+	Ids []string `json:"ids"`
+}
+
+// BatchContractsRequestAction untrack permanently deletes the contracts and their indexed data; tag sets the label on each contract.
+type BatchContractsRequestAction string
+
+// BatchContractsResult defines model for BatchContractsResult.
+type BatchContractsResult struct {
+	Action BatchContractsResultAction `json:"action"`
+
+	// Affected Number of contracts actually changed (unknown IDs are ignored).
+	Affected int64 `json:"affected"`
+
+	// Requested Number of distinct contract IDs in the request.
+	Requested int `json:"requested"`
+}
+
+// BatchContractsResultAction defines model for BatchContractsResult.Action.
+type BatchContractsResultAction string
+
+// BuildInfo defines model for BuildInfo.
+type BuildInfo struct {
+	// BuiltAt RFC3339 build timestamp injected at build time; "dev" when unset or malformed.
+	BuiltAt string `json:"built_at"`
+
+	// GitSha Git commit SHA injected at build time; "dev" when unset.
+	GitSha string `json:"git_sha"`
+
+	// Version Semantic version injected at build time; "dev" when unset.
+	Version string `json:"version"`
+}
+
+// CompareContractEntry defines model for CompareContractEntry.
+type CompareContractEntry struct {
+	AvgCpu      float32 `json:"avg_cpu"`
+	AvgFee      float32 `json:"avg_fee"`
+	Error       *string `json:"error,omitempty"`
+	EventCount  int64   `json:"event_count"`
+	EventVolume []struct {
+		Count     int64     `json:"count"`
+		Timestamp time.Time `json:"timestamp"`
+	} `json:"event_volume"`
+	HasData          bool   `json:"has_data"`
+	HealthScore      *int   `json:"health_score"`
+	Id               string `json:"id"`
+	InvocationCount  int64  `json:"invocation_count"`
+	Label            string `json:"label"`
+	LastSyncedLedger int64  `json:"last_synced_ledger"`
+	Network          string `json:"network"`
+	Status           string `json:"status"`
+	Tracked          bool   `json:"tracked"`
+}
+
+// CompareResponse defines model for CompareResponse.
+type CompareResponse struct {
+	Contracts []CompareContractEntry `json:"contracts"`
+	Window    CompareResponseWindow  `json:"window"`
+}
+
+// CompareResponseWindow defines model for CompareResponse.Window.
+type CompareResponseWindow string
+
 // Contract defines model for Contract.
 type Contract struct {
 	AddedAt            time.Time      `json:"added_at"`
@@ -203,7 +610,10 @@ type Contract struct {
 	Label              string         `json:"label"`
 	Network            string         `json:"network"`
 	Status             ContractStatus `json:"status"`
-	WasmHash           string         `json:"wasm_hash"`
+
+	// Tags User-defined tags, sorted ascending. Always present; empty when the contract has no tags.
+	Tags     []string `json:"tags"`
+	WasmHash string   `json:"wasm_hash"`
 }
 
 // ContractStatus defines model for Contract.Status.
@@ -222,6 +632,72 @@ type ContractAlert struct {
 // ContractAlertSeverity defines model for ContractAlert.Severity.
 type ContractAlertSeverity string
 
+// ContractEventRate defines model for ContractEventRate.
+type ContractEventRate struct {
+	ContractId string `json:"contract_id"`
+	Label      string `json:"label"`
+	Network    string `json:"network"`
+
+	// PerMinute One bucket per minute over the window, oldest first. The length
+	// always equals the requested minute count, so the series is
+	// contiguous and a sparkline's x-axis never shifts.
+	PerMinute []int `json:"per_minute"`
+
+	// Total Events observed in the window across all buckets.
+	Total int `json:"total"`
+}
+
+// ContractGraph defines model for ContractGraph.
+type ContractGraph struct {
+	Edges *[]struct {
+		Count  int    `json:"count"`
+		Source string `json:"source"`
+		Target string `json:"target"`
+	} `json:"edges"`
+	Nodes *[]struct {
+		Id    string `json:"id"`
+		Label string `json:"label"`
+	} `json:"nodes"`
+}
+
+// ContractReport defines model for ContractReport.
+type ContractReport struct {
+	ContractId     string     `json:"contract_id"`
+	CriticalAlerts int64      `json:"critical_alerts"`
+	FirstCheck     *time.Time `json:"first_check"`
+	HealthyChecks  int64      `json:"healthy_checks"`
+
+	// Incidents Outages (a transition from Healthy into any other status) in the month.
+	Incidents            int64      `json:"incidents"`
+	InfoAlerts           int64      `json:"info_alerts"`
+	LastCheck            *time.Time `json:"last_check"`
+	LongestOutageSeconds float64    `json:"longest_outage_seconds"`
+
+	// Month Reporting period, YYYY-MM (UTC).
+	Month string `json:"month"`
+
+	// MttrSeconds Mean time to recovery across incidents that recovered within the month.
+	MttrSeconds float64 `json:"mttr_seconds"`
+
+	// OngoingOutage True when the month ends mid-incident (MTTR then understates reality).
+	OngoingOutage bool    `json:"ongoing_outage"`
+	SamplingNote  *string `json:"sampling_note,omitempty"`
+
+	// Signature Hex HMAC-SHA256 over the canonical report text; empty when unsigned.
+	Signature          *string `json:"signature,omitempty"`
+	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`
+
+	// Signed False when no REPORT_SIGNING_KEY is configured.
+	Signed               bool    `json:"signed"`
+	TotalAlerts          int64   `json:"total_alerts"`
+	TotalChecks          int64   `json:"total_checks"`
+	TotalDowntimeSeconds float64 `json:"total_downtime_seconds"`
+
+	// UptimePct healthy_checks / total_checks * 100; 0 when there were no checks.
+	UptimePct     float64 `json:"uptime_pct"`
+	WarningAlerts int64   `json:"warning_alerts"`
+}
+
 // ContractSnapshot defines model for ContractSnapshot.
 type ContractSnapshot struct {
 	ContractId         string `json:"contract_id"`
@@ -234,6 +710,79 @@ type ContractSnapshot struct {
 	Storage   []StorageEntry `json:"storage"`
 }
 
+// ContractSnapshotExport defines model for ContractSnapshotExport.
+type ContractSnapshotExport struct {
+	ContractId string `json:"contract_id"`
+
+	// Events Most recent events, newest first (up to 50).
+	Events []Event `json:"events"`
+
+	// Ledger Newest indexed ledger the export is keyed to.
+	Ledger   int32    `json:"ledger"`
+	Metadata Contract `json:"metadata"`
+	Network  string   `json:"network"`
+
+	// SchemaVersion Version of the export shape; currently 1.
+	SchemaVersion int `json:"schema_version"`
+
+	// Storage Live storage entries, one per key, sorted by key_xdr.
+	Storage []StorageEntry `json:"storage"`
+	Summary struct {
+		EventCount         int   `json:"event_count"`
+		FirstTrackedLedger int32 `json:"first_tracked_ledger"`
+
+		// LastEventId Omitted when the contract has no events.
+		LastEventId     *string `json:"last_event_id,omitempty"`
+		LastEventLedger *int32  `json:"last_event_ledger,omitempty"`
+		StorageCount    int     `json:"storage_count"`
+
+		// StorageTruncated Present and true only when storage hit the 1000-entry cap.
+		StorageTruncated *bool `json:"storage_truncated,omitempty"`
+	} `json:"summary"`
+}
+
+// ContractSpec defines model for ContractSpec.
+type ContractSpec struct {
+	ContractId string           `json:"contract_id"`
+	ParsedAt   time.Time        `json:"parsed_at"`
+	Spec       ContractSpecTree `json:"spec"`
+	WasmHash   *string          `json:"wasm_hash,omitempty"`
+}
+
+// ContractSpecFunction defines model for ContractSpecFunction.
+type ContractSpecFunction struct {
+	Doc     *string             `json:"doc,omitempty"`
+	Inputs  []ContractSpecInput `json:"inputs"`
+	Name    string              `json:"name"`
+	Outputs []ContractSpecType  `json:"outputs"`
+}
+
+// ContractSpecInput defines model for ContractSpecInput.
+type ContractSpecInput struct {
+	Doc  *string          `json:"doc,omitempty"`
+	Name string           `json:"name"`
+	Type ContractSpecType `json:"type"`
+}
+
+// ContractSpecTree defines model for ContractSpecTree.
+type ContractSpecTree struct {
+	Functions []ContractSpecFunction `json:"functions"`
+}
+
+// ContractSpecType defines model for ContractSpecType.
+type ContractSpecType struct {
+	Elem                 *ContractSpecType      `json:"elem,omitempty"`
+	Err                  *ContractSpecType      `json:"err,omitempty"`
+	Key                  *ContractSpecType      `json:"key,omitempty"`
+	Kind                 string                 `json:"kind"`
+	N                    *int                   `json:"n,omitempty"`
+	Name                 *string                `json:"name,omitempty"`
+	Ok                   *ContractSpecType      `json:"ok,omitempty"`
+	Tuple                *[]ContractSpecType    `json:"tuple,omitempty"`
+	Value                *ContractSpecType      `json:"value,omitempty"`
+	AdditionalProperties map[string]interface{} `json:"-"`
+}
+
 // ContractStats defines model for ContractStats.
 type ContractStats struct {
 	EventCount            int64  `json:"event_count"`
@@ -244,6 +793,76 @@ type ContractStats struct {
 	WindowEventCount      int64  `json:"window_event_count"`
 	WindowInvocationCount int64  `json:"window_invocation_count"`
 }
+
+// ContractSummary defines model for ContractSummary.
+type ContractSummary struct {
+	ContractId       string        `json:"contract_id"`
+	GeneratedAt      time.Time     `json:"generated_at"`
+	HealthScore      *HealthScore  `json:"health_score"`
+	Label            string        `json:"label"`
+	LatestEvent      *Event        `json:"latest_event"`
+	LatestInvocation *Invocation   `json:"latest_invocation"`
+	Network          string        `json:"network"`
+	Stats            ContractStats `json:"stats"`
+	Status           string        `json:"status"`
+}
+
+// ContractTagRequest defines model for ContractTagRequest.
+type ContractTagRequest struct {
+	// Tag Tag label. Trimmed and lowercased before storage.
+	Tag string `json:"tag"`
+}
+
+// ContractTags defines model for ContractTags.
+type ContractTags struct {
+	ContractId string   `json:"contract_id"`
+	Tags       []string `json:"tags"`
+}
+
+// ContractUpgrade defines model for ContractUpgrade.
+type ContractUpgrade struct {
+	At         time.Time `json:"at"`
+	ContractId string    `json:"contract_id"`
+
+	// FromHash Previous Wasm hash (hex).
+	FromHash string `json:"from_hash"`
+	Ledger   int64  `json:"ledger"`
+
+	// ToHash New Wasm hash (hex).
+	ToHash string  `json:"to_hash"`
+	TxHash *string `json:"tx_hash,omitempty"`
+}
+
+// ContractValidationResult defines model for ContractValidationResult.
+type ContractValidationResult struct {
+	AlreadyTracked bool    `json:"already_tracked"`
+	ContractId     string  `json:"contract_id"`
+	Label          *string `json:"label"`
+	Network        string  `json:"network"`
+	Reason         *string `json:"reason"`
+	Valid          bool    `json:"valid"`
+}
+
+// CreateAlertSubscription defines model for CreateAlertSubscription.
+type CreateAlertSubscription struct {
+	ChannelType *CreateAlertSubscriptionChannelType `json:"channel_type,omitempty"`
+	ContractId  string                              `json:"contract_id"`
+
+	// RoutingKey PagerDuty integration key. Required for pagerduty, rejected otherwise.
+	RoutingKey     *string                                `json:"routing_key,omitempty"`
+	SeverityFilter *CreateAlertSubscriptionSeverityFilter `json:"severity_filter,omitempty"`
+
+	// WebhookUrl Required for webhook (http or https), slack and discord (https
+	// incoming webhook URL). Optional for pagerduty, where it defaults
+	// to https://events.pagerduty.com/v2/enqueue.
+	WebhookUrl *string `json:"webhook_url,omitempty"`
+}
+
+// CreateAlertSubscriptionChannelType defines model for CreateAlertSubscription.ChannelType.
+type CreateAlertSubscriptionChannelType string
+
+// CreateAlertSubscriptionSeverityFilter defines model for CreateAlertSubscription.SeverityFilter.
+type CreateAlertSubscriptionSeverityFilter string
 
 // Error defines model for Error.
 type Error struct {
@@ -286,6 +905,20 @@ type Event struct {
 	ValueXdr         string        `json:"value_xdr"`
 }
 
+// FailedEvent defines model for FailedEvent.
+type FailedEvent struct {
+	Attempts     int       `json:"attempts"`
+	ContractId   string    `json:"contract_id"`
+	CreatedAt    time.Time `json:"created_at"`
+	ErrorMessage string    `json:"error_message"`
+
+	// Event The original event payload, when included.
+	Event   *map[string]interface{} `json:"event,omitempty"`
+	EventId string                  `json:"event_id"`
+	Id      int64                   `json:"id"`
+	Network string                  `json:"network"`
+}
+
 // ForecastPoint defines model for ForecastPoint.
 type ForecastPoint struct {
 	Date  openapi_types.Date `json:"date"`
@@ -313,6 +946,19 @@ type HealthCheck struct {
 	Status     string    `json:"status"`
 	Timestamp  time.Time `json:"timestamp"`
 	TxHash     string    `json:"tx_hash"`
+}
+
+// HealthScore defines model for HealthScore.
+type HealthScore struct {
+	Components struct {
+		ErrorRate   int `json:"error_rate"`
+		Performance int `json:"performance"`
+		StorageTtl  int `json:"storage_ttl"`
+		Uptime      int `json:"uptime"`
+	} `json:"components"`
+	ComputedAt time.Time `json:"computed_at"`
+	ContractId string    `json:"contract_id"`
+	Score      int       `json:"score"`
 }
 
 // InWatchlist defines model for InWatchlist.
@@ -353,6 +999,36 @@ type MonitoredContract struct {
 	UpdatedAt     time.Time  `json:"updated_at"`
 }
 
+// MonthlySLA defines model for MonthlySLA.
+type MonthlySLA struct {
+	ContractId     string     `json:"contract_id"`
+	CriticalAlerts int64      `json:"critical_alerts"`
+	FirstCheck     *time.Time `json:"first_check"`
+	HealthyChecks  int64      `json:"healthy_checks"`
+
+	// Incidents Outages (a transition from Healthy into any other status) in the month.
+	Incidents            int64      `json:"incidents"`
+	InfoAlerts           int64      `json:"info_alerts"`
+	LastCheck            *time.Time `json:"last_check"`
+	LongestOutageSeconds float64    `json:"longest_outage_seconds"`
+
+	// Month Reporting period, YYYY-MM (UTC).
+	Month string `json:"month"`
+
+	// MttrSeconds Mean time to recovery across incidents that recovered within the month.
+	MttrSeconds float64 `json:"mttr_seconds"`
+
+	// OngoingOutage True when the month ends mid-incident (MTTR then understates reality).
+	OngoingOutage        bool    `json:"ongoing_outage"`
+	TotalAlerts          int64   `json:"total_alerts"`
+	TotalChecks          int64   `json:"total_checks"`
+	TotalDowntimeSeconds float64 `json:"total_downtime_seconds"`
+
+	// UptimePct healthy_checks / total_checks * 100; 0 when there were no checks.
+	UptimePct     float64 `json:"uptime_pct"`
+	WarningAlerts int64   `json:"warning_alerts"`
+}
+
 // RoleError defines model for RoleError.
 type RoleError struct {
 	Error    string `json:"error"`
@@ -365,6 +1041,16 @@ type ScopeError struct {
 	Error    string `json:"error"`
 	Required string `json:"required"`
 }
+
+// SlackMessage defines model for SlackMessage.
+type SlackMessage struct {
+	Blocks       *[]map[string]interface{} `json:"blocks,omitempty"`
+	ResponseType SlackMessageResponseType  `json:"response_type"`
+	Text         string                    `json:"text"`
+}
+
+// SlackMessageResponseType defines model for SlackMessage.ResponseType.
+type SlackMessageResponseType string
 
 // StorageEntry defines model for StorageEntry.
 type StorageEntry struct {
@@ -379,6 +1065,274 @@ type StorageEntry struct {
 	Status             string       `json:"status"`
 	ValueDecoded       *interface{} `json:"value_decoded,omitempty"`
 	ValueXdr           string       `json:"value_xdr"`
+}
+
+// UptimeResult defines model for UptimeResult.
+type UptimeResult struct {
+	// ContractId The contract ID this uptime figure applies to.
+	ContractId string `json:"contract_id"`
+
+	// UptimePct Uptime percentage with up to two decimal places.
+	// Computed as healthy_checks / total_checks × 100.
+	// Returns 0 when no health checks were recorded in the window.
+	UptimePct float64 `json:"uptime_pct"`
+
+	// Window The time window over which uptime was computed.
+	Window UptimeResultWindow `json:"window"`
+}
+
+// UptimeResultWindow The time window over which uptime was computed.
+type UptimeResultWindow string
+
+// V2ActivityResponse defines model for V2ActivityResponse.
+type V2ActivityResponse struct {
+	Data        []V2ContractRate `json:"data"`
+	Minutes     int              `json:"minutes"`
+	WindowStart time.Time        `json:"window_start"`
+}
+
+// V2Alert defines model for V2Alert.
+type V2Alert struct {
+	ContractId string          `json:"contract_id"`
+	Ledger     int64           `json:"ledger"`
+	Message    string          `json:"message"`
+	Severity   V2AlertSeverity `json:"severity"`
+	Timestamp  time.Time       `json:"timestamp"`
+	TxHash     string          `json:"tx_hash"`
+}
+
+// V2AlertSeverity defines model for V2Alert.Severity.
+type V2AlertSeverity string
+
+// V2AlertList defines model for V2AlertList.
+type V2AlertList struct {
+	Data       []V2Alert    `json:"data"`
+	Pagination V2Pagination `json:"pagination"`
+}
+
+// V2Contract defines model for V2Contract.
+type V2Contract struct {
+	AddedAt            time.Time  `json:"added_at"`
+	BackfillCompleteAt *time.Time `json:"backfill_complete_at"`
+	CreatedAtLedger    int64      `json:"created_at_ledger"`
+	Id                 string     `json:"id"`
+	Label              *string    `json:"label"`
+	Network            string     `json:"network"`
+	Status             string     `json:"status"`
+	WasmHash           *string    `json:"wasm_hash"`
+}
+
+// V2ContractHealthScore defines model for V2ContractHealthScore.
+type V2ContractHealthScore struct {
+	Components struct {
+		ErrorRate   int32 `json:"error_rate"`
+		Performance int32 `json:"performance"`
+		StorageTtl  int32 `json:"storage_ttl"`
+		Uptime      int32 `json:"uptime"`
+	} `json:"components"`
+	ComputedAt time.Time `json:"computed_at"`
+	ContractId string    `json:"contract_id"`
+	Score      int32     `json:"score"`
+}
+
+// V2ContractList defines model for V2ContractList.
+type V2ContractList struct {
+	Data       []V2Contract `json:"data"`
+	Pagination V2Pagination `json:"pagination"`
+}
+
+// V2ContractRate defines model for V2ContractRate.
+type V2ContractRate struct {
+	ContractId string  `json:"contract_id"`
+	Label      *string `json:"label"`
+	Network    string  `json:"network"`
+	PerMinute  []int   `json:"per_minute"`
+	Total      int64   `json:"total"`
+}
+
+// V2ContractStats defines model for V2ContractStats.
+type V2ContractStats struct {
+	EventCount            int64  `json:"event_count"`
+	InvocationCount       int64  `json:"invocation_count"`
+	LastSyncedLedger      int64  `json:"last_synced_ledger"`
+	StorageCount          int64  `json:"storage_count"`
+	WindowDuration        string `json:"window_duration"`
+	WindowEventCount      int64  `json:"window_event_count"`
+	WindowInvocationCount int64  `json:"window_invocation_count"`
+}
+
+// V2Event defines model for V2Event.
+type V2Event struct {
+	ContractId       string        `json:"contract_id"`
+	Id               string        `json:"id"`
+	InSuccessfulCall bool          `json:"in_successful_call"`
+	Ledger           int64         `json:"ledger"`
+	LedgerClosedAt   time.Time     `json:"ledger_closed_at"`
+	Network          string        `json:"network"`
+	TopicDecoded     []interface{} `json:"topic_decoded"`
+	TopicXdr         []string      `json:"topic_xdr"`
+	TxHash           string        `json:"tx_hash"`
+	Type             string        `json:"type"`
+	ValueDecoded     interface{}   `json:"value_decoded"`
+	ValueXdr         string        `json:"value_xdr"`
+}
+
+// V2EventList defines model for V2EventList.
+type V2EventList struct {
+	Data       []V2Event    `json:"data"`
+	Pagination V2Pagination `json:"pagination"`
+}
+
+// V2GlobalStats defines model for V2GlobalStats.
+type V2GlobalStats struct {
+	TotalEvents         int64 `json:"total_events"`
+	TotalInvocations    int64 `json:"total_invocations"`
+	TotalStorageEntries int64 `json:"total_storage_entries"`
+	TrackedContracts    int64 `json:"tracked_contracts"`
+}
+
+// V2HealthCheck defines model for V2HealthCheck.
+type V2HealthCheck struct {
+	ContractId string    `json:"contract_id"`
+	Ledger     int64     `json:"ledger"`
+	Metadata   string    `json:"metadata"`
+	Status     string    `json:"status"`
+	Timestamp  time.Time `json:"timestamp"`
+	TxHash     string    `json:"tx_hash"`
+}
+
+// V2HealthCheckList defines model for V2HealthCheckList.
+type V2HealthCheckList struct {
+	Data       []V2HealthCheck `json:"data"`
+	Pagination V2Pagination    `json:"pagination"`
+}
+
+// V2Invocation defines model for V2Invocation.
+type V2Invocation struct {
+	ApplicationOrder int                     `json:"application_order"`
+	ArgsDecoded      *map[string]interface{} `json:"args_decoded"`
+	ContractId       string                  `json:"contract_id"`
+	CpuInstructions  int64                   `json:"cpu_instructions"`
+	FunctionName     *string                 `json:"function_name"`
+	Ledger           int64                   `json:"ledger"`
+	LedgerClosedAt   time.Time               `json:"ledger_closed_at"`
+	LedgerReadBytes  int64                   `json:"ledger_read_bytes"`
+	LedgerWriteBytes int64                   `json:"ledger_write_bytes"`
+	MemoryBytes      int64                   `json:"memory_bytes"`
+	Network          string                  `json:"network"`
+
+	// ResourceFeeChargedStroops Renamed from v1's unitless `resource_fee_charged`.
+	ResourceFeeChargedStroops int64              `json:"resource_fee_charged_stroops"`
+	ResultDecoded             *interface{}       `json:"result_decoded,omitempty"`
+	ResultXdr                 *string            `json:"result_xdr,omitempty"`
+	Status                    V2InvocationStatus `json:"status"`
+	TxHash                    string             `json:"tx_hash"`
+}
+
+// V2InvocationStatus defines model for V2Invocation.Status.
+type V2InvocationStatus string
+
+// V2InvocationList defines model for V2InvocationList.
+type V2InvocationList struct {
+	Data       []V2Invocation `json:"data"`
+	Pagination V2Pagination   `json:"pagination"`
+}
+
+// V2MonitoredContract defines model for V2MonitoredContract.
+type V2MonitoredContract struct {
+	CheckInterval int64      `json:"check_interval"`
+	ContractId    string     `json:"contract_id"`
+	LastCheck     *time.Time `json:"last_check"`
+	Name          string     `json:"name"`
+	Network       string     `json:"network"`
+	Owner         string     `json:"owner"`
+	RegisteredAt  time.Time  `json:"registered_at"`
+	Status        string     `json:"status"`
+	UpdatedAt     time.Time  `json:"updated_at"`
+}
+
+// V2MonitoredList defines model for V2MonitoredList.
+type V2MonitoredList struct {
+	Data       []V2MonitoredContract `json:"data"`
+	Pagination V2Pagination          `json:"pagination"`
+}
+
+// V2Pagination defines model for V2Pagination.
+type V2Pagination struct {
+	HasMore bool `json:"has_more"`
+
+	// NextCursor Opaque cursor; null on the last page.
+	NextCursor *string `json:"next_cursor"`
+}
+
+// V2StorageEntry defines model for V2StorageEntry.
+type V2StorageEntry struct {
+	ContractId         string                   `json:"contract_id"`
+	Durability         V2StorageEntryDurability `json:"durability"`
+	KeyDecoded         interface{}              `json:"key_decoded"`
+	KeyXdr             string                   `json:"key_xdr"`
+	LastModifiedLedger int64                    `json:"last_modified_ledger"`
+	LastSeenAt         time.Time                `json:"last_seen_at"`
+	LiveUntilLedger    int64                    `json:"live_until_ledger"`
+	Network            string                   `json:"network"`
+	Status             V2StorageEntryStatus     `json:"status"`
+	ValueDecoded       interface{}              `json:"value_decoded"`
+	ValueXdr           string                   `json:"value_xdr"`
+}
+
+// V2StorageEntryDurability defines model for V2StorageEntry.Durability.
+type V2StorageEntryDurability string
+
+// V2StorageEntryStatus defines model for V2StorageEntry.Status.
+type V2StorageEntryStatus string
+
+// V2StorageList defines model for V2StorageList.
+type V2StorageList struct {
+	Data       []V2StorageEntry `json:"data"`
+	Pagination V2Pagination     `json:"pagination"`
+}
+
+// V2Upgrade defines model for V2Upgrade.
+type V2Upgrade struct {
+	At         time.Time `json:"at"`
+	ContractId string    `json:"contract_id"`
+	FromHash   string    `json:"from_hash"`
+	Ledger     int64     `json:"ledger"`
+	ToHash     string    `json:"to_hash"`
+	TxHash     *string   `json:"tx_hash"`
+}
+
+// V2UpgradeList defines model for V2UpgradeList.
+type V2UpgradeList struct {
+	Data       []V2Upgrade  `json:"data"`
+	Pagination V2Pagination `json:"pagination"`
+}
+
+// V2WatchdogStats defines model for V2WatchdogStats.
+type V2WatchdogStats struct {
+	CriticalAlerts int64 `json:"critical_alerts"`
+	Degraded       int64 `json:"degraded"`
+	Healthy        int64 `json:"healthy"`
+	TotalAlerts    int64 `json:"total_alerts"`
+	TotalMonitored int64 `json:"total_monitored"`
+	Unresponsive   int64 `json:"unresponsive"`
+}
+
+// V2WatchlistItem defines model for V2WatchlistItem.
+type V2WatchlistItem struct {
+	AddedAt    time.Time `json:"added_at"`
+	ContractId string    `json:"contract_id"`
+}
+
+// V2WatchlistList defines model for V2WatchlistList.
+type V2WatchlistList struct {
+	Data       []V2WatchlistItem `json:"data"`
+	Pagination V2Pagination      `json:"pagination"`
+}
+
+// V2WatchlistStatus defines model for V2WatchlistStatus.
+type V2WatchlistStatus struct {
+	InWatchlist bool `json:"in_watchlist"`
 }
 
 // WatchdogStats defines model for WatchdogStats.
@@ -402,6 +1356,9 @@ type WatchlistItem struct {
 	ContractId string    `json:"contract_id"`
 }
 
+// AlertCursor defines model for AlertCursor.
+type AlertCursor = string
+
 // ContractID defines model for ContractID.
 type ContractID = string
 
@@ -414,8 +1371,32 @@ type Limit = int
 // NetworkParam defines model for NetworkParam.
 type NetworkParam string
 
+// TagParam defines model for TagParam.
+type TagParam = string
+
+// TagPath defines model for TagPath.
+type TagPath = string
+
 // UserIDHeader defines model for UserIDHeader.
 type UserIDHeader = string
+
+// V2Cursor defines model for V2Cursor.
+type V2Cursor = string
+
+// V2Limit defines model for V2Limit.
+type V2Limit = int
+
+// V2Minutes defines model for V2Minutes.
+type V2Minutes = int
+
+// V2Network defines model for V2Network.
+type V2Network string
+
+// V2Status defines model for V2Status.
+type V2Status = string
+
+// WatchlistContractID defines model for WatchlistContractID.
+type WatchlistContractID = string
 
 // ForbiddenRole defines model for ForbiddenRole.
 type ForbiddenRole = RoleError
@@ -456,6 +1437,33 @@ type CreateApiKeyAdminJSONBody struct {
 	Scopes []string `json:"scopes"`
 }
 
+// ListAlertsParams defines parameters for ListAlerts.
+type ListAlertsParams struct {
+	// Flat Return the raw ContractAlert feed instead of grouped alerts.
+	Flat *bool `form:"flat,omitempty" json:"flat,omitempty"`
+
+	// ContractId Filter by contract ID.
+	ContractId *string `form:"contract_id,omitempty" json:"contract_id,omitempty"`
+
+	// Severity Severity filter.
+	Severity *ListAlertsParamsSeverity `form:"severity,omitempty" json:"severity,omitempty"`
+
+	// Network Network filter; empty means all networks.
+	Network *ListAlertsParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
+
+	// Cursor Opaque alert cursor from a previous page's next_cursor.
+	Cursor *AlertCursor `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Limit Maximum results to return (default 100).
+	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// ListAlertsParamsSeverity defines parameters for ListAlerts.
+type ListAlertsParamsSeverity string
+
+// ListAlertsParamsNetwork defines parameters for ListAlerts.
+type ListAlertsParamsNetwork string
+
 // ListApiKeysParams defines parameters for ListApiKeys.
 type ListApiKeysParams struct {
 	// Cursor Opaque pagination cursor from a previous response.
@@ -477,6 +1485,16 @@ type CreateApiKeyJSONBody struct {
 // CreateApiKeyJSONBodyScopes defines parameters for CreateApiKey.
 type CreateApiKeyJSONBodyScopes string
 
+// CompareContractsParams defines parameters for CompareContracts.
+type CompareContractsParams struct {
+	// Ids 1 to 4 comma-separated contract IDs.
+	Ids    string                        `form:"ids" json:"ids"`
+	Window *CompareContractsParamsWindow `form:"window,omitempty" json:"window,omitempty"`
+}
+
+// CompareContractsParamsWindow defines parameters for CompareContracts.
+type CompareContractsParamsWindow string
+
 // ListContractsParams defines parameters for ListContracts.
 type ListContractsParams struct {
 	// Cursor Opaque pagination cursor from a previous response.
@@ -490,10 +1508,25 @@ type ListContractsParams struct {
 
 	// Status Filter by contract status (pending, active, backfilling, error, paused).
 	Status *string `form:"status,omitempty" json:"status,omitempty"`
+
+	// Tag Show only contracts carrying this tag.
+	Tag *TagParam `form:"tag,omitempty" json:"tag,omitempty"`
+
+	// Sort Column to sort by. Defaults to id when omitted; values outside the enum are rejected with 422.
+	Sort *ListContractsParamsSort `form:"sort,omitempty" json:"sort,omitempty"`
+
+	// Dir Sort direction. Defaults to asc when omitted; values outside the enum are rejected with 422.
+	Dir *ListContractsParamsDir `form:"dir,omitempty" json:"dir,omitempty"`
 }
 
 // ListContractsParamsNetwork defines parameters for ListContracts.
 type ListContractsParamsNetwork string
+
+// ListContractsParamsSort defines parameters for ListContracts.
+type ListContractsParamsSort string
+
+// ListContractsParamsDir defines parameters for ListContracts.
+type ListContractsParamsDir string
 
 // RegisterContractJSONBody defines parameters for RegisterContract.
 type RegisterContractJSONBody struct {
@@ -507,6 +1540,12 @@ type RegisterContractJSONBody struct {
 
 // RegisterContractJSONBodyNetwork defines parameters for RegisterContract.
 type RegisterContractJSONBodyNetwork string
+
+// ValidateContractJSONBody defines parameters for ValidateContract.
+type ValidateContractJSONBody struct {
+	ContractId string `json:"contract_id"`
+	Network    string `json:"network"`
+}
 
 // ListContractEventsParams defines parameters for ListContractEvents.
 type ListContractEventsParams struct {
@@ -532,6 +1571,24 @@ type ListContractEventsParams struct {
 // ListContractEventsParamsNetwork defines parameters for ListContractEvents.
 type ListContractEventsParamsNetwork string
 
+// ExportContractEventsCSVParams defines parameters for ExportContractEventsCSV.
+type ExportContractEventsCSVParams struct {
+	// Network Network filter; empty means all networks.
+	Network *ExportContractEventsCSVParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
+
+	// Type Event type filter.
+	Type *string `form:"type,omitempty" json:"type,omitempty"`
+
+	// From Lower ledger bound (inclusive). Must not exceed `to`.
+	From *int32 `form:"from,omitempty" json:"from,omitempty"`
+
+	// To Upper ledger bound (inclusive). Must not be below `from`.
+	To *int32 `form:"to,omitempty" json:"to,omitempty"`
+}
+
+// ExportContractEventsCSVParamsNetwork defines parameters for ExportContractEventsCSV.
+type ExportContractEventsCSVParamsNetwork string
+
 // GetContractForecastParams defines parameters for GetContractForecast.
 type GetContractForecastParams struct {
 	// Horizon Number of days to forecast (default 30; optional trailing d accepted).
@@ -552,8 +1609,8 @@ type ListContractInvocationsParams struct {
 	// Status Invocation status filter.
 	Status *ListContractInvocationsParamsStatus `form:"status,omitempty" json:"status,omitempty"`
 
-	// Fn Function name filter.
-	Fn *string `form:"fn,omitempty" json:"fn,omitempty"`
+	// FunctionName Function name filter.
+	FunctionName *string `form:"function_name,omitempty" json:"function_name,omitempty"`
 
 	// From Lower ledger bound (inclusive).
 	From *int32 `form:"from,omitempty" json:"from,omitempty"`
@@ -607,6 +1664,152 @@ type ListContractStorageParamsDurability string
 // ListContractStorageParamsStatus defines parameters for ListContractStorage.
 type ListContractStorageParamsStatus string
 
+// ListContractUpgradesParams defines parameters for ListContractUpgrades.
+type ListContractUpgradesParams struct {
+	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// ListFailedEventsParams defines parameters for ListFailedEvents.
+type ListFailedEventsParams struct {
+	// Cursor Opaque pagination cursor from a previous response.
+	Cursor *Cursor `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Limit Page size (default 50).
+	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// ListAllEventsParams defines parameters for ListAllEvents.
+type ListAllEventsParams struct {
+	// Cursor Opaque pagination cursor from a previous response.
+	Cursor *Cursor `form:"cursor,omitempty" json:"cursor,omitempty"`
+	Limit  *int    `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// ContractId Contract ID prefix (case-insensitive); a full ID matches one contract.
+	ContractId *string                  `form:"contract_id,omitempty" json:"contract_id,omitempty"`
+	Type       *ListAllEventsParamsType `form:"type,omitempty" json:"type,omitempty"`
+
+	// Network Network filter; empty means all networks.
+	Network *ListAllEventsParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
+
+	// Since Inclusive lower bound on ledger_closed_at (RFC 3339).
+	Since *time.Time `form:"since,omitempty" json:"since,omitempty"`
+
+	// Until Inclusive upper bound on ledger_closed_at (RFC 3339).
+	Until *time.Time `form:"until,omitempty" json:"until,omitempty"`
+}
+
+// ListAllEventsParamsType defines parameters for ListAllEvents.
+type ListAllEventsParamsType string
+
+// ListAllEventsParamsNetwork defines parameters for ListAllEvents.
+type ListAllEventsParamsNetwork string
+
+// RecentEventsParams defines parameters for RecentEvents.
+type RecentEventsParams struct {
+	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// ListAllInvocationsParams defines parameters for ListAllInvocations.
+type ListAllInvocationsParams struct {
+	// Cursor Opaque pagination cursor from a previous response.
+	Cursor *Cursor `form:"cursor,omitempty" json:"cursor,omitempty"`
+	Limit  *int    `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// ContractId Filter to a specific contract ID.
+	ContractId *string `form:"contract_id,omitempty" json:"contract_id,omitempty"`
+
+	// Fn Function name filter.
+	Fn *string `form:"fn,omitempty" json:"fn,omitempty"`
+
+	// Status Invocation status filter.
+	Status *ListAllInvocationsParamsStatus `form:"status,omitempty" json:"status,omitempty"`
+
+	// Network Network filter; empty means all networks.
+	Network *ListAllInvocationsParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
+
+	// From Lower ledger bound (inclusive).
+	From *int32 `form:"from,omitempty" json:"from,omitempty"`
+
+	// To Upper ledger bound (inclusive).
+	To *int32 `form:"to,omitempty" json:"to,omitempty"`
+
+	// Since Inclusive lower bound on ledger_closed_at (RFC 3339).
+	Since *time.Time `form:"since,omitempty" json:"since,omitempty"`
+
+	// Until Inclusive upper bound on ledger_closed_at (RFC 3339).
+	Until *time.Time `form:"until,omitempty" json:"until,omitempty"`
+}
+
+// ListAllInvocationsParamsStatus defines parameters for ListAllInvocations.
+type ListAllInvocationsParamsStatus string
+
+// ListAllInvocationsParamsNetwork defines parameters for ListAllInvocations.
+type ListAllInvocationsParamsNetwork string
+
+// GetApiV1LabelsParams defines parameters for GetApiV1Labels.
+type GetApiV1LabelsParams struct {
+	Query *string `form:"query,omitempty" json:"query,omitempty"`
+}
+
+// PostApiV1LabelsJSONBody defines parameters for PostApiV1Labels.
+type PostApiV1LabelsJSONBody struct {
+	Label string                       `json:"label"`
+	Scope PostApiV1LabelsJSONBodyScope `json:"scope"`
+	Value string                       `json:"value"`
+}
+
+// PostApiV1LabelsJSONBodyScope defines parameters for PostApiV1Labels.
+type PostApiV1LabelsJSONBodyScope string
+
+// GetContractReportParams defines parameters for GetContractReport.
+type GetContractReportParams struct {
+	// Month Reporting month as YYYY-MM (UTC). Defaults to the current month.
+	Month *string `form:"month,omitempty" json:"month,omitempty"`
+
+	// Format Export format (default json).
+	Format *GetContractReportParamsFormat `form:"format,omitempty" json:"format,omitempty"`
+}
+
+// GetContractReportParamsFormat defines parameters for GetContractReport.
+type GetContractReportParamsFormat string
+
+// GetContractSLABadgeParams defines parameters for GetContractSLABadge.
+type GetContractSLABadgeParams struct {
+	// Month Reporting month as YYYY-MM (UTC). Defaults to the current month.
+	Month *string `form:"month,omitempty" json:"month,omitempty"`
+}
+
+// GetContractReportHistoryParams defines parameters for GetContractReportHistory.
+type GetContractReportHistoryParams struct {
+	// Months Number of trailing months to include (default 12).
+	Months *int `form:"months,omitempty" json:"months,omitempty"`
+}
+
+// GetApiV1ResolveParams defines parameters for GetApiV1Resolve.
+type GetApiV1ResolveParams struct {
+	Query string `form:"query" json:"query"`
+}
+
+// GetApiV1SearchParams defines parameters for GetApiV1Search.
+type GetApiV1SearchParams struct {
+	// Q Search query
+	Q string `form:"q" json:"q"`
+
+	// Limit Maximum number of results
+	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// LiveActivityParams defines parameters for LiveActivity.
+type LiveActivityParams struct {
+	Minutes *int `form:"minutes,omitempty" json:"minutes,omitempty"`
+}
+
+// StreamAllEventsParams defines parameters for StreamAllEvents.
+type StreamAllEventsParams struct {
+	// ContractId Only stream events for this contract.
+	ContractId *string `form:"contract_id,omitempty" json:"contract_id,omitempty"`
+}
+
 // ListWatchdogAlertsParams defines parameters for ListWatchdogAlerts.
 type ListWatchdogAlertsParams struct {
 	// Severity Severity filter.
@@ -617,6 +1820,9 @@ type ListWatchdogAlertsParams struct {
 
 	// Limit Maximum alerts to return (default 100).
 	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Cursor Opaque alert cursor from a previous page's next_cursor.
+	Cursor *AlertCursor `form:"cursor,omitempty" json:"cursor,omitempty"`
 }
 
 // ListWatchdogAlertsParamsSeverity defines parameters for ListWatchdogAlerts.
@@ -647,6 +1853,9 @@ type ListContractAlertsParams struct {
 	// Network Network filter; empty means all networks.
 	Network *ListContractAlertsParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
 	Limit   *int                             `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Cursor Opaque alert cursor from a previous page's next_cursor.
+	Cursor *AlertCursor `form:"cursor,omitempty" json:"cursor,omitempty"`
 }
 
 // ListContractAlertsParamsSeverity defines parameters for ListContractAlerts.
@@ -660,6 +1869,15 @@ type ListContractHealthChecksParams struct {
 	// Limit Maximum checks to return (default 100).
 	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
 }
+
+// GetContractUptimeParams defines parameters for GetContractUptime.
+type GetContractUptimeParams struct {
+	// Window Time window over which to compute uptime (default 24h).
+	Window *GetContractUptimeParamsWindow `form:"window,omitempty" json:"window,omitempty"`
+}
+
+// GetContractUptimeParamsWindow defines parameters for GetContractUptime.
+type GetContractUptimeParamsWindow string
 
 // GetWatchdogStatsParams defines parameters for GetWatchdogStats.
 type GetWatchdogStatsParams struct {
@@ -699,6 +1917,221 @@ type GetWatchlistStatusParams struct {
 	XUserID UserIDHeader `json:"X-User-ID"`
 }
 
+// V2AdminCreateKeyJSONBody defines parameters for V2AdminCreateKey.
+type V2AdminCreateKeyJSONBody = map[string]interface{}
+
+// V2CreateAPIKeyJSONBody defines parameters for V2CreateAPIKey.
+type V2CreateAPIKeyJSONBody struct {
+	Name   string   `json:"name"`
+	Scopes []string `json:"scopes"`
+}
+
+// V2ListContractsParams defines parameters for V2ListContracts.
+type V2ListContractsParams struct {
+	// Cursor Opaque cursor taken from `pagination.next_cursor`.
+	Cursor *V2Cursor `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Network Network filter; omitted or `all` means every network.
+	Network *V2ListContractsParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
+
+	// Status Status filter, e.g. `active`.
+	Status *V2Status `form:"status,omitempty" json:"status,omitempty"`
+}
+
+// V2ListContractsParamsNetwork defines parameters for V2ListContracts.
+type V2ListContractsParamsNetwork string
+
+// V2RegisterContractJSONBody defines parameters for V2RegisterContract.
+type V2RegisterContractJSONBody struct {
+	Id      string  `json:"id"`
+	Label   *string `json:"label,omitempty"`
+	Network string  `json:"network"`
+}
+
+// V2ValidateContractJSONBody defines parameters for V2ValidateContract.
+type V2ValidateContractJSONBody struct {
+	ContractId string `json:"contract_id"`
+	Network    string `json:"network"`
+}
+
+// V2ListEventsParams defines parameters for V2ListEvents.
+type V2ListEventsParams struct {
+	// Cursor Opaque cursor taken from `pagination.next_cursor`.
+	Cursor *V2Cursor `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Network Network filter; omitted or `all` means every network.
+	Network *V2ListEventsParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
+	Type    *V2ListEventsParamsType    `form:"type,omitempty" json:"type,omitempty"`
+	From    *int                       `form:"from,omitempty" json:"from,omitempty"`
+	To      *int                       `form:"to,omitempty" json:"to,omitempty"`
+}
+
+// V2ListEventsParamsNetwork defines parameters for V2ListEvents.
+type V2ListEventsParamsNetwork string
+
+// V2ListEventsParamsType defines parameters for V2ListEvents.
+type V2ListEventsParamsType string
+
+// V2ContractForecastParams defines parameters for V2ContractForecast.
+type V2ContractForecastParams struct {
+	Horizon *string `form:"horizon,omitempty" json:"horizon,omitempty"`
+}
+
+// V2ListInvocationsParams defines parameters for V2ListInvocations.
+type V2ListInvocationsParams struct {
+	// Cursor Opaque cursor taken from `pagination.next_cursor`.
+	Cursor *V2Cursor `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Network Network filter; omitted or `all` means every network.
+	Network *V2ListInvocationsParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
+	Status  *V2ListInvocationsParamsStatus  `form:"status,omitempty" json:"status,omitempty"`
+
+	// FunctionName Renamed from v1's `fn`; `fn` is still accepted.
+	FunctionName *string `form:"function_name,omitempty" json:"function_name,omitempty"`
+	From         *int    `form:"from,omitempty" json:"from,omitempty"`
+	To           *int    `form:"to,omitempty" json:"to,omitempty"`
+}
+
+// V2ListInvocationsParamsNetwork defines parameters for V2ListInvocations.
+type V2ListInvocationsParamsNetwork string
+
+// V2ListInvocationsParamsStatus defines parameters for V2ListInvocations.
+type V2ListInvocationsParamsStatus string
+
+// V2ContractSnapshotParams defines parameters for V2ContractSnapshot.
+type V2ContractSnapshotParams struct {
+	Ledger int `form:"ledger" json:"ledger"`
+}
+
+// V2ContractStatsParams defines parameters for V2ContractStats.
+type V2ContractStatsParams struct {
+	Window *V2ContractStatsParamsWindow `form:"window,omitempty" json:"window,omitempty"`
+}
+
+// V2ContractStatsParamsWindow defines parameters for V2ContractStats.
+type V2ContractStatsParamsWindow string
+
+// V2ListStorageEntriesParams defines parameters for V2ListStorageEntries.
+type V2ListStorageEntriesParams struct {
+	// Cursor Opaque cursor taken from `pagination.next_cursor`.
+	Cursor *V2Cursor `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Network Network filter; omitted or `all` means every network.
+	Network    *V2ListStorageEntriesParamsNetwork    `form:"network,omitempty" json:"network,omitempty"`
+	Durability *V2ListStorageEntriesParamsDurability `form:"durability,omitempty" json:"durability,omitempty"`
+	Status     *V2ListStorageEntriesParamsStatus     `form:"status,omitempty" json:"status,omitempty"`
+}
+
+// V2ListStorageEntriesParamsNetwork defines parameters for V2ListStorageEntries.
+type V2ListStorageEntriesParamsNetwork string
+
+// V2ListStorageEntriesParamsDurability defines parameters for V2ListStorageEntries.
+type V2ListStorageEntriesParamsDurability string
+
+// V2ListStorageEntriesParamsStatus defines parameters for V2ListStorageEntries.
+type V2ListStorageEntriesParamsStatus string
+
+// V2ListContractUpgradesParams defines parameters for V2ListContractUpgrades.
+type V2ListContractUpgradesParams struct {
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// V2RecentEventsParams defines parameters for V2RecentEvents.
+type V2RecentEventsParams struct {
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// V2LiveActivityParams defines parameters for V2LiveActivity.
+type V2LiveActivityParams struct {
+	// Minutes Window size in one-minute buckets.
+	Minutes *V2Minutes `form:"minutes,omitempty" json:"minutes,omitempty"`
+}
+
+// V2ListWatchdogAlertsParams defines parameters for V2ListWatchdogAlerts.
+type V2ListWatchdogAlertsParams struct {
+	// Network Network filter; omitted or `all` means every network.
+	Network  *V2ListWatchdogAlertsParamsNetwork  `form:"network,omitempty" json:"network,omitempty"`
+	Severity *V2ListWatchdogAlertsParamsSeverity `form:"severity,omitempty" json:"severity,omitempty"`
+
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// V2ListWatchdogAlertsParamsNetwork defines parameters for V2ListWatchdogAlerts.
+type V2ListWatchdogAlertsParamsNetwork string
+
+// V2ListWatchdogAlertsParamsSeverity defines parameters for V2ListWatchdogAlerts.
+type V2ListWatchdogAlertsParamsSeverity string
+
+// V2ListMonitoredContractsParams defines parameters for V2ListMonitoredContracts.
+type V2ListMonitoredContractsParams struct {
+	// Cursor Opaque cursor taken from `pagination.next_cursor`.
+	Cursor *V2Cursor `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Network Network filter; omitted or `all` means every network.
+	Network *V2ListMonitoredContractsParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
+}
+
+// V2ListMonitoredContractsParamsNetwork defines parameters for V2ListMonitoredContracts.
+type V2ListMonitoredContractsParamsNetwork string
+
+// V2ListContractAlertsParams defines parameters for V2ListContractAlerts.
+type V2ListContractAlertsParams struct {
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// V2ListHealthChecksParams defines parameters for V2ListHealthChecks.
+type V2ListHealthChecksParams struct {
+	// Limit Page size (default 50, clamped to 200).
+	Limit *V2Limit `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// V2WatchdogStatsParams defines parameters for V2WatchdogStats.
+type V2WatchdogStatsParams struct {
+	// Network Network filter; omitted or `all` means every network.
+	Network *V2WatchdogStatsParamsNetwork `form:"network,omitempty" json:"network,omitempty"`
+}
+
+// V2WatchdogStatsParamsNetwork defines parameters for V2WatchdogStats.
+type V2WatchdogStatsParamsNetwork string
+
+// V2AddToWatchlistJSONBody defines parameters for V2AddToWatchlist.
+type V2AddToWatchlistJSONBody struct {
+	ContractId string `json:"contract_id"`
+}
+
+// SlackCommandFormdataBody defines parameters for SlackCommand.
+type SlackCommandFormdataBody struct {
+	Command *string `form:"command,omitempty" json:"command,omitempty"`
+
+	// Text Contract ID to look up; empty or `help` returns usage.
+	Text *string `form:"text,omitempty" json:"text,omitempty"`
+}
+
+// SlackCommandParams defines parameters for SlackCommand.
+type SlackCommandParams struct {
+	XSlackSignature        string `json:"X-Slack-Signature"`
+	XSlackRequestTimestamp string `json:"X-Slack-Request-Timestamp"`
+}
+
 // CreateApiKeyAdminJSONRequestBody defines body for CreateApiKeyAdmin for application/json ContentType.
 type CreateApiKeyAdminJSONRequestBody CreateApiKeyAdminJSONBody
 
@@ -708,8 +2141,227 @@ type CreateApiKeyJSONRequestBody CreateApiKeyJSONBody
 // RegisterContractJSONRequestBody defines body for RegisterContract for application/json ContentType.
 type RegisterContractJSONRequestBody RegisterContractJSONBody
 
+// BatchContractsJSONRequestBody defines body for BatchContracts for application/json ContentType.
+type BatchContractsJSONRequestBody = BatchContractsRequest
+
+// ValidateContractJSONRequestBody defines body for ValidateContract for application/json ContentType.
+type ValidateContractJSONRequestBody ValidateContractJSONBody
+
+// AddContractTagJSONRequestBody defines body for AddContractTag for application/json ContentType.
+type AddContractTagJSONRequestBody = ContractTagRequest
+
+// PostApiV1LabelsJSONRequestBody defines body for PostApiV1Labels for application/json ContentType.
+type PostApiV1LabelsJSONRequestBody PostApiV1LabelsJSONBody
+
+// CreateAlertSubscriptionJSONRequestBody defines body for CreateAlertSubscription for application/json ContentType.
+type CreateAlertSubscriptionJSONRequestBody = CreateAlertSubscription
+
 // AddToWatchlistJSONRequestBody defines body for AddToWatchlist for application/json ContentType.
 type AddToWatchlistJSONRequestBody AddToWatchlistJSONBody
+
+// V2AdminCreateKeyJSONRequestBody defines body for V2AdminCreateKey for application/json ContentType.
+type V2AdminCreateKeyJSONRequestBody = V2AdminCreateKeyJSONBody
+
+// V2CreateAPIKeyJSONRequestBody defines body for V2CreateAPIKey for application/json ContentType.
+type V2CreateAPIKeyJSONRequestBody V2CreateAPIKeyJSONBody
+
+// V2RegisterContractJSONRequestBody defines body for V2RegisterContract for application/json ContentType.
+type V2RegisterContractJSONRequestBody V2RegisterContractJSONBody
+
+// V2ValidateContractJSONRequestBody defines body for V2ValidateContract for application/json ContentType.
+type V2ValidateContractJSONRequestBody V2ValidateContractJSONBody
+
+// V2AddToWatchlistJSONRequestBody defines body for V2AddToWatchlist for application/json ContentType.
+type V2AddToWatchlistJSONRequestBody V2AddToWatchlistJSONBody
+
+// SlackCommandFormdataRequestBody defines body for SlackCommand for application/x-www-form-urlencoded ContentType.
+type SlackCommandFormdataRequestBody SlackCommandFormdataBody
+
+// Getter for additional properties for ContractSpecType. Returns the specified
+// element and whether it was found
+func (a ContractSpecType) Get(fieldName string) (value interface{}, found bool) {
+	if a.AdditionalProperties != nil {
+		value, found = a.AdditionalProperties[fieldName]
+	}
+	return
+}
+
+// Setter for additional properties for ContractSpecType
+func (a *ContractSpecType) Set(fieldName string, value interface{}) {
+	if a.AdditionalProperties == nil {
+		a.AdditionalProperties = make(map[string]interface{})
+	}
+	a.AdditionalProperties[fieldName] = value
+}
+
+// Override default JSON handling for ContractSpecType to handle AdditionalProperties
+func (a *ContractSpecType) UnmarshalJSON(b []byte) error {
+	object := make(map[string]json.RawMessage)
+	err := json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["elem"]; found {
+		err = json.Unmarshal(raw, &a.Elem)
+		if err != nil {
+			return fmt.Errorf("error reading 'elem': %w", err)
+		}
+		delete(object, "elem")
+	}
+
+	if raw, found := object["err"]; found {
+		err = json.Unmarshal(raw, &a.Err)
+		if err != nil {
+			return fmt.Errorf("error reading 'err': %w", err)
+		}
+		delete(object, "err")
+	}
+
+	if raw, found := object["key"]; found {
+		err = json.Unmarshal(raw, &a.Key)
+		if err != nil {
+			return fmt.Errorf("error reading 'key': %w", err)
+		}
+		delete(object, "key")
+	}
+
+	if raw, found := object["kind"]; found {
+		err = json.Unmarshal(raw, &a.Kind)
+		if err != nil {
+			return fmt.Errorf("error reading 'kind': %w", err)
+		}
+		delete(object, "kind")
+	}
+
+	if raw, found := object["n"]; found {
+		err = json.Unmarshal(raw, &a.N)
+		if err != nil {
+			return fmt.Errorf("error reading 'n': %w", err)
+		}
+		delete(object, "n")
+	}
+
+	if raw, found := object["name"]; found {
+		err = json.Unmarshal(raw, &a.Name)
+		if err != nil {
+			return fmt.Errorf("error reading 'name': %w", err)
+		}
+		delete(object, "name")
+	}
+
+	if raw, found := object["ok"]; found {
+		err = json.Unmarshal(raw, &a.Ok)
+		if err != nil {
+			return fmt.Errorf("error reading 'ok': %w", err)
+		}
+		delete(object, "ok")
+	}
+
+	if raw, found := object["tuple"]; found {
+		err = json.Unmarshal(raw, &a.Tuple)
+		if err != nil {
+			return fmt.Errorf("error reading 'tuple': %w", err)
+		}
+		delete(object, "tuple")
+	}
+
+	if raw, found := object["value"]; found {
+		err = json.Unmarshal(raw, &a.Value)
+		if err != nil {
+			return fmt.Errorf("error reading 'value': %w", err)
+		}
+		delete(object, "value")
+	}
+
+	if len(object) != 0 {
+		a.AdditionalProperties = make(map[string]interface{})
+		for fieldName, fieldBuf := range object {
+			var fieldVal interface{}
+			err := json.Unmarshal(fieldBuf, &fieldVal)
+			if err != nil {
+				return fmt.Errorf("error unmarshaling field %s: %w", fieldName, err)
+			}
+			a.AdditionalProperties[fieldName] = fieldVal
+		}
+	}
+	return nil
+}
+
+// Override default JSON handling for ContractSpecType to handle AdditionalProperties
+func (a ContractSpecType) MarshalJSON() ([]byte, error) {
+	var err error
+	object := make(map[string]json.RawMessage)
+
+	if a.Elem != nil {
+		object["elem"], err = json.Marshal(a.Elem)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'elem': %w", err)
+		}
+	}
+
+	if a.Err != nil {
+		object["err"], err = json.Marshal(a.Err)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'err': %w", err)
+		}
+	}
+
+	if a.Key != nil {
+		object["key"], err = json.Marshal(a.Key)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'key': %w", err)
+		}
+	}
+
+	object["kind"], err = json.Marshal(a.Kind)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'kind': %w", err)
+	}
+
+	if a.N != nil {
+		object["n"], err = json.Marshal(a.N)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'n': %w", err)
+		}
+	}
+
+	if a.Name != nil {
+		object["name"], err = json.Marshal(a.Name)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'name': %w", err)
+		}
+	}
+
+	if a.Ok != nil {
+		object["ok"], err = json.Marshal(a.Ok)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'ok': %w", err)
+		}
+	}
+
+	if a.Tuple != nil {
+		object["tuple"], err = json.Marshal(a.Tuple)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'tuple': %w", err)
+		}
+	}
+
+	if a.Value != nil {
+		object["value"], err = json.Marshal(a.Value)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'value': %w", err)
+		}
+	}
+
+	for fieldName, field := range a.AdditionalProperties {
+		object[fieldName], err = json.Marshal(field)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling '%s': %w", fieldName, err)
+		}
+	}
+	return json.Marshal(object)
+}
 
 // AsErrorError0 returns the union data inside the Error_Error as a ErrorError0
 func (t Error_Error) AsErrorError0() (ErrorError0, error) {
@@ -857,6 +2509,9 @@ type ClientInterface interface {
 	// RevokeApiKeyAdmin request
 	RevokeApiKeyAdmin(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ListAlerts request
+	ListAlerts(ctx context.Context, params *ListAlertsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// ListApiKeys request
 	ListApiKeys(ctx context.Context, params *ListApiKeysParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -868,6 +2523,9 @@ type ClientInterface interface {
 	// RevokeApiKey request
 	RevokeApiKey(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// CompareContracts request
+	CompareContracts(ctx context.Context, params *CompareContractsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// ListContracts request
 	ListContracts(ctx context.Context, params *ListContractsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -876,20 +2534,45 @@ type ClientInterface interface {
 
 	RegisterContract(ctx context.Context, body RegisterContractJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// BatchContractsWithBody request with any body
+	BatchContractsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	BatchContracts(ctx context.Context, body BatchContractsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ValidateContractWithBody request with any body
+	ValidateContractWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	ValidateContract(ctx context.Context, body ValidateContractJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetContract request
 	GetContract(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// ListContractEvents request
 	ListContractEvents(ctx context.Context, id ContractID, params *ListContractEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ExportContractEventsCSV request
+	ExportContractEventsCSV(ctx context.Context, id ContractID, params *ExportContractEventsCSVParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetContractForecast request
 	GetContractForecast(ctx context.Context, id ContractID, params *GetContractForecastParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetContractGraph request
+	GetContractGraph(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetContractHealthScore request
+	GetContractHealthScore(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// ListContractInvocations request
 	ListContractInvocations(ctx context.Context, id ContractID, params *ListContractInvocationsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetContractSnapshot request
 	GetContractSnapshot(ctx context.Context, id ContractID, params *GetContractSnapshotParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ExportContractSnapshot request
+	ExportContractSnapshot(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetContractSpec request
+	GetContractSpec(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// GetContractStats request
 	GetContractStats(ctx context.Context, id ContractID, params *GetContractStatsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -900,8 +2583,72 @@ type ClientInterface interface {
 	// StreamContractEvents request
 	StreamContractEvents(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// GetContractSummary request
+	GetContractSummary(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AddContractTagWithBody request with any body
+	AddContractTagWithBody(ctx context.Context, id ContractID, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	AddContractTag(ctx context.Context, id ContractID, body AddContractTagJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// RemoveContractTag request
+	RemoveContractTag(ctx context.Context, id ContractID, tag TagPath, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListContractUpgrades request
+	ListContractUpgrades(ctx context.Context, id ContractID, params *ListContractUpgradesParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetContractWasm request
+	GetContractWasm(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListFailedEvents request
+	ListFailedEvents(ctx context.Context, params *ListFailedEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// RequeueFailedEvent request
+	RequeueFailedEvent(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListAllEvents request
+	ListAllEvents(ctx context.Context, params *ListAllEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// RecentEvents request
+	RecentEvents(ctx context.Context, params *RecentEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ApiHealth request
+	ApiHealth(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListAllInvocations request
+	ListAllInvocations(ctx context.Context, params *ListAllInvocationsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetApiV1Labels request
+	GetApiV1Labels(ctx context.Context, params *GetApiV1LabelsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PostApiV1LabelsWithBody request with any body
+	PostApiV1LabelsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	PostApiV1Labels(ctx context.Context, body PostApiV1LabelsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetContractReport request
+	GetContractReport(ctx context.Context, contractId string, params *GetContractReportParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetContractSLABadge request
+	GetContractSLABadge(ctx context.Context, contractId string, params *GetContractSLABadgeParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetContractReportHistory request
+	GetContractReportHistory(ctx context.Context, contractId string, params *GetContractReportHistoryParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetApiV1Resolve request
+	GetApiV1Resolve(ctx context.Context, params *GetApiV1ResolveParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetApiV1Search request
+	GetApiV1Search(ctx context.Context, params *GetApiV1SearchParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// LiveActivity request
+	LiveActivity(ctx context.Context, params *LiveActivityParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetGlobalStats request
 	GetGlobalStats(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StreamAllEvents request
+	StreamAllEvents(ctx context.Context, params *StreamAllEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// ListWatchdogAlerts request
 	ListWatchdogAlerts(ctx context.Context, params *ListWatchdogAlertsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -918,8 +2665,22 @@ type ClientInterface interface {
 	// ListContractHealthChecks request
 	ListContractHealthChecks(ctx context.Context, id ContractID, params *ListContractHealthChecksParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// GetContractUptime request
+	GetContractUptime(ctx context.Context, id ContractID, params *GetContractUptimeParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// GetWatchdogStats request
 	GetWatchdogStats(ctx context.Context, params *GetWatchdogStatsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListAlertSubscriptions request
+	ListAlertSubscriptions(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateAlertSubscriptionWithBody request with any body
+	CreateAlertSubscriptionWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CreateAlertSubscription(ctx context.Context, body CreateAlertSubscriptionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteAlertSubscription request
+	DeleteAlertSubscription(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// ListWatchlist request
 	ListWatchlist(ctx context.Context, params *ListWatchlistParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -935,8 +2696,128 @@ type ClientInterface interface {
 	// GetWatchlistStatus request
 	GetWatchlistStatus(ctx context.Context, contractId string, params *GetWatchlistStatusParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// V2AdminListKeys request
+	V2AdminListKeys(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2AdminCreateKeyWithBody request with any body
+	V2AdminCreateKeyWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	V2AdminCreateKey(ctx context.Context, body V2AdminCreateKeyJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2AdminRevokeKey request
+	V2AdminRevokeKey(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListAPIKeys request
+	V2ListAPIKeys(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2CreateAPIKeyWithBody request with any body
+	V2CreateAPIKeyWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	V2CreateAPIKey(ctx context.Context, body V2CreateAPIKeyJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2RevokeAPIKey request
+	V2RevokeAPIKey(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListContracts request
+	V2ListContracts(ctx context.Context, params *V2ListContractsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2RegisterContractWithBody request with any body
+	V2RegisterContractWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	V2RegisterContract(ctx context.Context, body V2RegisterContractJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ValidateContractWithBody request with any body
+	V2ValidateContractWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	V2ValidateContract(ctx context.Context, body V2ValidateContractJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2GetContract request
+	V2GetContract(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListEvents request
+	V2ListEvents(ctx context.Context, id ContractID, params *V2ListEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ContractForecast request
+	V2ContractForecast(ctx context.Context, id ContractID, params *V2ContractForecastParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ContractGraph request
+	V2ContractGraph(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2GetContractHealthScore request
+	V2GetContractHealthScore(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListInvocations request
+	V2ListInvocations(ctx context.Context, id ContractID, params *V2ListInvocationsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ContractSnapshot request
+	V2ContractSnapshot(ctx context.Context, id ContractID, params *V2ContractSnapshotParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ContractStats request
+	V2ContractStats(ctx context.Context, id ContractID, params *V2ContractStatsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListStorageEntries request
+	V2ListStorageEntries(ctx context.Context, id ContractID, params *V2ListStorageEntriesParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2StreamEvents request
+	V2StreamEvents(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListContractUpgrades request
+	V2ListContractUpgrades(ctx context.Context, id ContractID, params *V2ListContractUpgradesParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2RecentEvents request
+	V2RecentEvents(ctx context.Context, params *V2RecentEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2LiveActivity request
+	V2LiveActivity(ctx context.Context, params *V2LiveActivityParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2GlobalStats request
+	V2GlobalStats(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListWatchdogAlerts request
+	V2ListWatchdogAlerts(ctx context.Context, params *V2ListWatchdogAlertsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListMonitoredContracts request
+	V2ListMonitoredContracts(ctx context.Context, params *V2ListMonitoredContractsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2GetMonitoredContract request
+	V2GetMonitoredContract(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListContractAlerts request
+	V2ListContractAlerts(ctx context.Context, id ContractID, params *V2ListContractAlertsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListHealthChecks request
+	V2ListHealthChecks(ctx context.Context, id ContractID, params *V2ListHealthChecksParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2WatchdogStats request
+	V2WatchdogStats(ctx context.Context, params *V2WatchdogStatsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2ListWatchlist request
+	V2ListWatchlist(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2AddToWatchlistWithBody request with any body
+	V2AddToWatchlistWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	V2AddToWatchlist(ctx context.Context, body V2AddToWatchlistJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2RemoveFromWatchlist request
+	V2RemoveFromWatchlist(ctx context.Context, contractId WatchlistContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// V2WatchlistStatus request
+	V2WatchlistStatus(ctx context.Context, contractId WatchlistContractID, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetVersion request
+	GetVersion(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// Health request
 	Health(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// SlackCommandWithBody request with any body
+	SlackCommandWithBody(ctx context.Context, params *SlackCommandParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	SlackCommandWithFormdataBody(ctx context.Context, params *SlackCommandParams, body SlackCommandFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetMetrics request
+	GetMetrics(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// Readyz request
 	Readyz(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -980,6 +2861,18 @@ func (c *Client) CreateApiKeyAdmin(ctx context.Context, body CreateApiKeyAdminJS
 
 func (c *Client) RevokeApiKeyAdmin(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewRevokeApiKeyAdminRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ListAlerts(ctx context.Context, params *ListAlertsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListAlertsRequest(c.Server, params)
 	if err != nil {
 		return nil, err
 	}
@@ -1038,6 +2931,18 @@ func (c *Client) RevokeApiKey(ctx context.Context, id string, reqEditors ...Requ
 	return c.Client.Do(req)
 }
 
+func (c *Client) CompareContracts(ctx context.Context, params *CompareContractsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCompareContractsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) ListContracts(ctx context.Context, params *ListContractsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewListContractsRequest(c.Server, params)
 	if err != nil {
@@ -1074,6 +2979,54 @@ func (c *Client) RegisterContract(ctx context.Context, body RegisterContractJSON
 	return c.Client.Do(req)
 }
 
+func (c *Client) BatchContractsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewBatchContractsRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) BatchContracts(ctx context.Context, body BatchContractsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewBatchContractsRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ValidateContractWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewValidateContractRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ValidateContract(ctx context.Context, body ValidateContractJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewValidateContractRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) GetContract(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetContractRequest(c.Server, id)
 	if err != nil {
@@ -1098,8 +3051,44 @@ func (c *Client) ListContractEvents(ctx context.Context, id ContractID, params *
 	return c.Client.Do(req)
 }
 
+func (c *Client) ExportContractEventsCSV(ctx context.Context, id ContractID, params *ExportContractEventsCSVParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewExportContractEventsCSVRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) GetContractForecast(ctx context.Context, id ContractID, params *GetContractForecastParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetContractForecastRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetContractGraph(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetContractGraphRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetContractHealthScore(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetContractHealthScoreRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -1124,6 +3113,30 @@ func (c *Client) ListContractInvocations(ctx context.Context, id ContractID, par
 
 func (c *Client) GetContractSnapshot(ctx context.Context, id ContractID, params *GetContractSnapshotParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetContractSnapshotRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ExportContractSnapshot(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewExportContractSnapshotRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetContractSpec(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetContractSpecRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -1170,8 +3183,272 @@ func (c *Client) StreamContractEvents(ctx context.Context, id ContractID, reqEdi
 	return c.Client.Do(req)
 }
 
+func (c *Client) GetContractSummary(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetContractSummaryRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AddContractTagWithBody(ctx context.Context, id ContractID, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddContractTagRequestWithBody(c.Server, id, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AddContractTag(ctx context.Context, id ContractID, body AddContractTagJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAddContractTagRequest(c.Server, id, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) RemoveContractTag(ctx context.Context, id ContractID, tag TagPath, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRemoveContractTagRequest(c.Server, id, tag)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ListContractUpgrades(ctx context.Context, id ContractID, params *ListContractUpgradesParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListContractUpgradesRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetContractWasm(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetContractWasmRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ListFailedEvents(ctx context.Context, params *ListFailedEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListFailedEventsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) RequeueFailedEvent(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRequeueFailedEventRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ListAllEvents(ctx context.Context, params *ListAllEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListAllEventsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) RecentEvents(ctx context.Context, params *RecentEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRecentEventsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ApiHealth(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewApiHealthRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ListAllInvocations(ctx context.Context, params *ListAllInvocationsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListAllInvocationsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetApiV1Labels(ctx context.Context, params *GetApiV1LabelsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetApiV1LabelsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) PostApiV1LabelsWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostApiV1LabelsRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) PostApiV1Labels(ctx context.Context, body PostApiV1LabelsJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPostApiV1LabelsRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetContractReport(ctx context.Context, contractId string, params *GetContractReportParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetContractReportRequest(c.Server, contractId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetContractSLABadge(ctx context.Context, contractId string, params *GetContractSLABadgeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetContractSLABadgeRequest(c.Server, contractId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetContractReportHistory(ctx context.Context, contractId string, params *GetContractReportHistoryParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetContractReportHistoryRequest(c.Server, contractId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetApiV1Resolve(ctx context.Context, params *GetApiV1ResolveParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetApiV1ResolveRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetApiV1Search(ctx context.Context, params *GetApiV1SearchParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetApiV1SearchRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) LiveActivity(ctx context.Context, params *LiveActivityParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewLiveActivityRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) GetGlobalStats(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetGlobalStatsRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StreamAllEvents(ctx context.Context, params *StreamAllEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStreamAllEventsRequest(c.Server, params)
 	if err != nil {
 		return nil, err
 	}
@@ -1242,8 +3519,68 @@ func (c *Client) ListContractHealthChecks(ctx context.Context, id ContractID, pa
 	return c.Client.Do(req)
 }
 
+func (c *Client) GetContractUptime(ctx context.Context, id ContractID, params *GetContractUptimeParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetContractUptimeRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) GetWatchdogStats(ctx context.Context, params *GetWatchdogStatsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewGetWatchdogStatsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) ListAlertSubscriptions(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListAlertSubscriptionsRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CreateAlertSubscriptionWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateAlertSubscriptionRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CreateAlertSubscription(ctx context.Context, body CreateAlertSubscriptionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateAlertSubscriptionRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) DeleteAlertSubscription(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteAlertSubscriptionRequest(c.Server, id)
 	if err != nil {
 		return nil, err
 	}
@@ -1314,8 +3651,512 @@ func (c *Client) GetWatchlistStatus(ctx context.Context, contractId string, para
 	return c.Client.Do(req)
 }
 
+func (c *Client) V2AdminListKeys(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2AdminListKeysRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2AdminCreateKeyWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2AdminCreateKeyRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2AdminCreateKey(ctx context.Context, body V2AdminCreateKeyJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2AdminCreateKeyRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2AdminRevokeKey(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2AdminRevokeKeyRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListAPIKeys(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListAPIKeysRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2CreateAPIKeyWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2CreateAPIKeyRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2CreateAPIKey(ctx context.Context, body V2CreateAPIKeyJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2CreateAPIKeyRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2RevokeAPIKey(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2RevokeAPIKeyRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListContracts(ctx context.Context, params *V2ListContractsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListContractsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2RegisterContractWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2RegisterContractRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2RegisterContract(ctx context.Context, body V2RegisterContractJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2RegisterContractRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ValidateContractWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ValidateContractRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ValidateContract(ctx context.Context, body V2ValidateContractJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ValidateContractRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2GetContract(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2GetContractRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListEvents(ctx context.Context, id ContractID, params *V2ListEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListEventsRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ContractForecast(ctx context.Context, id ContractID, params *V2ContractForecastParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ContractForecastRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ContractGraph(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ContractGraphRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2GetContractHealthScore(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2GetContractHealthScoreRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListInvocations(ctx context.Context, id ContractID, params *V2ListInvocationsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListInvocationsRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ContractSnapshot(ctx context.Context, id ContractID, params *V2ContractSnapshotParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ContractSnapshotRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ContractStats(ctx context.Context, id ContractID, params *V2ContractStatsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ContractStatsRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListStorageEntries(ctx context.Context, id ContractID, params *V2ListStorageEntriesParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListStorageEntriesRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2StreamEvents(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2StreamEventsRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListContractUpgrades(ctx context.Context, id ContractID, params *V2ListContractUpgradesParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListContractUpgradesRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2RecentEvents(ctx context.Context, params *V2RecentEventsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2RecentEventsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2LiveActivity(ctx context.Context, params *V2LiveActivityParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2LiveActivityRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2GlobalStats(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2GlobalStatsRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListWatchdogAlerts(ctx context.Context, params *V2ListWatchdogAlertsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListWatchdogAlertsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListMonitoredContracts(ctx context.Context, params *V2ListMonitoredContractsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListMonitoredContractsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2GetMonitoredContract(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2GetMonitoredContractRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListContractAlerts(ctx context.Context, id ContractID, params *V2ListContractAlertsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListContractAlertsRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListHealthChecks(ctx context.Context, id ContractID, params *V2ListHealthChecksParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListHealthChecksRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2WatchdogStats(ctx context.Context, params *V2WatchdogStatsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2WatchdogStatsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2ListWatchlist(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2ListWatchlistRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2AddToWatchlistWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2AddToWatchlistRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2AddToWatchlist(ctx context.Context, body V2AddToWatchlistJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2AddToWatchlistRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2RemoveFromWatchlist(ctx context.Context, contractId WatchlistContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2RemoveFromWatchlistRequest(c.Server, contractId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) V2WatchlistStatus(ctx context.Context, contractId WatchlistContractID, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewV2WatchlistStatusRequest(c.Server, contractId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetVersion(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetVersionRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) Health(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewHealthRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SlackCommandWithBody(ctx context.Context, params *SlackCommandParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSlackCommandRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SlackCommandWithFormdataBody(ctx context.Context, params *SlackCommandParams, body SlackCommandFormdataRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSlackCommandRequestWithFormdataBody(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) GetMetrics(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetMetricsRequest(c.Server)
 	if err != nil {
 		return nil, err
 	}
@@ -1477,6 +4318,135 @@ func NewRevokeApiKeyAdminRequest(server string, id string) (*http.Request, error
 	return req, nil
 }
 
+// NewListAlertsRequest generates requests for ListAlerts
+func NewListAlertsRequest(server string, params *ListAlertsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/alerts")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Flat != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "flat", runtime.ParamLocationQuery, *params.Flat); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ContractId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "contract_id", runtime.ParamLocationQuery, *params.ContractId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Severity != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "severity", runtime.ParamLocationQuery, *params.Severity); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewListApiKeysRequest generates requests for ListApiKeys
 func NewListApiKeysRequest(server string, params *ListApiKeysParams) (*http.Request, error) {
 	var err error
@@ -1616,6 +4586,67 @@ func NewRevokeApiKeyRequest(server string, id string) (*http.Request, error) {
 	return req, nil
 }
 
+// NewCompareContractsRequest generates requests for CompareContracts
+func NewCompareContractsRequest(server string, params *CompareContractsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/compare")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "ids", runtime.ParamLocationQuery, params.Ids); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		if params.Window != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "window", runtime.ParamLocationQuery, *params.Window); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewListContractsRequest generates requests for ListContracts
 func NewListContractsRequest(server string, params *ListContractsParams) (*http.Request, error) {
 	var err error
@@ -1702,6 +4733,54 @@ func NewListContractsRequest(server string, params *ListContractsParams) (*http.
 
 		}
 
+		if params.Tag != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "tag", runtime.ParamLocationQuery, *params.Tag); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Sort != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "sort", runtime.ParamLocationQuery, *params.Sort); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Dir != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "dir", runtime.ParamLocationQuery, *params.Dir); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -1734,6 +4813,86 @@ func NewRegisterContractRequestWithBody(server string, contentType string, body 
 	}
 
 	operationPath := fmt.Sprintf("/api/v1/contracts")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewBatchContractsRequest calls the generic BatchContracts builder with application/json body
+func NewBatchContractsRequest(server string, body BatchContractsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewBatchContractsRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewBatchContractsRequestWithBody generates requests for BatchContracts with any type of body
+func NewBatchContractsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/batch")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewValidateContractRequest calls the generic ValidateContract builder with application/json body
+func NewValidateContractRequest(server string, body ValidateContractJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewValidateContractRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewValidateContractRequestWithBody generates requests for ValidateContract with any type of body
+func NewValidateContractRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/validate")
 	if operationPath[0] == '/' {
 		operationPath = "." + operationPath
 	}
@@ -1923,6 +5082,110 @@ func NewListContractEventsRequest(server string, id ContractID, params *ListCont
 	return req, nil
 }
 
+// NewExportContractEventsCSVRequest generates requests for ExportContractEventsCSV
+func NewExportContractEventsCSVRequest(server string, id ContractID, params *ExportContractEventsCSVParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/events.csv", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Type != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "type", runtime.ParamLocationQuery, *params.Type); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.From != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "from", runtime.ParamLocationQuery, *params.From); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.To != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "to", runtime.ParamLocationQuery, *params.To); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewGetContractForecastRequest generates requests for GetContractForecast
 func NewGetContractForecastRequest(server string, id ContractID, params *GetContractForecastParams) (*http.Request, error) {
 	var err error
@@ -1969,6 +5232,74 @@ func NewGetContractForecastRequest(server string, id ContractID, params *GetCont
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetContractGraphRequest generates requests for GetContractGraph
+func NewGetContractGraphRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/graph", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetContractHealthScoreRequest generates requests for GetContractHealthScore
+func NewGetContractHealthScoreRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/health-score", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
 	}
 
 	req, err := http.NewRequest("GET", queryURL.String(), nil)
@@ -2072,9 +5403,9 @@ func NewListContractInvocationsRequest(server string, id ContractID, params *Lis
 
 		}
 
-		if params.Fn != nil {
+		if params.FunctionName != nil {
 
-			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "fn", runtime.ParamLocationQuery, *params.Fn); err != nil {
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "function_name", runtime.ParamLocationQuery, *params.FunctionName); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -2173,6 +5504,74 @@ func NewGetContractSnapshotRequest(server string, id ContractID, params *GetCont
 		}
 
 		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewExportContractSnapshotRequest generates requests for ExportContractSnapshot
+func NewExportContractSnapshotRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/snapshot.json", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetContractSpecRequest generates requests for GetContractSpec
+func NewGetContractSpecRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/spec", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
 	}
 
 	req, err := http.NewRequest("GET", queryURL.String(), nil)
@@ -2393,6 +5792,1159 @@ func NewStreamContractEventsRequest(server string, id ContractID) (*http.Request
 	return req, nil
 }
 
+// NewGetContractSummaryRequest generates requests for GetContractSummary
+func NewGetContractSummaryRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/summary", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewAddContractTagRequest calls the generic AddContractTag builder with application/json body
+func NewAddContractTagRequest(server string, id ContractID, body AddContractTagJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewAddContractTagRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewAddContractTagRequestWithBody generates requests for AddContractTag with any type of body
+func NewAddContractTagRequestWithBody(server string, id ContractID, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/tags", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewRemoveContractTagRequest generates requests for RemoveContractTag
+func NewRemoveContractTagRequest(server string, id ContractID, tag TagPath) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithLocation("simple", false, "tag", runtime.ParamLocationPath, tag)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/tags/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewListContractUpgradesRequest generates requests for ListContractUpgrades
+func NewListContractUpgradesRequest(server string, id ContractID, params *ListContractUpgradesParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/upgrades", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetContractWasmRequest generates requests for GetContractWasm
+func NewGetContractWasmRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/contracts/%s/wasm", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewListFailedEventsRequest generates requests for ListFailedEvents
+func NewListFailedEventsRequest(server string, params *ListFailedEventsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/dlq")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewRequeueFailedEventRequest generates requests for RequeueFailedEvent
+func NewRequeueFailedEventRequest(server string, id int64) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/dlq/%s/requeue", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewListAllEventsRequest generates requests for ListAllEvents
+func NewListAllEventsRequest(server string, params *ListAllEventsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/events")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ContractId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "contract_id", runtime.ParamLocationQuery, *params.ContractId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Type != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "type", runtime.ParamLocationQuery, *params.Type); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Since != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "since", runtime.ParamLocationQuery, *params.Since); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Until != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "until", runtime.ParamLocationQuery, *params.Until); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewRecentEventsRequest generates requests for RecentEvents
+func NewRecentEventsRequest(server string, params *RecentEventsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/events/recent")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewApiHealthRequest generates requests for ApiHealth
+func NewApiHealthRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/health")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewListAllInvocationsRequest generates requests for ListAllInvocations
+func NewListAllInvocationsRequest(server string, params *ListAllInvocationsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/invocations")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ContractId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "contract_id", runtime.ParamLocationQuery, *params.ContractId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Fn != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "fn", runtime.ParamLocationQuery, *params.Fn); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Status != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "status", runtime.ParamLocationQuery, *params.Status); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.From != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "from", runtime.ParamLocationQuery, *params.From); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.To != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "to", runtime.ParamLocationQuery, *params.To); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Since != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "since", runtime.ParamLocationQuery, *params.Since); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Until != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "until", runtime.ParamLocationQuery, *params.Until); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetApiV1LabelsRequest generates requests for GetApiV1Labels
+func NewGetApiV1LabelsRequest(server string, params *GetApiV1LabelsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/labels")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Query != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "query", runtime.ParamLocationQuery, *params.Query); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewPostApiV1LabelsRequest calls the generic PostApiV1Labels builder with application/json body
+func NewPostApiV1LabelsRequest(server string, body PostApiV1LabelsJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewPostApiV1LabelsRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewPostApiV1LabelsRequestWithBody generates requests for PostApiV1Labels with any type of body
+func NewPostApiV1LabelsRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/labels")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGetContractReportRequest generates requests for GetContractReport
+func NewGetContractReportRequest(server string, contractId string, params *GetContractReportParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "contract_id", runtime.ParamLocationPath, contractId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/reports/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Month != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "month", runtime.ParamLocationQuery, *params.Month); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Format != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "format", runtime.ParamLocationQuery, *params.Format); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetContractSLABadgeRequest generates requests for GetContractSLABadge
+func NewGetContractSLABadgeRequest(server string, contractId string, params *GetContractSLABadgeParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "contract_id", runtime.ParamLocationPath, contractId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/reports/%s/badge.svg", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Month != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "month", runtime.ParamLocationQuery, *params.Month); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetContractReportHistoryRequest generates requests for GetContractReportHistory
+func NewGetContractReportHistoryRequest(server string, contractId string, params *GetContractReportHistoryParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "contract_id", runtime.ParamLocationPath, contractId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/reports/%s/history", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Months != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "months", runtime.ParamLocationQuery, *params.Months); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetApiV1ResolveRequest generates requests for GetApiV1Resolve
+func NewGetApiV1ResolveRequest(server string, params *GetApiV1ResolveParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/resolve")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "query", runtime.ParamLocationQuery, params.Query); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetApiV1SearchRequest generates requests for GetApiV1Search
+func NewGetApiV1SearchRequest(server string, params *GetApiV1SearchParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/search")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "q", runtime.ParamLocationQuery, params.Q); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewLiveActivityRequest generates requests for LiveActivity
+func NewLiveActivityRequest(server string, params *LiveActivityParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/stats/activity")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Minutes != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "minutes", runtime.ParamLocationQuery, *params.Minutes); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewGetGlobalStatsRequest generates requests for GetGlobalStats
 func NewGetGlobalStatsRequest(server string) (*http.Request, error) {
 	var err error
@@ -2410,6 +6962,55 @@ func NewGetGlobalStatsRequest(server string) (*http.Request, error) {
 	queryURL, err := serverURL.Parse(operationPath)
 	if err != nil {
 		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewStreamAllEventsRequest generates requests for StreamAllEvents
+func NewStreamAllEventsRequest(server string, params *StreamAllEventsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/stream/events")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.ContractId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "contract_id", runtime.ParamLocationQuery, *params.ContractId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
 	}
 
 	req, err := http.NewRequest("GET", queryURL.String(), nil)
@@ -2477,6 +7078,22 @@ func NewListWatchdogAlertsRequest(server string, params *ListWatchdogAlertsParam
 		if params.Limit != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -2693,6 +7310,22 @@ func NewListContractAlertsRequest(server string, id ContractID, params *ListCont
 
 		}
 
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -2760,6 +7393,62 @@ func NewListContractHealthChecksRequest(server string, id ContractID, params *Li
 	return req, nil
 }
 
+// NewGetContractUptimeRequest generates requests for GetContractUptime
+func NewGetContractUptimeRequest(server string, id ContractID, params *GetContractUptimeParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/watchdog/contracts/%s/uptime", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Window != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "window", runtime.ParamLocationQuery, *params.Window); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewGetWatchdogStatsRequest generates requests for GetWatchdogStats
 func NewGetWatchdogStatsRequest(server string, params *GetWatchdogStatsParams) (*http.Request, error) {
 	var err error
@@ -2802,6 +7491,107 @@ func NewGetWatchdogStatsRequest(server string, params *GetWatchdogStatsParams) (
 	}
 
 	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewListAlertSubscriptionsRequest generates requests for ListAlertSubscriptions
+func NewListAlertSubscriptionsRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/watchdog/subscriptions")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCreateAlertSubscriptionRequest calls the generic CreateAlertSubscription builder with application/json body
+func NewCreateAlertSubscriptionRequest(server string, body CreateAlertSubscriptionJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCreateAlertSubscriptionRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCreateAlertSubscriptionRequestWithBody generates requests for CreateAlertSubscription with any type of body
+func NewCreateAlertSubscriptionRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/watchdog/subscriptions")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewDeleteAlertSubscriptionRequest generates requests for DeleteAlertSubscription
+func NewDeleteAlertSubscriptionRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v1/watchdog/subscriptions/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -2996,6 +7786,1793 @@ func NewGetWatchlistStatusRequest(server string, contractId string, params *GetW
 	return req, nil
 }
 
+// NewV2AdminListKeysRequest generates requests for V2AdminListKeys
+func NewV2AdminListKeysRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/admin/keys")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2AdminCreateKeyRequest calls the generic V2AdminCreateKey builder with application/json body
+func NewV2AdminCreateKeyRequest(server string, body V2AdminCreateKeyJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewV2AdminCreateKeyRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewV2AdminCreateKeyRequestWithBody generates requests for V2AdminCreateKey with any type of body
+func NewV2AdminCreateKeyRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/admin/keys")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewV2AdminRevokeKeyRequest generates requests for V2AdminRevokeKey
+func NewV2AdminRevokeKeyRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/admin/keys/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListAPIKeysRequest generates requests for V2ListAPIKeys
+func NewV2ListAPIKeysRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/api-keys")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2CreateAPIKeyRequest calls the generic V2CreateAPIKey builder with application/json body
+func NewV2CreateAPIKeyRequest(server string, body V2CreateAPIKeyJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewV2CreateAPIKeyRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewV2CreateAPIKeyRequestWithBody generates requests for V2CreateAPIKey with any type of body
+func NewV2CreateAPIKeyRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/api-keys")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewV2RevokeAPIKeyRequest generates requests for V2RevokeAPIKey
+func NewV2RevokeAPIKeyRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/api-keys/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListContractsRequest generates requests for V2ListContracts
+func NewV2ListContractsRequest(server string, params *V2ListContractsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Status != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "status", runtime.ParamLocationQuery, *params.Status); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2RegisterContractRequest calls the generic V2RegisterContract builder with application/json body
+func NewV2RegisterContractRequest(server string, body V2RegisterContractJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewV2RegisterContractRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewV2RegisterContractRequestWithBody generates requests for V2RegisterContract with any type of body
+func NewV2RegisterContractRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewV2ValidateContractRequest calls the generic V2ValidateContract builder with application/json body
+func NewV2ValidateContractRequest(server string, body V2ValidateContractJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewV2ValidateContractRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewV2ValidateContractRequestWithBody generates requests for V2ValidateContract with any type of body
+func NewV2ValidateContractRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/validate")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewV2GetContractRequest generates requests for V2GetContract
+func NewV2GetContractRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListEventsRequest generates requests for V2ListEvents
+func NewV2ListEventsRequest(server string, id ContractID, params *V2ListEventsParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/events", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Type != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "type", runtime.ParamLocationQuery, *params.Type); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.From != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "from", runtime.ParamLocationQuery, *params.From); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.To != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "to", runtime.ParamLocationQuery, *params.To); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ContractForecastRequest generates requests for V2ContractForecast
+func NewV2ContractForecastRequest(server string, id ContractID, params *V2ContractForecastParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/forecast", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Horizon != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "horizon", runtime.ParamLocationQuery, *params.Horizon); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ContractGraphRequest generates requests for V2ContractGraph
+func NewV2ContractGraphRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/graph", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2GetContractHealthScoreRequest generates requests for V2GetContractHealthScore
+func NewV2GetContractHealthScoreRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/health-score", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListInvocationsRequest generates requests for V2ListInvocations
+func NewV2ListInvocationsRequest(server string, id ContractID, params *V2ListInvocationsParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/invocations", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Status != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "status", runtime.ParamLocationQuery, *params.Status); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.FunctionName != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "function_name", runtime.ParamLocationQuery, *params.FunctionName); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.From != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "from", runtime.ParamLocationQuery, *params.From); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.To != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "to", runtime.ParamLocationQuery, *params.To); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ContractSnapshotRequest generates requests for V2ContractSnapshot
+func NewV2ContractSnapshotRequest(server string, id ContractID, params *V2ContractSnapshotParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/snapshot", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", true, "ledger", runtime.ParamLocationQuery, params.Ledger); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ContractStatsRequest generates requests for V2ContractStats
+func NewV2ContractStatsRequest(server string, id ContractID, params *V2ContractStatsParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/stats", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Window != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "window", runtime.ParamLocationQuery, *params.Window); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListStorageEntriesRequest generates requests for V2ListStorageEntries
+func NewV2ListStorageEntriesRequest(server string, id ContractID, params *V2ListStorageEntriesParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/storage", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Durability != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "durability", runtime.ParamLocationQuery, *params.Durability); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Status != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "status", runtime.ParamLocationQuery, *params.Status); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2StreamEventsRequest generates requests for V2StreamEvents
+func NewV2StreamEventsRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/stream", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListContractUpgradesRequest generates requests for V2ListContractUpgrades
+func NewV2ListContractUpgradesRequest(server string, id ContractID, params *V2ListContractUpgradesParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/contracts/%s/upgrades", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2RecentEventsRequest generates requests for V2RecentEvents
+func NewV2RecentEventsRequest(server string, params *V2RecentEventsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/events/recent")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2LiveActivityRequest generates requests for V2LiveActivity
+func NewV2LiveActivityRequest(server string, params *V2LiveActivityParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/stats/activity")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Minutes != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "minutes", runtime.ParamLocationQuery, *params.Minutes); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2GlobalStatsRequest generates requests for V2GlobalStats
+func NewV2GlobalStatsRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/stats/global")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListWatchdogAlertsRequest generates requests for V2ListWatchdogAlerts
+func NewV2ListWatchdogAlertsRequest(server string, params *V2ListWatchdogAlertsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchdog/alerts")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Severity != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "severity", runtime.ParamLocationQuery, *params.Severity); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListMonitoredContractsRequest generates requests for V2ListMonitoredContracts
+func NewV2ListMonitoredContractsRequest(server string, params *V2ListMonitoredContractsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchdog/contracts")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2GetMonitoredContractRequest generates requests for V2GetMonitoredContract
+func NewV2GetMonitoredContractRequest(server string, id ContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchdog/contracts/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListContractAlertsRequest generates requests for V2ListContractAlerts
+func NewV2ListContractAlertsRequest(server string, id ContractID, params *V2ListContractAlertsParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchdog/contracts/%s/alerts", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListHealthChecksRequest generates requests for V2ListHealthChecks
+func NewV2ListHealthChecksRequest(server string, id ContractID, params *V2ListHealthChecksParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "id", runtime.ParamLocationPath, id)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchdog/contracts/%s/health", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2WatchdogStatsRequest generates requests for V2WatchdogStats
+func NewV2WatchdogStatsRequest(server string, params *V2WatchdogStatsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchdog/stats")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Network != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", true, "network", runtime.ParamLocationQuery, *params.Network); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2ListWatchlistRequest generates requests for V2ListWatchlist
+func NewV2ListWatchlistRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchlist")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2AddToWatchlistRequest calls the generic V2AddToWatchlist builder with application/json body
+func NewV2AddToWatchlistRequest(server string, body V2AddToWatchlistJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewV2AddToWatchlistRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewV2AddToWatchlistRequestWithBody generates requests for V2AddToWatchlist with any type of body
+func NewV2AddToWatchlistRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchlist")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewV2RemoveFromWatchlistRequest generates requests for V2RemoveFromWatchlist
+func NewV2RemoveFromWatchlistRequest(server string, contractId WatchlistContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "contractId", runtime.ParamLocationPath, contractId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchlist/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("DELETE", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewV2WatchlistStatusRequest generates requests for V2WatchlistStatus
+func NewV2WatchlistStatusRequest(server string, contractId WatchlistContractID) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithLocation("simple", false, "contractId", runtime.ParamLocationPath, contractId)
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/v2/watchlist/%s/status", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetVersionRequest generates requests for GetVersion
+func NewGetVersionRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/api/version")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewHealthRequest generates requests for Health
 func NewHealthRequest(server string) (*http.Request, error) {
 	var err error
@@ -3006,6 +9583,95 @@ func NewHealthRequest(server string) (*http.Request, error) {
 	}
 
 	operationPath := fmt.Sprintf("/health")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewSlackCommandRequestWithFormdataBody calls the generic SlackCommand builder with application/x-www-form-urlencoded body
+func NewSlackCommandRequestWithFormdataBody(server string, params *SlackCommandParams, body SlackCommandFormdataRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	bodyStr, err := runtime.MarshalForm(body, nil)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = strings.NewReader(bodyStr.Encode())
+	return NewSlackCommandRequestWithBody(server, params, "application/x-www-form-urlencoded", bodyReader)
+}
+
+// NewSlackCommandRequestWithBody generates requests for SlackCommand with any type of body
+func NewSlackCommandRequestWithBody(server string, params *SlackCommandParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/integrations/slack/commands")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		var headerParam0 string
+
+		headerParam0, err = runtime.StyleParamWithLocation("simple", false, "X-Slack-Signature", runtime.ParamLocationHeader, params.XSlackSignature)
+		if err != nil {
+			return nil, err
+		}
+
+		req.Header.Set("X-Slack-Signature", headerParam0)
+
+		var headerParam1 string
+
+		headerParam1, err = runtime.StyleParamWithLocation("simple", false, "X-Slack-Request-Timestamp", runtime.ParamLocationHeader, params.XSlackRequestTimestamp)
+		if err != nil {
+			return nil, err
+		}
+
+		req.Header.Set("X-Slack-Request-Timestamp", headerParam1)
+
+	}
+
+	return req, nil
+}
+
+// NewGetMetricsRequest generates requests for GetMetrics
+func NewGetMetricsRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/metrics")
 	if operationPath[0] == '/' {
 		operationPath = "." + operationPath
 	}
@@ -3104,6 +9770,9 @@ type ClientWithResponsesInterface interface {
 	// RevokeApiKeyAdminWithResponse request
 	RevokeApiKeyAdminWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*RevokeApiKeyAdminResponse, error)
 
+	// ListAlertsWithResponse request
+	ListAlertsWithResponse(ctx context.Context, params *ListAlertsParams, reqEditors ...RequestEditorFn) (*ListAlertsResponse, error)
+
 	// ListApiKeysWithResponse request
 	ListApiKeysWithResponse(ctx context.Context, params *ListApiKeysParams, reqEditors ...RequestEditorFn) (*ListApiKeysResponse, error)
 
@@ -3115,6 +9784,9 @@ type ClientWithResponsesInterface interface {
 	// RevokeApiKeyWithResponse request
 	RevokeApiKeyWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*RevokeApiKeyResponse, error)
 
+	// CompareContractsWithResponse request
+	CompareContractsWithResponse(ctx context.Context, params *CompareContractsParams, reqEditors ...RequestEditorFn) (*CompareContractsResponse, error)
+
 	// ListContractsWithResponse request
 	ListContractsWithResponse(ctx context.Context, params *ListContractsParams, reqEditors ...RequestEditorFn) (*ListContractsResponse, error)
 
@@ -3123,20 +9795,45 @@ type ClientWithResponsesInterface interface {
 
 	RegisterContractWithResponse(ctx context.Context, body RegisterContractJSONRequestBody, reqEditors ...RequestEditorFn) (*RegisterContractResponse, error)
 
+	// BatchContractsWithBodyWithResponse request with any body
+	BatchContractsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*BatchContractsResponse, error)
+
+	BatchContractsWithResponse(ctx context.Context, body BatchContractsJSONRequestBody, reqEditors ...RequestEditorFn) (*BatchContractsResponse, error)
+
+	// ValidateContractWithBodyWithResponse request with any body
+	ValidateContractWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ValidateContractResponse, error)
+
+	ValidateContractWithResponse(ctx context.Context, body ValidateContractJSONRequestBody, reqEditors ...RequestEditorFn) (*ValidateContractResponse, error)
+
 	// GetContractWithResponse request
 	GetContractWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractResponse, error)
 
 	// ListContractEventsWithResponse request
 	ListContractEventsWithResponse(ctx context.Context, id ContractID, params *ListContractEventsParams, reqEditors ...RequestEditorFn) (*ListContractEventsResponse, error)
 
+	// ExportContractEventsCSVWithResponse request
+	ExportContractEventsCSVWithResponse(ctx context.Context, id ContractID, params *ExportContractEventsCSVParams, reqEditors ...RequestEditorFn) (*ExportContractEventsCSVResponse, error)
+
 	// GetContractForecastWithResponse request
 	GetContractForecastWithResponse(ctx context.Context, id ContractID, params *GetContractForecastParams, reqEditors ...RequestEditorFn) (*GetContractForecastResponse, error)
+
+	// GetContractGraphWithResponse request
+	GetContractGraphWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractGraphResponse, error)
+
+	// GetContractHealthScoreWithResponse request
+	GetContractHealthScoreWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractHealthScoreResponse, error)
 
 	// ListContractInvocationsWithResponse request
 	ListContractInvocationsWithResponse(ctx context.Context, id ContractID, params *ListContractInvocationsParams, reqEditors ...RequestEditorFn) (*ListContractInvocationsResponse, error)
 
 	// GetContractSnapshotWithResponse request
 	GetContractSnapshotWithResponse(ctx context.Context, id ContractID, params *GetContractSnapshotParams, reqEditors ...RequestEditorFn) (*GetContractSnapshotResponse, error)
+
+	// ExportContractSnapshotWithResponse request
+	ExportContractSnapshotWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*ExportContractSnapshotResponse, error)
+
+	// GetContractSpecWithResponse request
+	GetContractSpecWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractSpecResponse, error)
 
 	// GetContractStatsWithResponse request
 	GetContractStatsWithResponse(ctx context.Context, id ContractID, params *GetContractStatsParams, reqEditors ...RequestEditorFn) (*GetContractStatsResponse, error)
@@ -3147,8 +9844,72 @@ type ClientWithResponsesInterface interface {
 	// StreamContractEventsWithResponse request
 	StreamContractEventsWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*StreamContractEventsResponse, error)
 
+	// GetContractSummaryWithResponse request
+	GetContractSummaryWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractSummaryResponse, error)
+
+	// AddContractTagWithBodyWithResponse request with any body
+	AddContractTagWithBodyWithResponse(ctx context.Context, id ContractID, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddContractTagResponse, error)
+
+	AddContractTagWithResponse(ctx context.Context, id ContractID, body AddContractTagJSONRequestBody, reqEditors ...RequestEditorFn) (*AddContractTagResponse, error)
+
+	// RemoveContractTagWithResponse request
+	RemoveContractTagWithResponse(ctx context.Context, id ContractID, tag TagPath, reqEditors ...RequestEditorFn) (*RemoveContractTagResponse, error)
+
+	// ListContractUpgradesWithResponse request
+	ListContractUpgradesWithResponse(ctx context.Context, id ContractID, params *ListContractUpgradesParams, reqEditors ...RequestEditorFn) (*ListContractUpgradesResponse, error)
+
+	// GetContractWasmWithResponse request
+	GetContractWasmWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractWasmResponse, error)
+
+	// ListFailedEventsWithResponse request
+	ListFailedEventsWithResponse(ctx context.Context, params *ListFailedEventsParams, reqEditors ...RequestEditorFn) (*ListFailedEventsResponse, error)
+
+	// RequeueFailedEventWithResponse request
+	RequeueFailedEventWithResponse(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*RequeueFailedEventResponse, error)
+
+	// ListAllEventsWithResponse request
+	ListAllEventsWithResponse(ctx context.Context, params *ListAllEventsParams, reqEditors ...RequestEditorFn) (*ListAllEventsResponse, error)
+
+	// RecentEventsWithResponse request
+	RecentEventsWithResponse(ctx context.Context, params *RecentEventsParams, reqEditors ...RequestEditorFn) (*RecentEventsResponse, error)
+
+	// ApiHealthWithResponse request
+	ApiHealthWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ApiHealthResponse, error)
+
+	// ListAllInvocationsWithResponse request
+	ListAllInvocationsWithResponse(ctx context.Context, params *ListAllInvocationsParams, reqEditors ...RequestEditorFn) (*ListAllInvocationsResponse, error)
+
+	// GetApiV1LabelsWithResponse request
+	GetApiV1LabelsWithResponse(ctx context.Context, params *GetApiV1LabelsParams, reqEditors ...RequestEditorFn) (*GetApiV1LabelsResponse, error)
+
+	// PostApiV1LabelsWithBodyWithResponse request with any body
+	PostApiV1LabelsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostApiV1LabelsResponse, error)
+
+	PostApiV1LabelsWithResponse(ctx context.Context, body PostApiV1LabelsJSONRequestBody, reqEditors ...RequestEditorFn) (*PostApiV1LabelsResponse, error)
+
+	// GetContractReportWithResponse request
+	GetContractReportWithResponse(ctx context.Context, contractId string, params *GetContractReportParams, reqEditors ...RequestEditorFn) (*GetContractReportResponse, error)
+
+	// GetContractSLABadgeWithResponse request
+	GetContractSLABadgeWithResponse(ctx context.Context, contractId string, params *GetContractSLABadgeParams, reqEditors ...RequestEditorFn) (*GetContractSLABadgeResponse, error)
+
+	// GetContractReportHistoryWithResponse request
+	GetContractReportHistoryWithResponse(ctx context.Context, contractId string, params *GetContractReportHistoryParams, reqEditors ...RequestEditorFn) (*GetContractReportHistoryResponse, error)
+
+	// GetApiV1ResolveWithResponse request
+	GetApiV1ResolveWithResponse(ctx context.Context, params *GetApiV1ResolveParams, reqEditors ...RequestEditorFn) (*GetApiV1ResolveResponse, error)
+
+	// GetApiV1SearchWithResponse request
+	GetApiV1SearchWithResponse(ctx context.Context, params *GetApiV1SearchParams, reqEditors ...RequestEditorFn) (*GetApiV1SearchResponse, error)
+
+	// LiveActivityWithResponse request
+	LiveActivityWithResponse(ctx context.Context, params *LiveActivityParams, reqEditors ...RequestEditorFn) (*LiveActivityResponse, error)
+
 	// GetGlobalStatsWithResponse request
 	GetGlobalStatsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetGlobalStatsResponse, error)
+
+	// StreamAllEventsWithResponse request
+	StreamAllEventsWithResponse(ctx context.Context, params *StreamAllEventsParams, reqEditors ...RequestEditorFn) (*StreamAllEventsResponse, error)
 
 	// ListWatchdogAlertsWithResponse request
 	ListWatchdogAlertsWithResponse(ctx context.Context, params *ListWatchdogAlertsParams, reqEditors ...RequestEditorFn) (*ListWatchdogAlertsResponse, error)
@@ -3165,8 +9926,22 @@ type ClientWithResponsesInterface interface {
 	// ListContractHealthChecksWithResponse request
 	ListContractHealthChecksWithResponse(ctx context.Context, id ContractID, params *ListContractHealthChecksParams, reqEditors ...RequestEditorFn) (*ListContractHealthChecksResponse, error)
 
+	// GetContractUptimeWithResponse request
+	GetContractUptimeWithResponse(ctx context.Context, id ContractID, params *GetContractUptimeParams, reqEditors ...RequestEditorFn) (*GetContractUptimeResponse, error)
+
 	// GetWatchdogStatsWithResponse request
 	GetWatchdogStatsWithResponse(ctx context.Context, params *GetWatchdogStatsParams, reqEditors ...RequestEditorFn) (*GetWatchdogStatsResponse, error)
+
+	// ListAlertSubscriptionsWithResponse request
+	ListAlertSubscriptionsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ListAlertSubscriptionsResponse, error)
+
+	// CreateAlertSubscriptionWithBodyWithResponse request with any body
+	CreateAlertSubscriptionWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateAlertSubscriptionResponse, error)
+
+	CreateAlertSubscriptionWithResponse(ctx context.Context, body CreateAlertSubscriptionJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateAlertSubscriptionResponse, error)
+
+	// DeleteAlertSubscriptionWithResponse request
+	DeleteAlertSubscriptionWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*DeleteAlertSubscriptionResponse, error)
 
 	// ListWatchlistWithResponse request
 	ListWatchlistWithResponse(ctx context.Context, params *ListWatchlistParams, reqEditors ...RequestEditorFn) (*ListWatchlistResponse, error)
@@ -3182,8 +9957,128 @@ type ClientWithResponsesInterface interface {
 	// GetWatchlistStatusWithResponse request
 	GetWatchlistStatusWithResponse(ctx context.Context, contractId string, params *GetWatchlistStatusParams, reqEditors ...RequestEditorFn) (*GetWatchlistStatusResponse, error)
 
+	// V2AdminListKeysWithResponse request
+	V2AdminListKeysWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*V2AdminListKeysResponse, error)
+
+	// V2AdminCreateKeyWithBodyWithResponse request with any body
+	V2AdminCreateKeyWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2AdminCreateKeyResponse, error)
+
+	V2AdminCreateKeyWithResponse(ctx context.Context, body V2AdminCreateKeyJSONRequestBody, reqEditors ...RequestEditorFn) (*V2AdminCreateKeyResponse, error)
+
+	// V2AdminRevokeKeyWithResponse request
+	V2AdminRevokeKeyWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*V2AdminRevokeKeyResponse, error)
+
+	// V2ListAPIKeysWithResponse request
+	V2ListAPIKeysWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*V2ListAPIKeysResponse, error)
+
+	// V2CreateAPIKeyWithBodyWithResponse request with any body
+	V2CreateAPIKeyWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2CreateAPIKeyResponse, error)
+
+	V2CreateAPIKeyWithResponse(ctx context.Context, body V2CreateAPIKeyJSONRequestBody, reqEditors ...RequestEditorFn) (*V2CreateAPIKeyResponse, error)
+
+	// V2RevokeAPIKeyWithResponse request
+	V2RevokeAPIKeyWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*V2RevokeAPIKeyResponse, error)
+
+	// V2ListContractsWithResponse request
+	V2ListContractsWithResponse(ctx context.Context, params *V2ListContractsParams, reqEditors ...RequestEditorFn) (*V2ListContractsResponse, error)
+
+	// V2RegisterContractWithBodyWithResponse request with any body
+	V2RegisterContractWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2RegisterContractResponse, error)
+
+	V2RegisterContractWithResponse(ctx context.Context, body V2RegisterContractJSONRequestBody, reqEditors ...RequestEditorFn) (*V2RegisterContractResponse, error)
+
+	// V2ValidateContractWithBodyWithResponse request with any body
+	V2ValidateContractWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2ValidateContractResponse, error)
+
+	V2ValidateContractWithResponse(ctx context.Context, body V2ValidateContractJSONRequestBody, reqEditors ...RequestEditorFn) (*V2ValidateContractResponse, error)
+
+	// V2GetContractWithResponse request
+	V2GetContractWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2GetContractResponse, error)
+
+	// V2ListEventsWithResponse request
+	V2ListEventsWithResponse(ctx context.Context, id ContractID, params *V2ListEventsParams, reqEditors ...RequestEditorFn) (*V2ListEventsResponse, error)
+
+	// V2ContractForecastWithResponse request
+	V2ContractForecastWithResponse(ctx context.Context, id ContractID, params *V2ContractForecastParams, reqEditors ...RequestEditorFn) (*V2ContractForecastResponse, error)
+
+	// V2ContractGraphWithResponse request
+	V2ContractGraphWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2ContractGraphResponse, error)
+
+	// V2GetContractHealthScoreWithResponse request
+	V2GetContractHealthScoreWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2GetContractHealthScoreResponse, error)
+
+	// V2ListInvocationsWithResponse request
+	V2ListInvocationsWithResponse(ctx context.Context, id ContractID, params *V2ListInvocationsParams, reqEditors ...RequestEditorFn) (*V2ListInvocationsResponse, error)
+
+	// V2ContractSnapshotWithResponse request
+	V2ContractSnapshotWithResponse(ctx context.Context, id ContractID, params *V2ContractSnapshotParams, reqEditors ...RequestEditorFn) (*V2ContractSnapshotResponse, error)
+
+	// V2ContractStatsWithResponse request
+	V2ContractStatsWithResponse(ctx context.Context, id ContractID, params *V2ContractStatsParams, reqEditors ...RequestEditorFn) (*V2ContractStatsResponse, error)
+
+	// V2ListStorageEntriesWithResponse request
+	V2ListStorageEntriesWithResponse(ctx context.Context, id ContractID, params *V2ListStorageEntriesParams, reqEditors ...RequestEditorFn) (*V2ListStorageEntriesResponse, error)
+
+	// V2StreamEventsWithResponse request
+	V2StreamEventsWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2StreamEventsResponse, error)
+
+	// V2ListContractUpgradesWithResponse request
+	V2ListContractUpgradesWithResponse(ctx context.Context, id ContractID, params *V2ListContractUpgradesParams, reqEditors ...RequestEditorFn) (*V2ListContractUpgradesResponse, error)
+
+	// V2RecentEventsWithResponse request
+	V2RecentEventsWithResponse(ctx context.Context, params *V2RecentEventsParams, reqEditors ...RequestEditorFn) (*V2RecentEventsResponse, error)
+
+	// V2LiveActivityWithResponse request
+	V2LiveActivityWithResponse(ctx context.Context, params *V2LiveActivityParams, reqEditors ...RequestEditorFn) (*V2LiveActivityResponse, error)
+
+	// V2GlobalStatsWithResponse request
+	V2GlobalStatsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*V2GlobalStatsResponse, error)
+
+	// V2ListWatchdogAlertsWithResponse request
+	V2ListWatchdogAlertsWithResponse(ctx context.Context, params *V2ListWatchdogAlertsParams, reqEditors ...RequestEditorFn) (*V2ListWatchdogAlertsResponse, error)
+
+	// V2ListMonitoredContractsWithResponse request
+	V2ListMonitoredContractsWithResponse(ctx context.Context, params *V2ListMonitoredContractsParams, reqEditors ...RequestEditorFn) (*V2ListMonitoredContractsResponse, error)
+
+	// V2GetMonitoredContractWithResponse request
+	V2GetMonitoredContractWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2GetMonitoredContractResponse, error)
+
+	// V2ListContractAlertsWithResponse request
+	V2ListContractAlertsWithResponse(ctx context.Context, id ContractID, params *V2ListContractAlertsParams, reqEditors ...RequestEditorFn) (*V2ListContractAlertsResponse, error)
+
+	// V2ListHealthChecksWithResponse request
+	V2ListHealthChecksWithResponse(ctx context.Context, id ContractID, params *V2ListHealthChecksParams, reqEditors ...RequestEditorFn) (*V2ListHealthChecksResponse, error)
+
+	// V2WatchdogStatsWithResponse request
+	V2WatchdogStatsWithResponse(ctx context.Context, params *V2WatchdogStatsParams, reqEditors ...RequestEditorFn) (*V2WatchdogStatsResponse, error)
+
+	// V2ListWatchlistWithResponse request
+	V2ListWatchlistWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*V2ListWatchlistResponse, error)
+
+	// V2AddToWatchlistWithBodyWithResponse request with any body
+	V2AddToWatchlistWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2AddToWatchlistResponse, error)
+
+	V2AddToWatchlistWithResponse(ctx context.Context, body V2AddToWatchlistJSONRequestBody, reqEditors ...RequestEditorFn) (*V2AddToWatchlistResponse, error)
+
+	// V2RemoveFromWatchlistWithResponse request
+	V2RemoveFromWatchlistWithResponse(ctx context.Context, contractId WatchlistContractID, reqEditors ...RequestEditorFn) (*V2RemoveFromWatchlistResponse, error)
+
+	// V2WatchlistStatusWithResponse request
+	V2WatchlistStatusWithResponse(ctx context.Context, contractId WatchlistContractID, reqEditors ...RequestEditorFn) (*V2WatchlistStatusResponse, error)
+
+	// GetVersionWithResponse request
+	GetVersionWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetVersionResponse, error)
+
 	// HealthWithResponse request
 	HealthWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*HealthResponse, error)
+
+	// SlackCommandWithBodyWithResponse request with any body
+	SlackCommandWithBodyWithResponse(ctx context.Context, params *SlackCommandParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SlackCommandResponse, error)
+
+	SlackCommandWithFormdataBodyWithResponse(ctx context.Context, params *SlackCommandParams, body SlackCommandFormdataRequestBody, reqEditors ...RequestEditorFn) (*SlackCommandResponse, error)
+
+	// GetMetricsWithResponse request
+	GetMetricsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetMetricsResponse, error)
 
 	// ReadyzWithResponse request
 	ReadyzWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ReadyzResponse, error)
@@ -3271,6 +10166,37 @@ func (r RevokeApiKeyAdminResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r RevokeApiKeyAdminResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ListAlertsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		// Alerts Present when flat=true.
+		Alerts *[]ContractAlert `json:"alerts,omitempty"`
+
+		// Groups Present when flat is not set.
+		Groups     *[]AlertGroup `json:"groups,omitempty"`
+		NextCursor string        `json:"next_cursor"`
+	}
+	JSON422 *InvalidInput
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r ListAlertsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListAlertsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -3369,6 +10295,29 @@ func (r RevokeApiKeyResponse) StatusCode() int {
 	return 0
 }
 
+type CompareContractsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CompareResponse
+	JSON422      *InvalidInput
+}
+
+// Status returns HTTPResponse.Status
+func (r CompareContractsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CompareContractsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type ListContractsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -3419,6 +10368,57 @@ func (r RegisterContractResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r RegisterContractResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type BatchContractsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *BatchContractsResult
+	JSON401      *Unauthorized
+	JSON403      *ForbiddenRole
+	JSON415      *UnsupportedMediaType
+	JSON422      *InvalidInput
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r BatchContractsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r BatchContractsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ValidateContractResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ContractValidationResult
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r ValidateContractResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ValidateContractResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -3476,6 +10476,29 @@ func (r ListContractEventsResponse) StatusCode() int {
 	return 0
 }
 
+type ExportContractEventsCSVResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON422      *InvalidInput
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r ExportContractEventsCSVResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ExportContractEventsCSVResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type GetContractForecastResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -3498,6 +10521,55 @@ func (r GetContractForecastResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r GetContractForecastResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetContractGraphResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ContractGraph
+	JSON400      *Error
+	JSON404      *NotFound
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r GetContractGraphResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetContractGraphResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetContractHealthScoreResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *HealthScore
+	JSON404      *Error
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r GetContractHealthScoreResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetContractHealthScoreResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -3550,6 +10622,54 @@ func (r GetContractSnapshotResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r GetContractSnapshotResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ExportContractSnapshotResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ContractSnapshotExport
+	JSON404      *NotFound
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r ExportContractSnapshotResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ExportContractSnapshotResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetContractSpecResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ContractSpec
+	JSON404      *Error
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r GetContractSpecResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetContractSpecResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -3633,6 +10753,497 @@ func (r StreamContractEventsResponse) StatusCode() int {
 	return 0
 }
 
+type GetContractSummaryResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ContractSummary
+	JSON404      *NotFound
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r GetContractSummaryResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetContractSummaryResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type AddContractTagResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ContractTags
+	JSON401      *Unauthorized
+	JSON403      *ForbiddenRole
+	JSON404      *NotFound
+	JSON415      *UnsupportedMediaType
+	JSON422      *InvalidInput
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r AddContractTagResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AddContractTagResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type RemoveContractTagResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON401      *Unauthorized
+	JSON403      *ForbiddenRole
+	JSON404      *NotFound
+	JSON422      *InvalidInput
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r RemoveContractTagResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r RemoveContractTagResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ListContractUpgradesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Upgrades []ContractUpgrade `json:"upgrades"`
+	}
+	JSON404 *NotFound
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r ListContractUpgradesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListContractUpgradesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetContractWasmResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON404      *Error
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r GetContractWasmResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetContractWasmResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ListFailedEventsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Items      []FailedEvent `json:"items"`
+		NextCursor *string       `json:"next_cursor,omitempty"`
+	}
+	JSON422 *InvalidInput
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r ListFailedEventsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListFailedEventsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type RequeueFailedEventResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		EventId string `json:"event_id"`
+		Id      int64  `json:"id"`
+		Status  string `json:"status"`
+	}
+	JSON404 *NotFound
+	JSON422 *InvalidInput
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r RequeueFailedEventResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r RequeueFailedEventResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ListAllEventsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Events []Event `json:"events"`
+
+		// NextCursor Opaque cursor for the next (older) page; empty when no more pages.
+		NextCursor string `json:"next_cursor"`
+	}
+	JSON422 *InvalidInput
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r ListAllEventsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListAllEventsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type RecentEventsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Events []Event `json:"events"`
+	}
+	JSON429 *RateLimited
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r RecentEventsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r RecentEventsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ApiHealthResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Db    ApiHealth200Db    `json:"db"`
+		Redis ApiHealth200Redis `json:"redis"`
+
+		// Status "ok" when both dependencies are reachable, "degraded" otherwise
+		Status    string    `json:"status"`
+		Timestamp time.Time `json:"timestamp"`
+	}
+}
+type ApiHealth200Db string
+type ApiHealth200Redis string
+
+// Status returns HTTPResponse.Status
+func (r ApiHealthResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ApiHealthResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ListAllInvocationsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Invocations []Invocation `json:"invocations"`
+
+		// NextCursor Opaque cursor for the next (older) page; empty when no more pages.
+		NextCursor string `json:"next_cursor"`
+	}
+	JSON422 *InvalidInput
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r ListAllInvocationsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListAllInvocationsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetApiV1LabelsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// Status returns HTTPResponse.Status
+func (r GetApiV1LabelsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetApiV1LabelsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type PostApiV1LabelsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// Status returns HTTPResponse.Status
+func (r PostApiV1LabelsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PostApiV1LabelsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetContractReportResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ContractReport
+	JSON422      *InvalidInput
+	JSON500      *InternalError
+	JSON501      *Error
+}
+
+// Status returns HTTPResponse.Status
+func (r GetContractReportResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetContractReportResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetContractSLABadgeResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON422      *InvalidInput
+	JSON500      *InternalError
+	JSON501      *Error
+}
+
+// Status returns HTTPResponse.Status
+func (r GetContractSLABadgeResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetContractSLABadgeResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetContractReportHistoryResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		ContractId string       `json:"contract_id"`
+		Months     []MonthlySLA `json:"months"`
+	}
+	JSON422 *InvalidInput
+	JSON500 *InternalError
+	JSON501 *Error
+}
+
+// Status returns HTTPResponse.Status
+func (r GetContractReportHistoryResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetContractReportHistoryResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetApiV1ResolveResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+}
+
+// Status returns HTTPResponse.Status
+func (r GetApiV1ResolveResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetApiV1ResolveResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetApiV1SearchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Items *[]Contract `json:"items,omitempty"`
+	}
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r GetApiV1SearchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetApiV1SearchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type LiveActivityResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Contracts   []ContractEventRate `json:"contracts"`
+		Minutes     int                 `json:"minutes"`
+		WindowStart time.Time           `json:"window_start"`
+	}
+	JSON429 *RateLimited
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r LiveActivityResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r LiveActivityResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type GetGlobalStatsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -3662,11 +11273,37 @@ func (r GetGlobalStatsResponse) StatusCode() int {
 	return 0
 }
 
+type StreamAllEventsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r StreamAllEventsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StreamAllEventsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type ListWatchdogAlertsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON200      *struct {
 		Alerts []ContractAlert `json:"alerts"`
+
+		// NextCursor Cursor for the next (older) page; empty when no more pages.
+		NextCursor string `json:"next_cursor"`
 	}
 	JSON422 *InvalidInput
 	JSON500 *InternalError
@@ -3744,6 +11381,9 @@ type ListContractAlertsResponse struct {
 	HTTPResponse *http.Response
 	JSON200      *struct {
 		Alerts []ContractAlert `json:"alerts"`
+
+		// NextCursor Cursor for the next (older) page; empty when no more pages.
+		NextCursor string `json:"next_cursor"`
 	}
 	JSON422 *InvalidInput
 	JSON500 *InternalError
@@ -3791,6 +11431,30 @@ func (r ListContractHealthChecksResponse) StatusCode() int {
 	return 0
 }
 
+type GetContractUptimeResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *UptimeResult
+	JSON422      *InvalidInput
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r GetContractUptimeResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetContractUptimeResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type GetWatchdogStatsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -3809,6 +11473,85 @@ func (r GetWatchdogStatsResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r GetWatchdogStatsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type ListAlertSubscriptionsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Subscriptions []AlertSubscription `json:"subscriptions"`
+	}
+	JSON401 *Unauthorized
+	JSON403 *ForbiddenRole
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r ListAlertSubscriptionsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListAlertSubscriptionsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CreateAlertSubscriptionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *AlertSubscription
+	JSON401      *Unauthorized
+	JSON403      *ForbiddenRole
+	JSON415      *UnsupportedMediaType
+	JSON422      *InvalidInput
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r CreateAlertSubscriptionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CreateAlertSubscriptionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type DeleteAlertSubscriptionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON401      *Unauthorized
+	JSON403      *ForbiddenRole
+	JSON404      *NotFound
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteAlertSubscriptionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteAlertSubscriptionResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -3913,6 +11656,832 @@ func (r GetWatchlistStatusResponse) StatusCode() int {
 	return 0
 }
 
+type V2AdminListKeysResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *map[string]interface{}
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2AdminListKeysResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2AdminListKeysResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2AdminCreateKeyResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *map[string]interface{}
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2AdminCreateKeyResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2AdminCreateKeyResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2AdminRevokeKeyResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2AdminRevokeKeyResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2AdminRevokeKeyResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListAPIKeysResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *map[string]interface{}
+	JSON401      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListAPIKeysResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListAPIKeysResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2CreateAPIKeyResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *map[string]interface{}
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2CreateAPIKeyResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2CreateAPIKeyResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2RevokeAPIKeyResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2RevokeAPIKeyResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2RevokeAPIKeyResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListContractsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2ContractList
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListContractsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListContractsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2RegisterContractResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *V2Contract
+	JSON422      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2RegisterContractResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2RegisterContractResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ValidateContractResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *ContractValidationResult
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ValidateContractResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ValidateContractResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2GetContractResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2Contract
+	JSON404      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2GetContractResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2GetContractResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListEventsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2EventList
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListEventsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListEventsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ContractForecastResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *map[string]interface{}
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ContractForecastResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ContractForecastResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ContractGraphResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *map[string]interface{}
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ContractGraphResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ContractGraphResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2GetContractHealthScoreResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2ContractHealthScore
+	JSON404      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2GetContractHealthScoreResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2GetContractHealthScoreResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListInvocationsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2InvocationList
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListInvocationsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListInvocationsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ContractSnapshotResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *map[string]interface{}
+	JSON404      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ContractSnapshotResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ContractSnapshotResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ContractStatsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2ContractStats
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ContractStatsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ContractStatsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListStorageEntriesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2StorageList
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListStorageEntriesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListStorageEntriesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2StreamEventsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *struct {
+		Events []V2Event `json:"events"`
+	}
+	JSON429 *RateLimited
+	JSON500 *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2StreamEventsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2StreamEventsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListContractUpgradesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2UpgradeList
+	JSON404      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListContractUpgradesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListContractUpgradesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2RecentEventsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2EventList
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2RecentEventsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2RecentEventsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2LiveActivityResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2ActivityResponse
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2LiveActivityResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2LiveActivityResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2GlobalStatsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2GlobalStats
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2GlobalStatsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2GlobalStatsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListWatchdogAlertsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2AlertList
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListWatchdogAlertsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListWatchdogAlertsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListMonitoredContractsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2MonitoredList
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListMonitoredContractsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListMonitoredContractsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2GetMonitoredContractResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2MonitoredContract
+	JSON404      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2GetMonitoredContractResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2GetMonitoredContractResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListContractAlertsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2AlertList
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListContractAlertsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListContractAlertsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListHealthChecksResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2HealthCheckList
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListHealthChecksResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListHealthChecksResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2WatchdogStatsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2WatchdogStats
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2WatchdogStatsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2WatchdogStatsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2ListWatchlistResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2WatchlistList
+	JSON401      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2ListWatchlistResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2ListWatchlistResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2AddToWatchlistResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *V2WatchlistStatus
+	JSON401      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2AddToWatchlistResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2AddToWatchlistResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2RemoveFromWatchlistResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2WatchlistStatus
+	JSON401      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2RemoveFromWatchlistResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2RemoveFromWatchlistResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type V2WatchlistStatusResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *V2WatchlistStatus
+	JSON401      *Error
+	JSON429      *RateLimited
+	JSON500      *InternalError
+}
+
+// Status returns HTTPResponse.Status
+func (r V2WatchlistStatusResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r V2WatchlistStatusResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetVersionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *BuildInfo
+	JSON429      *RateLimited
+}
+
+// Status returns HTTPResponse.Status
+func (r GetVersionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetVersionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type HealthResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -3932,6 +12501,53 @@ func (r HealthResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r HealthResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type SlackCommandResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *SlackMessage
+	JSON400      *InvalidInput
+	JSON401      *Error
+	JSON404      *Error
+}
+
+// Status returns HTTPResponse.Status
+func (r SlackCommandResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r SlackCommandResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type GetMetricsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON429      *RateLimited
+}
+
+// Status returns HTTPResponse.Status
+func (r GetMetricsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetMetricsResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -4002,6 +12618,15 @@ func (c *ClientWithResponses) RevokeApiKeyAdminWithResponse(ctx context.Context,
 	return ParseRevokeApiKeyAdminResponse(rsp)
 }
 
+// ListAlertsWithResponse request returning *ListAlertsResponse
+func (c *ClientWithResponses) ListAlertsWithResponse(ctx context.Context, params *ListAlertsParams, reqEditors ...RequestEditorFn) (*ListAlertsResponse, error) {
+	rsp, err := c.ListAlerts(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListAlertsResponse(rsp)
+}
+
 // ListApiKeysWithResponse request returning *ListApiKeysResponse
 func (c *ClientWithResponses) ListApiKeysWithResponse(ctx context.Context, params *ListApiKeysParams, reqEditors ...RequestEditorFn) (*ListApiKeysResponse, error) {
 	rsp, err := c.ListApiKeys(ctx, params, reqEditors...)
@@ -4037,6 +12662,15 @@ func (c *ClientWithResponses) RevokeApiKeyWithResponse(ctx context.Context, id s
 	return ParseRevokeApiKeyResponse(rsp)
 }
 
+// CompareContractsWithResponse request returning *CompareContractsResponse
+func (c *ClientWithResponses) CompareContractsWithResponse(ctx context.Context, params *CompareContractsParams, reqEditors ...RequestEditorFn) (*CompareContractsResponse, error) {
+	rsp, err := c.CompareContracts(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCompareContractsResponse(rsp)
+}
+
 // ListContractsWithResponse request returning *ListContractsResponse
 func (c *ClientWithResponses) ListContractsWithResponse(ctx context.Context, params *ListContractsParams, reqEditors ...RequestEditorFn) (*ListContractsResponse, error) {
 	rsp, err := c.ListContracts(ctx, params, reqEditors...)
@@ -4063,6 +12697,40 @@ func (c *ClientWithResponses) RegisterContractWithResponse(ctx context.Context, 
 	return ParseRegisterContractResponse(rsp)
 }
 
+// BatchContractsWithBodyWithResponse request with arbitrary body returning *BatchContractsResponse
+func (c *ClientWithResponses) BatchContractsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*BatchContractsResponse, error) {
+	rsp, err := c.BatchContractsWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseBatchContractsResponse(rsp)
+}
+
+func (c *ClientWithResponses) BatchContractsWithResponse(ctx context.Context, body BatchContractsJSONRequestBody, reqEditors ...RequestEditorFn) (*BatchContractsResponse, error) {
+	rsp, err := c.BatchContracts(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseBatchContractsResponse(rsp)
+}
+
+// ValidateContractWithBodyWithResponse request with arbitrary body returning *ValidateContractResponse
+func (c *ClientWithResponses) ValidateContractWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ValidateContractResponse, error) {
+	rsp, err := c.ValidateContractWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseValidateContractResponse(rsp)
+}
+
+func (c *ClientWithResponses) ValidateContractWithResponse(ctx context.Context, body ValidateContractJSONRequestBody, reqEditors ...RequestEditorFn) (*ValidateContractResponse, error) {
+	rsp, err := c.ValidateContract(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseValidateContractResponse(rsp)
+}
+
 // GetContractWithResponse request returning *GetContractResponse
 func (c *ClientWithResponses) GetContractWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractResponse, error) {
 	rsp, err := c.GetContract(ctx, id, reqEditors...)
@@ -4081,6 +12749,15 @@ func (c *ClientWithResponses) ListContractEventsWithResponse(ctx context.Context
 	return ParseListContractEventsResponse(rsp)
 }
 
+// ExportContractEventsCSVWithResponse request returning *ExportContractEventsCSVResponse
+func (c *ClientWithResponses) ExportContractEventsCSVWithResponse(ctx context.Context, id ContractID, params *ExportContractEventsCSVParams, reqEditors ...RequestEditorFn) (*ExportContractEventsCSVResponse, error) {
+	rsp, err := c.ExportContractEventsCSV(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseExportContractEventsCSVResponse(rsp)
+}
+
 // GetContractForecastWithResponse request returning *GetContractForecastResponse
 func (c *ClientWithResponses) GetContractForecastWithResponse(ctx context.Context, id ContractID, params *GetContractForecastParams, reqEditors ...RequestEditorFn) (*GetContractForecastResponse, error) {
 	rsp, err := c.GetContractForecast(ctx, id, params, reqEditors...)
@@ -4088,6 +12765,24 @@ func (c *ClientWithResponses) GetContractForecastWithResponse(ctx context.Contex
 		return nil, err
 	}
 	return ParseGetContractForecastResponse(rsp)
+}
+
+// GetContractGraphWithResponse request returning *GetContractGraphResponse
+func (c *ClientWithResponses) GetContractGraphWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractGraphResponse, error) {
+	rsp, err := c.GetContractGraph(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetContractGraphResponse(rsp)
+}
+
+// GetContractHealthScoreWithResponse request returning *GetContractHealthScoreResponse
+func (c *ClientWithResponses) GetContractHealthScoreWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractHealthScoreResponse, error) {
+	rsp, err := c.GetContractHealthScore(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetContractHealthScoreResponse(rsp)
 }
 
 // ListContractInvocationsWithResponse request returning *ListContractInvocationsResponse
@@ -4106,6 +12801,24 @@ func (c *ClientWithResponses) GetContractSnapshotWithResponse(ctx context.Contex
 		return nil, err
 	}
 	return ParseGetContractSnapshotResponse(rsp)
+}
+
+// ExportContractSnapshotWithResponse request returning *ExportContractSnapshotResponse
+func (c *ClientWithResponses) ExportContractSnapshotWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*ExportContractSnapshotResponse, error) {
+	rsp, err := c.ExportContractSnapshot(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseExportContractSnapshotResponse(rsp)
+}
+
+// GetContractSpecWithResponse request returning *GetContractSpecResponse
+func (c *ClientWithResponses) GetContractSpecWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractSpecResponse, error) {
+	rsp, err := c.GetContractSpec(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetContractSpecResponse(rsp)
 }
 
 // GetContractStatsWithResponse request returning *GetContractStatsResponse
@@ -4135,6 +12848,193 @@ func (c *ClientWithResponses) StreamContractEventsWithResponse(ctx context.Conte
 	return ParseStreamContractEventsResponse(rsp)
 }
 
+// GetContractSummaryWithResponse request returning *GetContractSummaryResponse
+func (c *ClientWithResponses) GetContractSummaryWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractSummaryResponse, error) {
+	rsp, err := c.GetContractSummary(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetContractSummaryResponse(rsp)
+}
+
+// AddContractTagWithBodyWithResponse request with arbitrary body returning *AddContractTagResponse
+func (c *ClientWithResponses) AddContractTagWithBodyWithResponse(ctx context.Context, id ContractID, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AddContractTagResponse, error) {
+	rsp, err := c.AddContractTagWithBody(ctx, id, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddContractTagResponse(rsp)
+}
+
+func (c *ClientWithResponses) AddContractTagWithResponse(ctx context.Context, id ContractID, body AddContractTagJSONRequestBody, reqEditors ...RequestEditorFn) (*AddContractTagResponse, error) {
+	rsp, err := c.AddContractTag(ctx, id, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAddContractTagResponse(rsp)
+}
+
+// RemoveContractTagWithResponse request returning *RemoveContractTagResponse
+func (c *ClientWithResponses) RemoveContractTagWithResponse(ctx context.Context, id ContractID, tag TagPath, reqEditors ...RequestEditorFn) (*RemoveContractTagResponse, error) {
+	rsp, err := c.RemoveContractTag(ctx, id, tag, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRemoveContractTagResponse(rsp)
+}
+
+// ListContractUpgradesWithResponse request returning *ListContractUpgradesResponse
+func (c *ClientWithResponses) ListContractUpgradesWithResponse(ctx context.Context, id ContractID, params *ListContractUpgradesParams, reqEditors ...RequestEditorFn) (*ListContractUpgradesResponse, error) {
+	rsp, err := c.ListContractUpgrades(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListContractUpgradesResponse(rsp)
+}
+
+// GetContractWasmWithResponse request returning *GetContractWasmResponse
+func (c *ClientWithResponses) GetContractWasmWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*GetContractWasmResponse, error) {
+	rsp, err := c.GetContractWasm(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetContractWasmResponse(rsp)
+}
+
+// ListFailedEventsWithResponse request returning *ListFailedEventsResponse
+func (c *ClientWithResponses) ListFailedEventsWithResponse(ctx context.Context, params *ListFailedEventsParams, reqEditors ...RequestEditorFn) (*ListFailedEventsResponse, error) {
+	rsp, err := c.ListFailedEvents(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListFailedEventsResponse(rsp)
+}
+
+// RequeueFailedEventWithResponse request returning *RequeueFailedEventResponse
+func (c *ClientWithResponses) RequeueFailedEventWithResponse(ctx context.Context, id int64, reqEditors ...RequestEditorFn) (*RequeueFailedEventResponse, error) {
+	rsp, err := c.RequeueFailedEvent(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRequeueFailedEventResponse(rsp)
+}
+
+// ListAllEventsWithResponse request returning *ListAllEventsResponse
+func (c *ClientWithResponses) ListAllEventsWithResponse(ctx context.Context, params *ListAllEventsParams, reqEditors ...RequestEditorFn) (*ListAllEventsResponse, error) {
+	rsp, err := c.ListAllEvents(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListAllEventsResponse(rsp)
+}
+
+// RecentEventsWithResponse request returning *RecentEventsResponse
+func (c *ClientWithResponses) RecentEventsWithResponse(ctx context.Context, params *RecentEventsParams, reqEditors ...RequestEditorFn) (*RecentEventsResponse, error) {
+	rsp, err := c.RecentEvents(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRecentEventsResponse(rsp)
+}
+
+// ApiHealthWithResponse request returning *ApiHealthResponse
+func (c *ClientWithResponses) ApiHealthWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ApiHealthResponse, error) {
+	rsp, err := c.ApiHealth(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseApiHealthResponse(rsp)
+}
+
+// ListAllInvocationsWithResponse request returning *ListAllInvocationsResponse
+func (c *ClientWithResponses) ListAllInvocationsWithResponse(ctx context.Context, params *ListAllInvocationsParams, reqEditors ...RequestEditorFn) (*ListAllInvocationsResponse, error) {
+	rsp, err := c.ListAllInvocations(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListAllInvocationsResponse(rsp)
+}
+
+// GetApiV1LabelsWithResponse request returning *GetApiV1LabelsResponse
+func (c *ClientWithResponses) GetApiV1LabelsWithResponse(ctx context.Context, params *GetApiV1LabelsParams, reqEditors ...RequestEditorFn) (*GetApiV1LabelsResponse, error) {
+	rsp, err := c.GetApiV1Labels(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetApiV1LabelsResponse(rsp)
+}
+
+// PostApiV1LabelsWithBodyWithResponse request with arbitrary body returning *PostApiV1LabelsResponse
+func (c *ClientWithResponses) PostApiV1LabelsWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostApiV1LabelsResponse, error) {
+	rsp, err := c.PostApiV1LabelsWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostApiV1LabelsResponse(rsp)
+}
+
+func (c *ClientWithResponses) PostApiV1LabelsWithResponse(ctx context.Context, body PostApiV1LabelsJSONRequestBody, reqEditors ...RequestEditorFn) (*PostApiV1LabelsResponse, error) {
+	rsp, err := c.PostApiV1Labels(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePostApiV1LabelsResponse(rsp)
+}
+
+// GetContractReportWithResponse request returning *GetContractReportResponse
+func (c *ClientWithResponses) GetContractReportWithResponse(ctx context.Context, contractId string, params *GetContractReportParams, reqEditors ...RequestEditorFn) (*GetContractReportResponse, error) {
+	rsp, err := c.GetContractReport(ctx, contractId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetContractReportResponse(rsp)
+}
+
+// GetContractSLABadgeWithResponse request returning *GetContractSLABadgeResponse
+func (c *ClientWithResponses) GetContractSLABadgeWithResponse(ctx context.Context, contractId string, params *GetContractSLABadgeParams, reqEditors ...RequestEditorFn) (*GetContractSLABadgeResponse, error) {
+	rsp, err := c.GetContractSLABadge(ctx, contractId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetContractSLABadgeResponse(rsp)
+}
+
+// GetContractReportHistoryWithResponse request returning *GetContractReportHistoryResponse
+func (c *ClientWithResponses) GetContractReportHistoryWithResponse(ctx context.Context, contractId string, params *GetContractReportHistoryParams, reqEditors ...RequestEditorFn) (*GetContractReportHistoryResponse, error) {
+	rsp, err := c.GetContractReportHistory(ctx, contractId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetContractReportHistoryResponse(rsp)
+}
+
+// GetApiV1ResolveWithResponse request returning *GetApiV1ResolveResponse
+func (c *ClientWithResponses) GetApiV1ResolveWithResponse(ctx context.Context, params *GetApiV1ResolveParams, reqEditors ...RequestEditorFn) (*GetApiV1ResolveResponse, error) {
+	rsp, err := c.GetApiV1Resolve(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetApiV1ResolveResponse(rsp)
+}
+
+// GetApiV1SearchWithResponse request returning *GetApiV1SearchResponse
+func (c *ClientWithResponses) GetApiV1SearchWithResponse(ctx context.Context, params *GetApiV1SearchParams, reqEditors ...RequestEditorFn) (*GetApiV1SearchResponse, error) {
+	rsp, err := c.GetApiV1Search(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetApiV1SearchResponse(rsp)
+}
+
+// LiveActivityWithResponse request returning *LiveActivityResponse
+func (c *ClientWithResponses) LiveActivityWithResponse(ctx context.Context, params *LiveActivityParams, reqEditors ...RequestEditorFn) (*LiveActivityResponse, error) {
+	rsp, err := c.LiveActivity(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseLiveActivityResponse(rsp)
+}
+
 // GetGlobalStatsWithResponse request returning *GetGlobalStatsResponse
 func (c *ClientWithResponses) GetGlobalStatsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetGlobalStatsResponse, error) {
 	rsp, err := c.GetGlobalStats(ctx, reqEditors...)
@@ -4142,6 +13042,15 @@ func (c *ClientWithResponses) GetGlobalStatsWithResponse(ctx context.Context, re
 		return nil, err
 	}
 	return ParseGetGlobalStatsResponse(rsp)
+}
+
+// StreamAllEventsWithResponse request returning *StreamAllEventsResponse
+func (c *ClientWithResponses) StreamAllEventsWithResponse(ctx context.Context, params *StreamAllEventsParams, reqEditors ...RequestEditorFn) (*StreamAllEventsResponse, error) {
+	rsp, err := c.StreamAllEvents(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStreamAllEventsResponse(rsp)
 }
 
 // ListWatchdogAlertsWithResponse request returning *ListWatchdogAlertsResponse
@@ -4189,6 +13098,15 @@ func (c *ClientWithResponses) ListContractHealthChecksWithResponse(ctx context.C
 	return ParseListContractHealthChecksResponse(rsp)
 }
 
+// GetContractUptimeWithResponse request returning *GetContractUptimeResponse
+func (c *ClientWithResponses) GetContractUptimeWithResponse(ctx context.Context, id ContractID, params *GetContractUptimeParams, reqEditors ...RequestEditorFn) (*GetContractUptimeResponse, error) {
+	rsp, err := c.GetContractUptime(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetContractUptimeResponse(rsp)
+}
+
 // GetWatchdogStatsWithResponse request returning *GetWatchdogStatsResponse
 func (c *ClientWithResponses) GetWatchdogStatsWithResponse(ctx context.Context, params *GetWatchdogStatsParams, reqEditors ...RequestEditorFn) (*GetWatchdogStatsResponse, error) {
 	rsp, err := c.GetWatchdogStats(ctx, params, reqEditors...)
@@ -4196,6 +13114,41 @@ func (c *ClientWithResponses) GetWatchdogStatsWithResponse(ctx context.Context, 
 		return nil, err
 	}
 	return ParseGetWatchdogStatsResponse(rsp)
+}
+
+// ListAlertSubscriptionsWithResponse request returning *ListAlertSubscriptionsResponse
+func (c *ClientWithResponses) ListAlertSubscriptionsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ListAlertSubscriptionsResponse, error) {
+	rsp, err := c.ListAlertSubscriptions(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListAlertSubscriptionsResponse(rsp)
+}
+
+// CreateAlertSubscriptionWithBodyWithResponse request with arbitrary body returning *CreateAlertSubscriptionResponse
+func (c *ClientWithResponses) CreateAlertSubscriptionWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateAlertSubscriptionResponse, error) {
+	rsp, err := c.CreateAlertSubscriptionWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateAlertSubscriptionResponse(rsp)
+}
+
+func (c *ClientWithResponses) CreateAlertSubscriptionWithResponse(ctx context.Context, body CreateAlertSubscriptionJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateAlertSubscriptionResponse, error) {
+	rsp, err := c.CreateAlertSubscription(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateAlertSubscriptionResponse(rsp)
+}
+
+// DeleteAlertSubscriptionWithResponse request returning *DeleteAlertSubscriptionResponse
+func (c *ClientWithResponses) DeleteAlertSubscriptionWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*DeleteAlertSubscriptionResponse, error) {
+	rsp, err := c.DeleteAlertSubscription(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteAlertSubscriptionResponse(rsp)
 }
 
 // ListWatchlistWithResponse request returning *ListWatchlistResponse
@@ -4242,6 +13195,352 @@ func (c *ClientWithResponses) GetWatchlistStatusWithResponse(ctx context.Context
 	return ParseGetWatchlistStatusResponse(rsp)
 }
 
+// V2AdminListKeysWithResponse request returning *V2AdminListKeysResponse
+func (c *ClientWithResponses) V2AdminListKeysWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*V2AdminListKeysResponse, error) {
+	rsp, err := c.V2AdminListKeys(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2AdminListKeysResponse(rsp)
+}
+
+// V2AdminCreateKeyWithBodyWithResponse request with arbitrary body returning *V2AdminCreateKeyResponse
+func (c *ClientWithResponses) V2AdminCreateKeyWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2AdminCreateKeyResponse, error) {
+	rsp, err := c.V2AdminCreateKeyWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2AdminCreateKeyResponse(rsp)
+}
+
+func (c *ClientWithResponses) V2AdminCreateKeyWithResponse(ctx context.Context, body V2AdminCreateKeyJSONRequestBody, reqEditors ...RequestEditorFn) (*V2AdminCreateKeyResponse, error) {
+	rsp, err := c.V2AdminCreateKey(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2AdminCreateKeyResponse(rsp)
+}
+
+// V2AdminRevokeKeyWithResponse request returning *V2AdminRevokeKeyResponse
+func (c *ClientWithResponses) V2AdminRevokeKeyWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*V2AdminRevokeKeyResponse, error) {
+	rsp, err := c.V2AdminRevokeKey(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2AdminRevokeKeyResponse(rsp)
+}
+
+// V2ListAPIKeysWithResponse request returning *V2ListAPIKeysResponse
+func (c *ClientWithResponses) V2ListAPIKeysWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*V2ListAPIKeysResponse, error) {
+	rsp, err := c.V2ListAPIKeys(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListAPIKeysResponse(rsp)
+}
+
+// V2CreateAPIKeyWithBodyWithResponse request with arbitrary body returning *V2CreateAPIKeyResponse
+func (c *ClientWithResponses) V2CreateAPIKeyWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2CreateAPIKeyResponse, error) {
+	rsp, err := c.V2CreateAPIKeyWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2CreateAPIKeyResponse(rsp)
+}
+
+func (c *ClientWithResponses) V2CreateAPIKeyWithResponse(ctx context.Context, body V2CreateAPIKeyJSONRequestBody, reqEditors ...RequestEditorFn) (*V2CreateAPIKeyResponse, error) {
+	rsp, err := c.V2CreateAPIKey(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2CreateAPIKeyResponse(rsp)
+}
+
+// V2RevokeAPIKeyWithResponse request returning *V2RevokeAPIKeyResponse
+func (c *ClientWithResponses) V2RevokeAPIKeyWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*V2RevokeAPIKeyResponse, error) {
+	rsp, err := c.V2RevokeAPIKey(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2RevokeAPIKeyResponse(rsp)
+}
+
+// V2ListContractsWithResponse request returning *V2ListContractsResponse
+func (c *ClientWithResponses) V2ListContractsWithResponse(ctx context.Context, params *V2ListContractsParams, reqEditors ...RequestEditorFn) (*V2ListContractsResponse, error) {
+	rsp, err := c.V2ListContracts(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListContractsResponse(rsp)
+}
+
+// V2RegisterContractWithBodyWithResponse request with arbitrary body returning *V2RegisterContractResponse
+func (c *ClientWithResponses) V2RegisterContractWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2RegisterContractResponse, error) {
+	rsp, err := c.V2RegisterContractWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2RegisterContractResponse(rsp)
+}
+
+func (c *ClientWithResponses) V2RegisterContractWithResponse(ctx context.Context, body V2RegisterContractJSONRequestBody, reqEditors ...RequestEditorFn) (*V2RegisterContractResponse, error) {
+	rsp, err := c.V2RegisterContract(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2RegisterContractResponse(rsp)
+}
+
+// V2ValidateContractWithBodyWithResponse request with arbitrary body returning *V2ValidateContractResponse
+func (c *ClientWithResponses) V2ValidateContractWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2ValidateContractResponse, error) {
+	rsp, err := c.V2ValidateContractWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ValidateContractResponse(rsp)
+}
+
+func (c *ClientWithResponses) V2ValidateContractWithResponse(ctx context.Context, body V2ValidateContractJSONRequestBody, reqEditors ...RequestEditorFn) (*V2ValidateContractResponse, error) {
+	rsp, err := c.V2ValidateContract(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ValidateContractResponse(rsp)
+}
+
+// V2GetContractWithResponse request returning *V2GetContractResponse
+func (c *ClientWithResponses) V2GetContractWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2GetContractResponse, error) {
+	rsp, err := c.V2GetContract(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2GetContractResponse(rsp)
+}
+
+// V2ListEventsWithResponse request returning *V2ListEventsResponse
+func (c *ClientWithResponses) V2ListEventsWithResponse(ctx context.Context, id ContractID, params *V2ListEventsParams, reqEditors ...RequestEditorFn) (*V2ListEventsResponse, error) {
+	rsp, err := c.V2ListEvents(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListEventsResponse(rsp)
+}
+
+// V2ContractForecastWithResponse request returning *V2ContractForecastResponse
+func (c *ClientWithResponses) V2ContractForecastWithResponse(ctx context.Context, id ContractID, params *V2ContractForecastParams, reqEditors ...RequestEditorFn) (*V2ContractForecastResponse, error) {
+	rsp, err := c.V2ContractForecast(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ContractForecastResponse(rsp)
+}
+
+// V2ContractGraphWithResponse request returning *V2ContractGraphResponse
+func (c *ClientWithResponses) V2ContractGraphWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2ContractGraphResponse, error) {
+	rsp, err := c.V2ContractGraph(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ContractGraphResponse(rsp)
+}
+
+// V2GetContractHealthScoreWithResponse request returning *V2GetContractHealthScoreResponse
+func (c *ClientWithResponses) V2GetContractHealthScoreWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2GetContractHealthScoreResponse, error) {
+	rsp, err := c.V2GetContractHealthScore(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2GetContractHealthScoreResponse(rsp)
+}
+
+// V2ListInvocationsWithResponse request returning *V2ListInvocationsResponse
+func (c *ClientWithResponses) V2ListInvocationsWithResponse(ctx context.Context, id ContractID, params *V2ListInvocationsParams, reqEditors ...RequestEditorFn) (*V2ListInvocationsResponse, error) {
+	rsp, err := c.V2ListInvocations(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListInvocationsResponse(rsp)
+}
+
+// V2ContractSnapshotWithResponse request returning *V2ContractSnapshotResponse
+func (c *ClientWithResponses) V2ContractSnapshotWithResponse(ctx context.Context, id ContractID, params *V2ContractSnapshotParams, reqEditors ...RequestEditorFn) (*V2ContractSnapshotResponse, error) {
+	rsp, err := c.V2ContractSnapshot(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ContractSnapshotResponse(rsp)
+}
+
+// V2ContractStatsWithResponse request returning *V2ContractStatsResponse
+func (c *ClientWithResponses) V2ContractStatsWithResponse(ctx context.Context, id ContractID, params *V2ContractStatsParams, reqEditors ...RequestEditorFn) (*V2ContractStatsResponse, error) {
+	rsp, err := c.V2ContractStats(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ContractStatsResponse(rsp)
+}
+
+// V2ListStorageEntriesWithResponse request returning *V2ListStorageEntriesResponse
+func (c *ClientWithResponses) V2ListStorageEntriesWithResponse(ctx context.Context, id ContractID, params *V2ListStorageEntriesParams, reqEditors ...RequestEditorFn) (*V2ListStorageEntriesResponse, error) {
+	rsp, err := c.V2ListStorageEntries(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListStorageEntriesResponse(rsp)
+}
+
+// V2StreamEventsWithResponse request returning *V2StreamEventsResponse
+func (c *ClientWithResponses) V2StreamEventsWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2StreamEventsResponse, error) {
+	rsp, err := c.V2StreamEvents(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2StreamEventsResponse(rsp)
+}
+
+// V2ListContractUpgradesWithResponse request returning *V2ListContractUpgradesResponse
+func (c *ClientWithResponses) V2ListContractUpgradesWithResponse(ctx context.Context, id ContractID, params *V2ListContractUpgradesParams, reqEditors ...RequestEditorFn) (*V2ListContractUpgradesResponse, error) {
+	rsp, err := c.V2ListContractUpgrades(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListContractUpgradesResponse(rsp)
+}
+
+// V2RecentEventsWithResponse request returning *V2RecentEventsResponse
+func (c *ClientWithResponses) V2RecentEventsWithResponse(ctx context.Context, params *V2RecentEventsParams, reqEditors ...RequestEditorFn) (*V2RecentEventsResponse, error) {
+	rsp, err := c.V2RecentEvents(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2RecentEventsResponse(rsp)
+}
+
+// V2LiveActivityWithResponse request returning *V2LiveActivityResponse
+func (c *ClientWithResponses) V2LiveActivityWithResponse(ctx context.Context, params *V2LiveActivityParams, reqEditors ...RequestEditorFn) (*V2LiveActivityResponse, error) {
+	rsp, err := c.V2LiveActivity(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2LiveActivityResponse(rsp)
+}
+
+// V2GlobalStatsWithResponse request returning *V2GlobalStatsResponse
+func (c *ClientWithResponses) V2GlobalStatsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*V2GlobalStatsResponse, error) {
+	rsp, err := c.V2GlobalStats(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2GlobalStatsResponse(rsp)
+}
+
+// V2ListWatchdogAlertsWithResponse request returning *V2ListWatchdogAlertsResponse
+func (c *ClientWithResponses) V2ListWatchdogAlertsWithResponse(ctx context.Context, params *V2ListWatchdogAlertsParams, reqEditors ...RequestEditorFn) (*V2ListWatchdogAlertsResponse, error) {
+	rsp, err := c.V2ListWatchdogAlerts(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListWatchdogAlertsResponse(rsp)
+}
+
+// V2ListMonitoredContractsWithResponse request returning *V2ListMonitoredContractsResponse
+func (c *ClientWithResponses) V2ListMonitoredContractsWithResponse(ctx context.Context, params *V2ListMonitoredContractsParams, reqEditors ...RequestEditorFn) (*V2ListMonitoredContractsResponse, error) {
+	rsp, err := c.V2ListMonitoredContracts(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListMonitoredContractsResponse(rsp)
+}
+
+// V2GetMonitoredContractWithResponse request returning *V2GetMonitoredContractResponse
+func (c *ClientWithResponses) V2GetMonitoredContractWithResponse(ctx context.Context, id ContractID, reqEditors ...RequestEditorFn) (*V2GetMonitoredContractResponse, error) {
+	rsp, err := c.V2GetMonitoredContract(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2GetMonitoredContractResponse(rsp)
+}
+
+// V2ListContractAlertsWithResponse request returning *V2ListContractAlertsResponse
+func (c *ClientWithResponses) V2ListContractAlertsWithResponse(ctx context.Context, id ContractID, params *V2ListContractAlertsParams, reqEditors ...RequestEditorFn) (*V2ListContractAlertsResponse, error) {
+	rsp, err := c.V2ListContractAlerts(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListContractAlertsResponse(rsp)
+}
+
+// V2ListHealthChecksWithResponse request returning *V2ListHealthChecksResponse
+func (c *ClientWithResponses) V2ListHealthChecksWithResponse(ctx context.Context, id ContractID, params *V2ListHealthChecksParams, reqEditors ...RequestEditorFn) (*V2ListHealthChecksResponse, error) {
+	rsp, err := c.V2ListHealthChecks(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListHealthChecksResponse(rsp)
+}
+
+// V2WatchdogStatsWithResponse request returning *V2WatchdogStatsResponse
+func (c *ClientWithResponses) V2WatchdogStatsWithResponse(ctx context.Context, params *V2WatchdogStatsParams, reqEditors ...RequestEditorFn) (*V2WatchdogStatsResponse, error) {
+	rsp, err := c.V2WatchdogStats(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2WatchdogStatsResponse(rsp)
+}
+
+// V2ListWatchlistWithResponse request returning *V2ListWatchlistResponse
+func (c *ClientWithResponses) V2ListWatchlistWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*V2ListWatchlistResponse, error) {
+	rsp, err := c.V2ListWatchlist(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2ListWatchlistResponse(rsp)
+}
+
+// V2AddToWatchlistWithBodyWithResponse request with arbitrary body returning *V2AddToWatchlistResponse
+func (c *ClientWithResponses) V2AddToWatchlistWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*V2AddToWatchlistResponse, error) {
+	rsp, err := c.V2AddToWatchlistWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2AddToWatchlistResponse(rsp)
+}
+
+func (c *ClientWithResponses) V2AddToWatchlistWithResponse(ctx context.Context, body V2AddToWatchlistJSONRequestBody, reqEditors ...RequestEditorFn) (*V2AddToWatchlistResponse, error) {
+	rsp, err := c.V2AddToWatchlist(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2AddToWatchlistResponse(rsp)
+}
+
+// V2RemoveFromWatchlistWithResponse request returning *V2RemoveFromWatchlistResponse
+func (c *ClientWithResponses) V2RemoveFromWatchlistWithResponse(ctx context.Context, contractId WatchlistContractID, reqEditors ...RequestEditorFn) (*V2RemoveFromWatchlistResponse, error) {
+	rsp, err := c.V2RemoveFromWatchlist(ctx, contractId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2RemoveFromWatchlistResponse(rsp)
+}
+
+// V2WatchlistStatusWithResponse request returning *V2WatchlistStatusResponse
+func (c *ClientWithResponses) V2WatchlistStatusWithResponse(ctx context.Context, contractId WatchlistContractID, reqEditors ...RequestEditorFn) (*V2WatchlistStatusResponse, error) {
+	rsp, err := c.V2WatchlistStatus(ctx, contractId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseV2WatchlistStatusResponse(rsp)
+}
+
+// GetVersionWithResponse request returning *GetVersionResponse
+func (c *ClientWithResponses) GetVersionWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetVersionResponse, error) {
+	rsp, err := c.GetVersion(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetVersionResponse(rsp)
+}
+
 // HealthWithResponse request returning *HealthResponse
 func (c *ClientWithResponses) HealthWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*HealthResponse, error) {
 	rsp, err := c.Health(ctx, reqEditors...)
@@ -4249,6 +13548,32 @@ func (c *ClientWithResponses) HealthWithResponse(ctx context.Context, reqEditors
 		return nil, err
 	}
 	return ParseHealthResponse(rsp)
+}
+
+// SlackCommandWithBodyWithResponse request with arbitrary body returning *SlackCommandResponse
+func (c *ClientWithResponses) SlackCommandWithBodyWithResponse(ctx context.Context, params *SlackCommandParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SlackCommandResponse, error) {
+	rsp, err := c.SlackCommandWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSlackCommandResponse(rsp)
+}
+
+func (c *ClientWithResponses) SlackCommandWithFormdataBodyWithResponse(ctx context.Context, params *SlackCommandParams, body SlackCommandFormdataRequestBody, reqEditors ...RequestEditorFn) (*SlackCommandResponse, error) {
+	rsp, err := c.SlackCommandWithFormdataBody(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSlackCommandResponse(rsp)
+}
+
+// GetMetricsWithResponse request returning *GetMetricsResponse
+func (c *ClientWithResponses) GetMetricsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GetMetricsResponse, error) {
+	rsp, err := c.GetMetrics(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetMetricsResponse(rsp)
 }
 
 // ReadyzWithResponse request returning *ReadyzResponse
@@ -4407,6 +13732,53 @@ func ParseRevokeApiKeyAdminResponse(rsp *http.Response) (*RevokeApiKeyAdminRespo
 			return nil, err
 		}
 		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListAlertsResponse parses an HTTP response from a ListAlertsWithResponse call
+func ParseListAlertsResponse(rsp *http.Response) (*ListAlertsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListAlertsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			// Alerts Present when flat=true.
+			Alerts *[]ContractAlert `json:"alerts,omitempty"`
+
+			// Groups Present when flat is not set.
+			Groups     *[]AlertGroup `json:"groups,omitempty"`
+			NextCursor string        `json:"next_cursor"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
 		var dest InternalError
@@ -4596,6 +13968,39 @@ func ParseRevokeApiKeyResponse(rsp *http.Response) (*RevokeApiKeyResponse, error
 	return response, nil
 }
 
+// ParseCompareContractsResponse parses an HTTP response from a CompareContractsWithResponse call
+func ParseCompareContractsResponse(rsp *http.Response) (*CompareContractsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CompareContractsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CompareResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseListContractsResponse parses an HTTP response from a ListContractsWithResponse call
 func ParseListContractsResponse(rsp *http.Response) (*ListContractsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -4702,6 +14107,107 @@ func ParseRegisterContractResponse(rsp *http.Response) (*RegisterContractRespons
 	return response, nil
 }
 
+// ParseBatchContractsResponse parses an HTTP response from a BatchContractsWithResponse call
+func ParseBatchContractsResponse(rsp *http.Response) (*BatchContractsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &BatchContractsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchContractsResult
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ForbiddenRole
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 415:
+		var dest UnsupportedMediaType
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON415 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseValidateContractResponse parses an HTTP response from a ValidateContractWithResponse call
+func ParseValidateContractResponse(rsp *http.Response) (*ValidateContractResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ValidateContractResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContractValidationResult
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetContractResponse parses an HTTP response from a GetContractWithResponse call
 func ParseGetContractResponse(rsp *http.Response) (*GetContractResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -4785,6 +14291,39 @@ func ParseListContractEventsResponse(rsp *http.Response) (*ListContractEventsRes
 	return response, nil
 }
 
+// ParseExportContractEventsCSVResponse parses an HTTP response from a ExportContractEventsCSVWithResponse call
+func ParseExportContractEventsCSVResponse(rsp *http.Response) (*ExportContractEventsCSVResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ExportContractEventsCSVResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetContractForecastResponse parses an HTTP response from a GetContractForecastWithResponse call
 func ParseGetContractForecastResponse(rsp *http.Response) (*GetContractForecastResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -4816,6 +14355,93 @@ func ParseGetContractForecastResponse(rsp *http.Response) (*GetContractForecastR
 			return nil, err
 		}
 		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetContractGraphResponse parses an HTTP response from a GetContractGraphWithResponse call
+func ParseGetContractGraphResponse(rsp *http.Response) (*GetContractGraphResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetContractGraphResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContractGraph
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetContractHealthScoreResponse parses an HTTP response from a GetContractHealthScoreWithResponse call
+func ParseGetContractHealthScoreResponse(rsp *http.Response) (*GetContractHealthScoreResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetContractHealthScoreResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest HealthScore
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
 		var dest InternalError
@@ -4906,6 +14532,86 @@ func ParseGetContractSnapshotResponse(rsp *http.Response) (*GetContractSnapshotR
 			return nil, err
 		}
 		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseExportContractSnapshotResponse parses an HTTP response from a ExportContractSnapshotWithResponse call
+func ParseExportContractSnapshotResponse(rsp *http.Response) (*ExportContractSnapshotResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ExportContractSnapshotResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContractSnapshotExport
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetContractSpecResponse parses an HTTP response from a GetContractSpecWithResponse call
+func ParseGetContractSpecResponse(rsp *http.Response) (*GetContractSpecResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetContractSpecResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContractSpec
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
 		var dest InternalError
@@ -5044,6 +14750,769 @@ func ParseStreamContractEventsResponse(rsp *http.Response) (*StreamContractEvent
 	return response, nil
 }
 
+// ParseGetContractSummaryResponse parses an HTTP response from a GetContractSummaryWithResponse call
+func ParseGetContractSummaryResponse(rsp *http.Response) (*GetContractSummaryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetContractSummaryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContractSummary
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAddContractTagResponse parses an HTTP response from a AddContractTagWithResponse call
+func ParseAddContractTagResponse(rsp *http.Response) (*AddContractTagResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AddContractTagResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContractTags
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ForbiddenRole
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 415:
+		var dest UnsupportedMediaType
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON415 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseRemoveContractTagResponse parses an HTTP response from a RemoveContractTagWithResponse call
+func ParseRemoveContractTagResponse(rsp *http.Response) (*RemoveContractTagResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &RemoveContractTagResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ForbiddenRole
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListContractUpgradesResponse parses an HTTP response from a ListContractUpgradesWithResponse call
+func ParseListContractUpgradesResponse(rsp *http.Response) (*ListContractUpgradesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListContractUpgradesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Upgrades []ContractUpgrade `json:"upgrades"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetContractWasmResponse parses an HTTP response from a GetContractWasmWithResponse call
+func ParseGetContractWasmResponse(rsp *http.Response) (*GetContractWasmResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetContractWasmResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListFailedEventsResponse parses an HTTP response from a ListFailedEventsWithResponse call
+func ParseListFailedEventsResponse(rsp *http.Response) (*ListFailedEventsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListFailedEventsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Items      []FailedEvent `json:"items"`
+			NextCursor *string       `json:"next_cursor,omitempty"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseRequeueFailedEventResponse parses an HTTP response from a RequeueFailedEventWithResponse call
+func ParseRequeueFailedEventResponse(rsp *http.Response) (*RequeueFailedEventResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &RequeueFailedEventResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			EventId string `json:"event_id"`
+			Id      int64  `json:"id"`
+			Status  string `json:"status"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListAllEventsResponse parses an HTTP response from a ListAllEventsWithResponse call
+func ParseListAllEventsResponse(rsp *http.Response) (*ListAllEventsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListAllEventsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Events []Event `json:"events"`
+
+			// NextCursor Opaque cursor for the next (older) page; empty when no more pages.
+			NextCursor string `json:"next_cursor"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseRecentEventsResponse parses an HTTP response from a RecentEventsWithResponse call
+func ParseRecentEventsResponse(rsp *http.Response) (*RecentEventsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &RecentEventsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Events []Event `json:"events"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseApiHealthResponse parses an HTTP response from a ApiHealthWithResponse call
+func ParseApiHealthResponse(rsp *http.Response) (*ApiHealthResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ApiHealthResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Db    ApiHealth200Db    `json:"db"`
+			Redis ApiHealth200Redis `json:"redis"`
+
+			// Status "ok" when both dependencies are reachable, "degraded" otherwise
+			Status    string    `json:"status"`
+			Timestamp time.Time `json:"timestamp"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListAllInvocationsResponse parses an HTTP response from a ListAllInvocationsWithResponse call
+func ParseListAllInvocationsResponse(rsp *http.Response) (*ListAllInvocationsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListAllInvocationsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Invocations []Invocation `json:"invocations"`
+
+			// NextCursor Opaque cursor for the next (older) page; empty when no more pages.
+			NextCursor string `json:"next_cursor"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetApiV1LabelsResponse parses an HTTP response from a GetApiV1LabelsWithResponse call
+func ParseGetApiV1LabelsResponse(rsp *http.Response) (*GetApiV1LabelsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetApiV1LabelsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParsePostApiV1LabelsResponse parses an HTTP response from a PostApiV1LabelsWithResponse call
+func ParsePostApiV1LabelsResponse(rsp *http.Response) (*PostApiV1LabelsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PostApiV1LabelsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetContractReportResponse parses an HTTP response from a GetContractReportWithResponse call
+func ParseGetContractReportResponse(rsp *http.Response) (*GetContractReportResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetContractReportResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContractReport
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON501 = &dest
+
+	case rsp.StatusCode == 200:
+		// Content-type (text/csv) unsupported
+
+	}
+
+	return response, nil
+}
+
+// ParseGetContractSLABadgeResponse parses an HTTP response from a GetContractSLABadgeWithResponse call
+func ParseGetContractSLABadgeResponse(rsp *http.Response) (*GetContractSLABadgeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetContractSLABadgeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON501 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetContractReportHistoryResponse parses an HTTP response from a GetContractReportHistoryWithResponse call
+func ParseGetContractReportHistoryResponse(rsp *http.Response) (*GetContractReportHistoryResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetContractReportHistoryResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			ContractId string       `json:"contract_id"`
+			Months     []MonthlySLA `json:"months"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 501:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON501 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetApiV1ResolveResponse parses an HTTP response from a GetApiV1ResolveWithResponse call
+func ParseGetApiV1ResolveResponse(rsp *http.Response) (*GetApiV1ResolveResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetApiV1ResolveResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	return response, nil
+}
+
+// ParseGetApiV1SearchResponse parses an HTTP response from a GetApiV1SearchWithResponse call
+func ParseGetApiV1SearchResponse(rsp *http.Response) (*GetApiV1SearchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetApiV1SearchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Items *[]Contract `json:"items,omitempty"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseLiveActivityResponse parses an HTTP response from a LiveActivityWithResponse call
+func ParseLiveActivityResponse(rsp *http.Response) (*LiveActivityResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &LiveActivityResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Contracts   []ContractEventRate `json:"contracts"`
+			Minutes     int                 `json:"minutes"`
+			WindowStart time.Time           `json:"window_start"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetGlobalStatsResponse parses an HTTP response from a GetGlobalStatsWithResponse call
 func ParseGetGlobalStatsResponse(rsp *http.Response) (*GetGlobalStatsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -5089,6 +15558,39 @@ func ParseGetGlobalStatsResponse(rsp *http.Response) (*GetGlobalStatsResponse, e
 	return response, nil
 }
 
+// ParseStreamAllEventsResponse parses an HTTP response from a StreamAllEventsWithResponse call
+func ParseStreamAllEventsResponse(rsp *http.Response) (*StreamAllEventsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StreamAllEventsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseListWatchdogAlertsResponse parses an HTTP response from a ListWatchdogAlertsWithResponse call
 func ParseListWatchdogAlertsResponse(rsp *http.Response) (*ListWatchdogAlertsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -5106,6 +15608,9 @@ func ParseListWatchdogAlertsResponse(rsp *http.Response) (*ListWatchdogAlertsRes
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest struct {
 			Alerts []ContractAlert `json:"alerts"`
+
+			// NextCursor Cursor for the next (older) page; empty when no more pages.
+			NextCursor string `json:"next_cursor"`
 		}
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
@@ -5231,6 +15736,9 @@ func ParseListContractAlertsResponse(rsp *http.Response) (*ListContractAlertsRes
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest struct {
 			Alerts []ContractAlert `json:"alerts"`
+
+			// NextCursor Cursor for the next (older) page; empty when no more pages.
+			NextCursor string `json:"next_cursor"`
 		}
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
@@ -5298,6 +15806,46 @@ func ParseListContractHealthChecksResponse(rsp *http.Response) (*ListContractHea
 	return response, nil
 }
 
+// ParseGetContractUptimeResponse parses an HTTP response from a GetContractUptimeWithResponse call
+func ParseGetContractUptimeResponse(rsp *http.Response) (*GetContractUptimeResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetContractUptimeResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest UptimeResult
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseGetWatchdogStatsResponse parses an HTTP response from a GetWatchdogStatsWithResponse call
 func ParseGetWatchdogStatsResponse(rsp *http.Response) (*GetWatchdogStatsResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -5325,6 +15873,163 @@ func ParseGetWatchdogStatsResponse(rsp *http.Response) (*GetWatchdogStatsRespons
 			return nil, err
 		}
 		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListAlertSubscriptionsResponse parses an HTTP response from a ListAlertSubscriptionsWithResponse call
+func ParseListAlertSubscriptionsResponse(rsp *http.Response) (*ListAlertSubscriptionsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListAlertSubscriptionsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Subscriptions []AlertSubscription `json:"subscriptions"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ForbiddenRole
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCreateAlertSubscriptionResponse parses an HTTP response from a CreateAlertSubscriptionWithResponse call
+func ParseCreateAlertSubscriptionResponse(rsp *http.Response) (*CreateAlertSubscriptionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CreateAlertSubscriptionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest AlertSubscription
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ForbiddenRole
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 415:
+		var dest UnsupportedMediaType
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON415 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteAlertSubscriptionResponse parses an HTTP response from a DeleteAlertSubscriptionWithResponse call
+func ParseDeleteAlertSubscriptionResponse(rsp *http.Response) (*DeleteAlertSubscriptionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteAlertSubscriptionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ForbiddenRole
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
 		var dest InternalError
@@ -5512,6 +16217,1424 @@ func ParseGetWatchlistStatusResponse(rsp *http.Response) (*GetWatchlistStatusRes
 	return response, nil
 }
 
+// ParseV2AdminListKeysResponse parses an HTTP response from a V2AdminListKeysWithResponse call
+func ParseV2AdminListKeysResponse(rsp *http.Response) (*V2AdminListKeysResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2AdminListKeysResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest map[string]interface{}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2AdminCreateKeyResponse parses an HTTP response from a V2AdminCreateKeyWithResponse call
+func ParseV2AdminCreateKeyResponse(rsp *http.Response) (*V2AdminCreateKeyResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2AdminCreateKeyResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest map[string]interface{}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2AdminRevokeKeyResponse parses an HTTP response from a V2AdminRevokeKeyWithResponse call
+func ParseV2AdminRevokeKeyResponse(rsp *http.Response) (*V2AdminRevokeKeyResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2AdminRevokeKeyResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListAPIKeysResponse parses an HTTP response from a V2ListAPIKeysWithResponse call
+func ParseV2ListAPIKeysResponse(rsp *http.Response) (*V2ListAPIKeysResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListAPIKeysResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest map[string]interface{}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2CreateAPIKeyResponse parses an HTTP response from a V2CreateAPIKeyWithResponse call
+func ParseV2CreateAPIKeyResponse(rsp *http.Response) (*V2CreateAPIKeyResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2CreateAPIKeyResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest map[string]interface{}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2RevokeAPIKeyResponse parses an HTTP response from a V2RevokeAPIKeyWithResponse call
+func ParseV2RevokeAPIKeyResponse(rsp *http.Response) (*V2RevokeAPIKeyResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2RevokeAPIKeyResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListContractsResponse parses an HTTP response from a V2ListContractsWithResponse call
+func ParseV2ListContractsResponse(rsp *http.Response) (*V2ListContractsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListContractsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2ContractList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2RegisterContractResponse parses an HTTP response from a V2RegisterContractWithResponse call
+func ParseV2RegisterContractResponse(rsp *http.Response) (*V2RegisterContractResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2RegisterContractResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest V2Contract
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ValidateContractResponse parses an HTTP response from a V2ValidateContractWithResponse call
+func ParseV2ValidateContractResponse(rsp *http.Response) (*V2ValidateContractResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ValidateContractResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContractValidationResult
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2GetContractResponse parses an HTTP response from a V2GetContractWithResponse call
+func ParseV2GetContractResponse(rsp *http.Response) (*V2GetContractResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2GetContractResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2Contract
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListEventsResponse parses an HTTP response from a V2ListEventsWithResponse call
+func ParseV2ListEventsResponse(rsp *http.Response) (*V2ListEventsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListEventsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2EventList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ContractForecastResponse parses an HTTP response from a V2ContractForecastWithResponse call
+func ParseV2ContractForecastResponse(rsp *http.Response) (*V2ContractForecastResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ContractForecastResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest map[string]interface{}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ContractGraphResponse parses an HTTP response from a V2ContractGraphWithResponse call
+func ParseV2ContractGraphResponse(rsp *http.Response) (*V2ContractGraphResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ContractGraphResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest map[string]interface{}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2GetContractHealthScoreResponse parses an HTTP response from a V2GetContractHealthScoreWithResponse call
+func ParseV2GetContractHealthScoreResponse(rsp *http.Response) (*V2GetContractHealthScoreResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2GetContractHealthScoreResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2ContractHealthScore
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListInvocationsResponse parses an HTTP response from a V2ListInvocationsWithResponse call
+func ParseV2ListInvocationsResponse(rsp *http.Response) (*V2ListInvocationsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListInvocationsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2InvocationList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ContractSnapshotResponse parses an HTTP response from a V2ContractSnapshotWithResponse call
+func ParseV2ContractSnapshotResponse(rsp *http.Response) (*V2ContractSnapshotResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ContractSnapshotResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest map[string]interface{}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ContractStatsResponse parses an HTTP response from a V2ContractStatsWithResponse call
+func ParseV2ContractStatsResponse(rsp *http.Response) (*V2ContractStatsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ContractStatsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2ContractStats
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListStorageEntriesResponse parses an HTTP response from a V2ListStorageEntriesWithResponse call
+func ParseV2ListStorageEntriesResponse(rsp *http.Response) (*V2ListStorageEntriesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListStorageEntriesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2StorageList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2StreamEventsResponse parses an HTTP response from a V2StreamEventsWithResponse call
+func ParseV2StreamEventsResponse(rsp *http.Response) (*V2StreamEventsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2StreamEventsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Events []V2Event `json:"events"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListContractUpgradesResponse parses an HTTP response from a V2ListContractUpgradesWithResponse call
+func ParseV2ListContractUpgradesResponse(rsp *http.Response) (*V2ListContractUpgradesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListContractUpgradesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2UpgradeList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2RecentEventsResponse parses an HTTP response from a V2RecentEventsWithResponse call
+func ParseV2RecentEventsResponse(rsp *http.Response) (*V2RecentEventsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2RecentEventsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2EventList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2LiveActivityResponse parses an HTTP response from a V2LiveActivityWithResponse call
+func ParseV2LiveActivityResponse(rsp *http.Response) (*V2LiveActivityResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2LiveActivityResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2ActivityResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2GlobalStatsResponse parses an HTTP response from a V2GlobalStatsWithResponse call
+func ParseV2GlobalStatsResponse(rsp *http.Response) (*V2GlobalStatsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2GlobalStatsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2GlobalStats
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListWatchdogAlertsResponse parses an HTTP response from a V2ListWatchdogAlertsWithResponse call
+func ParseV2ListWatchdogAlertsResponse(rsp *http.Response) (*V2ListWatchdogAlertsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListWatchdogAlertsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2AlertList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListMonitoredContractsResponse parses an HTTP response from a V2ListMonitoredContractsWithResponse call
+func ParseV2ListMonitoredContractsResponse(rsp *http.Response) (*V2ListMonitoredContractsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListMonitoredContractsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2MonitoredList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2GetMonitoredContractResponse parses an HTTP response from a V2GetMonitoredContractWithResponse call
+func ParseV2GetMonitoredContractResponse(rsp *http.Response) (*V2GetMonitoredContractResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2GetMonitoredContractResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2MonitoredContract
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListContractAlertsResponse parses an HTTP response from a V2ListContractAlertsWithResponse call
+func ParseV2ListContractAlertsResponse(rsp *http.Response) (*V2ListContractAlertsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListContractAlertsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2AlertList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListHealthChecksResponse parses an HTTP response from a V2ListHealthChecksWithResponse call
+func ParseV2ListHealthChecksResponse(rsp *http.Response) (*V2ListHealthChecksResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListHealthChecksResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2HealthCheckList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2WatchdogStatsResponse parses an HTTP response from a V2WatchdogStatsWithResponse call
+func ParseV2WatchdogStatsResponse(rsp *http.Response) (*V2WatchdogStatsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2WatchdogStatsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2WatchdogStats
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2ListWatchlistResponse parses an HTTP response from a V2ListWatchlistWithResponse call
+func ParseV2ListWatchlistResponse(rsp *http.Response) (*V2ListWatchlistResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2ListWatchlistResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2WatchlistList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2AddToWatchlistResponse parses an HTTP response from a V2AddToWatchlistWithResponse call
+func ParseV2AddToWatchlistResponse(rsp *http.Response) (*V2AddToWatchlistResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2AddToWatchlistResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest V2WatchlistStatus
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2RemoveFromWatchlistResponse parses an HTTP response from a V2RemoveFromWatchlistWithResponse call
+func ParseV2RemoveFromWatchlistResponse(rsp *http.Response) (*V2RemoveFromWatchlistResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2RemoveFromWatchlistResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2WatchlistStatus
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseV2WatchlistStatusResponse parses an HTTP response from a V2WatchlistStatusWithResponse call
+func ParseV2WatchlistStatusResponse(rsp *http.Response) (*V2WatchlistStatusResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &V2WatchlistStatusResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest V2WatchlistStatus
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetVersionResponse parses an HTTP response from a GetVersionWithResponse call
+func ParseGetVersionResponse(rsp *http.Response) (*GetVersionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetVersionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BuildInfo
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseHealthResponse parses an HTTP response from a HealthWithResponse call
 func ParseHealthResponse(rsp *http.Response) (*HealthResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -5535,6 +17658,79 @@ func ParseHealthResponse(rsp *http.Response) (*HealthResponse, error) {
 		}
 		response.JSON200 = &dest
 
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest RateLimited
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseSlackCommandResponse parses an HTTP response from a SlackCommandWithResponse call
+func ParseSlackCommandResponse(rsp *http.Response) (*SlackCommandResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &SlackCommandResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SlackMessage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest InvalidInput
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest Error
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetMetricsResponse parses an HTTP response from a GetMetricsWithResponse call
+func ParseGetMetricsResponse(rsp *http.Response) (*GetMetricsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetMetricsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
 		var dest RateLimited
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
@@ -5595,94 +17791,287 @@ func ParseReadyzResponse(rsp *http.Response) (*ReadyzResponse, error) {
 // Base64 encoded, gzipped, json marshaled Swagger object
 var swaggerSpec = []string{
 
-	"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",
+	"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",
+	"MbcE8cqEH/dpRvb5/Pvn/z8AAP//GPdiuGCzAQA=",
 }
 
 // GetSwagger returns the content of the embedded swagger specification file
